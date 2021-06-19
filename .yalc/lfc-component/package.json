@@ -1,0 +1,16 @@
+{
+  "name": "lfc-component",
+  "version": "1.0.0",
+  "main": "lib/change-button.js",
+  "auther": "lfc",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config ./scripts/webpack.prod.config.js",
+    "dev": "webpack-dev-server --config ./scripts/webpack.dev.config.js"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "yalcSig": "7dc4bd841bc6d650a692b7e21385674e"
+}
