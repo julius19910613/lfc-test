@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>02圖標/08圖像圖標/CRUD類型-编辑</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.4392433,1.17710669 C12.6733356,0.941501553 13.054292,0.940886242 13.289142,1.17573622 L16.8246759,4.71127012 C17.0584554,4.94504966 17.0590673,5.32389203 16.8260442,5.55842553 L6.86158031,15.5939617 C6.77937042,15.6767 6.67482905,15.733686 6.56074333,15.7579459 L2.02520942,16.722412 C1.59798194,16.8132605 1.2199487,16.4317549 1.31469958,16.0053759 L2.31469958,11.5053759 C2.33931062,11.3946262 2.39481685,11.2931237 2.47477945,11.2126429 L12.4392433,1.17710669 Z M3.44844983,11.9352265 L2.68860879,15.3545111 L6.13630296,14.6213705 L15.553252,5.1369025 L12.8662507,2.44990116 L3.44844983,11.9352265 Z" id="path-1"></path>
+    </defs>
+    <g id="对话行为" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2_1对话行为分类详情" transform="translate(-1165.000000, -586.000000)">
+            <g id="分组-11" transform="translate(240.000000, 68.000000)">
+                <g id="分组-6" transform="translate(20.000000, 345.000000)">
+                    <g transform="translate(0.000000, 34.000000)" id="编组-16">
+                        <g transform="translate(20.000000, 98.000000)">
+                            <g id="分组-5" transform="translate(0.000000, 30.000000)">
+                                <g id="02圖標/08圖像圖標/CRUD類型-编辑1" transform="translate(884.000000, 10.000000)">
+                                    <mask id="mask-2" fill="white">
+                                        <use xlink:href="#path-1"></use>
+                                    </mask>
+                                    <use id="形状" fill="#979797" fill-rule="nonzero" xlink:href="#path-1"></use>
+                                    <g id="01色票/02圖標/04新淺色" mask="url(#mask-2)" fill="#9BA6B1" fill-rule="evenodd">
+                                        <rect id="淺色" x="0" y="0" width="18" height="18"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

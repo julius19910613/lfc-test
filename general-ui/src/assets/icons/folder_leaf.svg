@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>文件1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="标准问" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="分类设置" transform="translate(-719.000000, -426.000000)" fill="#8CCFF4" fill-rule="nonzero">
+            <g id="05--Folder-Filter/All-Copy" transform="translate(655.000000, 31.000000)">
+                <g id="Level4" transform="translate(0.000000, 386.000000)">
+                    <g id="文件1" transform="translate(64.000000, 9.000000)">
+                        <path d="M5.21755066,0.777777778 C5.35617969,0.777777778 5.49042141,0.824704052 5.59691919,0.910391919 L6.50740367,2.46330915 C6.57840219,2.52043439 6.66789667,2.46330915 6.76031603,2.46330915 L14.5185185,2.46330915 C14.8457984,2.46330915 15.1111111,2.77766255 15.1111111,3.09365688 L15.1111111,11.2673478 C15.1111111,11.5833421 14.8457984,11.8395062 14.5185185,11.8395062 L1.48148148,11.8395062 C1.15420164,11.8395062 0.888888889,11.5833421 0.888888889,11.2673478 L0.888888889,1.34993614 C0.888888889,1.03394181 1.15420164,0.777777778 1.48148148,0.777777778 L5.21755066,0.777777778 Z" id="03-Icon/close-folder"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,252 @@
+@import 'variables';
+@import '_reset';
+@import 'mixin';
+
+//基础样式设置
+html, body {
+  line-height: 1;
+  min-width: 1080px;
+  height: 100%;
+  font-size: $font-size-s;
+  color: $color-text;
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background: $table-body-border;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+// 圆角白色panel
+.white-panel{
+    height: 100%;
+    margin: 20px;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0 0 5px 0 rgba(102, 102, 102, 0.08);
+    box-shadow: 0 0 5px 0 rgba(102, 102, 102, 0.08);
+    border-radius: 6px;
+    font-size: 12px;
+    position: relative;
+}
+
+/*
+*   按钮 Button
+*/
+// 大号
+.btn-big{
+    @include box-sizing(box-border);
+    font-size: 14px;
+    height: 46px;
+    line-height: 46px;
+    padding: 0px 32px;
+    text-align: center;
+}
+.btn-medium{
+    @include box-sizing(box-border);
+    font-size: 12px;
+    height: 40px;
+    padding: 0px 20px;
+    min-width: 80px;
+    text-align: center;
+}
+.btn-normal{
+    @include box-sizing(box-border);
+    font-size: 12px;
+    height: 32px;
+    padding: 0px 20px;
+    min-width: 80px;
+    text-align: center;
+}
+.btn-small{
+    @include box-sizing(box-border);
+    font-size: 12px;
+    height: 28px;
+    min-width: 80px;
+    text-align: center;
+}
+// 小号
+// 深蓝色底 白色字体
+.btn-dark-blue{
+    border-radius: 2px;
+    border: 1px solid #4B4B64;
+    font-weight: 400;
+    background: #4B4B64;
+    color: #FFFFFF;
+    cursor: pointer;
+    &:hover {
+        background: #5D5D74;
+    }
+}
+// 白色底 灰色边框 灰色字体
+.btn-white-gray{
+    border-radius:2px;
+    border: 1px solid #dbdbdb;
+    font-weight:400;
+    background: #FFFFFF;
+    color: #666666;
+    cursor: pointer;
+    &:hover {
+        background: #E9E9E9;
+    }
+}
+// 蓝色底 白色字体
+.btn-blue{
+    background: #1875F0;
+    color: white;
+    border-radius: 2px;
+    font-weight: 400;
+    border: 1px solid #1875F0;
+    cursor: pointer;
+}
+// 蓝色底 白色字体
+.btn-red{
+    background: #F76260;
+    color: #FFFFFF;
+    border-radius: 2px;
+    font-weight: 400;
+    border: 1px solid #F76260;
+    cursor: pointer;
+    &:hover {
+        background: #F56F6D;
+    }
+}
+// 灰色底，白色字体
+.btn-disabled{
+    background: #CCCCCC;
+    color: #FFFFFF;
+    border-radius: 2px;
+    font-weight: 400;
+    border: 1px solid #FFFFFF;
+    cursor: not-allowed !important;
+}
+// 可点击的 鼠标为手掌
+.clickable{
+    cursor: pointer;
+}
+// el 输入框三种尺寸
+// small
+.bf-input-s.el-input{
+    .el-input__inner{
+        height: 28px;
+        line-height: 28px;
+    }
+}
+// medium
+.bf-input-m.el-input{
+    .el-input__inner{
+        height: 32px;
+        line-height: 32px;
+    }
+}
+// large
+.bf-input-l.el-input{
+    .el-input__inner{
+        height: 36px;
+        line-height: 36px;
+    }
+}
+
+// 加载除SSM & Intent之外的页面
+.iframe-container{
+    width: calc(100% + 100px);
+    height: calc(100% + 50px) !important;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    right: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 0, 0, 0.01);
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    // border-left: 0px;
+    background-clip: padding-box;
+    background-color: #cccccc;
+    border-radius: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #c3c3c3;
+}
+
+input::-webkit-input-placeholder,
+input:-moz-placeholder,
+input::-moz-placeholder,
+input:-ms-input-placeholder {
+    color: $color-text-light !important;
+    font-size: $font-size-xs !important;
+}
+
+// 灰头表格样式
+.bf-table-grey{
+    @include flex-box;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    flex-grow: 1;
+    table{
+        table-layout: fixed;
+        border-collapse: separate;
+        width: 100%;
+        td{
+            display: table-cell;
+            padding: 0 20px;
+            min-width: 0;
+            font-size: $font-size-s;
+            color: $color-text;
+            word-wrap: break-word;
+            word-break: break-all;
+            vertical-align: middle;
+            &>span{
+                line-height: normal;
+            }
+        }
+    }
+    .table-header{
+        border-top: 1px solid $color-border;
+        border-bottom: 1px solid $color-border;
+        tbody{
+            padding: 0 20px;
+            background: $color-bg-f7;
+            height: 50px;
+            line-height: 50px;
+        }
+    }
+    .table-body{
+        overflow-y: auto;
+        overflow-y: overlay;
+        flex-grow: 1;
+        // @include customScrollbar;
+        td{
+            border-bottom: 1px solid $color-border;
+            height: 59px;
+            &>*{
+                vertical-align: middle;
+            }
+        }
+    }
+    .table-pagination{
+        @include flex-box;
+        padding-right: 30px;
+        border-top: 1px solid $color-border;
+        align-items: center;
+        justify-content: flex-end;
+        flex-shrink: 0;
+        height: 57px;
+        background-color: $color-theme;
+    }
+}

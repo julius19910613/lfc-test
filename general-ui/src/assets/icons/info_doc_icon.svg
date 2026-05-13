@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>PDFicon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5_1问答详情_素材库" transform="translate(-200.000000, -829.000000)">
+            <g id="Group-4" transform="translate(90.000000, 446.000000)">
+                <g id="Group-7">
+                    <g id="Group-13" transform="translate(0.000000, 76.000000)">
+                        <g id="Group-10">
+                            <g id="Group-15" transform="translate(0.000000, 32.000000)">
+                                <g id="Group-8" transform="translate(90.000000, 0.000000)">
+                                    <g id="分组-5" transform="translate(10.000000, 268.000000)">
+                                        <g id="PDFicon" transform="translate(10.000000, 7.000000)">
+                                            <path d="M18.1219512,4.90685717 L18.1219512,2.5136784 L20.501795,4.90685717 L18.1219512,4.90685717 Z M21.5365854,6.37847178 L21.5365854,24.5283854 L7.63414634,24.5283854 C5.88299957,24.5283854 4.46341463,23.1008461 4.46341463,21.339887 L4.46341463,1.47308973 L14.8139988,1.47308973 C15.2181096,1.47308973 15.5457061,1.14365758 15.5457061,0.737282421 C15.5457061,0.330907266 15.2181096,0.00147511305 14.8139988,0.00147511305 L3.73170732,0.00147511305 C3.32759652,0.00147511305 3,0.330907266 3,0.737282421 L3,21.339887 C3,23.9135964 5.07477799,26 7.63414634,26 L22.2682927,26 C22.6724035,26 23,25.6705678 23,25.2641927 L23,5.64266448 C23,5.44751624 22.9229096,5.26036078 22.7856879,5.12237014 L17.9076391,0.216988084 C17.4466892,-0.246544665 16.6585366,0.0817481213 16.6585366,0.737282421 L16.6585366,5.64266448 C16.6585366,6.04903963 16.9861331,6.37847178 17.3902439,6.37847178 L21.5365854,6.37847178 Z" id="直线" fill="#8E8E8E" fill-rule="nonzero"></path>
+                                            <rect id="矩形" fill="#8E8E8E" x="0" y="10" width="26" height="12" rx="1"></rect>
+                                            <text id="PDF" font-family="PingFang-SC-Heavy, PingFang SC" font-size="9" font-weight="600" line-spacing="12" fill="#FFFFFF">
+                                                <tspan x="4" y="20">PDF</tspan>
+                                            </text>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,820 @@
+{
+    "confirmNode": null,
+    "entry": {
+        "criteria": {
+            "items": [
+                {
+                    "type": "INTENT",
+                    "value": 22394
+                },
+                {
+                    "type": "SPEECH_ACT",
+                    "value": "帮我订一张机票"
+                }
+            ],
+            "operator": "AND"
+        },
+        "id": "entry",
+        "nlTemplates": {
+            "options": [
+                ""
+            ] 
+        },
+        "title": "开始触发"
+    },
+    "nodeGroups": [
+        {
+            "id": "group-0.7248360368613362",
+            "title": "节点组名称",
+            "nodes": [
+                "node-test",
+                "node-确认",
+                "node-时间节点"
+            ]
+        }
+    ],
+    "published": true,
+    "standardNodes": [
+        {
+            "id": "node-出发地目的地",
+            "title": "出发地目的地",
+            "slotFinder": {
+                "id": "from_to解析器",
+                "slots": [
+                    {
+                        "name": "fromPlace",
+                        "confirmType": "RIGHT_NOW"
+                    },
+                    {
+                        "name": "toPlace",
+                        "confirmType": "RIGHT_NOW"
+                    }
+                ]
+            },
+            "triggers": [
+                {
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "left": "${node-出发地目的地.fromPlace}",
+                                        "operator": "N_EXIST"
+                                    },
+                                    {
+                                        "left": "${node-出发地目的地.toPlace}",
+                                        "operator": "N_EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": { 
+                        "options": [
+                            "请问您想订从哪里到哪里的机票呢？${node-时间节点.XXMMH2356}  "
+                        ]
+                    },
+                    "strategicSlot": "${node-出发地目的地.toPlace}"
+                }
+            ],
+            "terminations": [
+                {
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "left": "${node-出发地目的地.fromPlace}",
+                                        "operator": "EXIST"
+                                    },
+                                    {
+                                        "left": "${node-出发地目的地.toPlace}",
+                                        "operator": "EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": { 
+                        "options": [
+                            "好的"
+                        ]
+                    }
+                }
+            ],
+            "failure": {
+                "nlTemplates": {
+                    "options": [
+                        "对不起，没有解析到出发地目的地"
+                    ]
+                }
+            },
+            "confirm": {
+                "type": "RIGHT_NOW",
+                "options": [
+                    {
+                        "targets": [
+                            "fromPlace",
+                            "toPlace"
+                        ],
+                        "nlTemplates": {
+                            "options": [
+                                "ddd${node-出发地目的地.fromPlace}"
+                            ]
+                        },
+                        "criteriaSet": {
+                            "operator": "OR",
+                            "items": [
+                                {
+                                    "operator": "AND",
+                                    "items": [
+                                        {
+                                            "left": "${node-出发地目的地.fromPlace}",
+                                            "operator": "EXIST"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "criteriaSet": {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "OR",
+                                    "items": [
+                                        {
+                                            "left": "${node-出发地目的地.fromPlace}",
+                                            "operator": "EXIST"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "options": [
+                                "确认话术第二组"
+                            ]
+                        },
+                        "targets": [
+                            "fromPlace",
+                            "toPlace"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": "node-test",
+            "title": "金额",
+            "slotFinder": {
+                "id": "金额解析器",
+                "slots": [
+                    {
+                        "slotId": 882,
+                        "name": "amount1",
+                        "confirmType": "RIGHT_NOW"
+                    },
+                    {
+                        "slotId": 883,
+                        "name": "amount2",
+                        "confirmType": "NONE"
+                    }
+                ]
+            },
+            "triggers": [
+                {
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "left": "${node-test.amount2}",
+                                        "operator": "EXIST"
+                                    },
+                                    {
+                                        "left": "${node-test.amount1}",
+                                        "operator": ""
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "left": "123333333333edddddd",
+                                        "operator": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": { 
+                        "options": [
+                            "${node-test.amount2}"
+                        ]
+                    },
+                    "strategicSlot": "${node-test.amount1}"
+                }
+            ],
+            "terminations": [
+                {
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "left": "",
+                                        "operator": "EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": { 
+                        "options": [
+                            ""
+                        ]
+                    }
+                }
+            ],
+            "failure": {
+                "nlTemplates": { 
+                    "options": [
+                        "对不起，无法获取金额信息"
+                    ]
+                }
+            },
+            "confirm": {
+                "type": "RIGHT_NOW",
+                "options": [
+                    {
+                        "targets": [
+                            "amount1"
+                        ],
+                        "nlTemplates": {
+                            "options": [
+                                "Hello-确认模式"
+                            ]
+                        },
+                        "criteriaSet": {
+                            "operator": "OR",
+                            "items": [
+                                {
+                                    "operator": "AND",
+                                    "items": [
+                                        {
+                                            "left": "",
+                                            "operator": "EXIST"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "node-确认",
+            "title": "确认",
+            "slotFinder": {
+                "id": "test1111212",
+                "slots": [
+                    {
+                        "slotId": 742,
+                        "name": "test",
+                        "confirmType": "NONE"
+                    }
+                ]
+            },
+            "triggers": [
+                {
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "left": "",
+                                        "operator": "EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": { 
+                        "options": [
+                            ""
+                        ]
+                    }
+                }
+            ],
+            "terminations": [
+                {
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "left": "",
+                                        "operator": "EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": { 
+                        "options": [
+                            ""
+                        ]
+                    }
+                }
+            ],
+            "failure": {
+                "nlTemplates": {
+                    "options": [
+                        ""
+                    ]
+                }
+            },
+            "confirm": {}
+        },
+        {
+            "id": "node-时间节点",
+            "title": "时间节点",
+            "slotFinder": {
+                "id": "抽取动漫人物名字121",
+                "slots": [
+                    {
+                        "slotId": 822,
+                        "name": "XXMMH2356",
+                        "confirmType": "NONE"
+                    }
+                ]
+            },
+            "triggers": [
+                {
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "left": "${node-出发地目的地.fromPlace}",
+                                        "operator": "EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": { 
+                        "options": [
+                            "hahah"
+                        ]
+                    }
+                }
+            ],
+            "terminations": [
+                {
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "left": "${node-时间节点.toTime}",
+                                        "operator": "EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "options": [
+                            "${node-时间节点.fromTime}yayaya"
+                        ]
+                    }
+                }
+            ],
+            "failure": {
+                "nlTemplates": {
+                    "options": [
+                        "对不起，无法解析到时间信息"
+                    ]
+                }
+            },
+            "confirm": {}
+        }
+    ],
+    "generalNodes": [
+        {
+            "id": "jumpOutNode",
+            "title": "跳出",
+            "entry": {
+                "criteriaSet": {
+                    "operator": "OR",
+                    "items": [
+                        {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "left": "${node-出发地目的地.fromPlace}",
+                                    "operator": "N_EXIST"
+                                },
+                                {
+                                    "left": "${node-出发地目的地.toPlace}",
+                                    "operator": "N_EXIST"
+                                },
+                                {
+                                    "left": "",
+                                    "operator": "",
+                                    "type": "KEYWORD",
+                                    "value": "得到的",
+                                    "right": ""
+                                },
+                                {
+                                    "left": "${jumpOutChildNode.amount2}",
+                                    "operator": ""
+                                },
+                                {
+                                    "left": "",
+                                    "operator": "",
+                                    "type": "SPEECH_ACT",
+                                    "value": "j",
+                                    "right": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "canDrag": false,
+                "id": "entry",
+                "title": "场景入口"
+            },
+            "standardNodes": [
+                {
+                    "id": "jumpOutChildNode",
+                    "title": "跳出",
+                    "slotFinder": {
+                        "id": "金额解析器",
+                        "slots": [
+                            {
+                                "slotId": 882,
+                                "name": "amount1",
+                                "confirmType": "NONE"
+                            },
+                            {
+                                "slotId": 883,
+                                "name": "amount2",
+                                "confirmType": "NONE"
+                            }
+                        ]
+                    },
+                    "triggers": [
+                        {
+                            "criteriaSet": {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "operator": "AND",
+                                        "items": [
+                                            {
+                                                "left": "$eee",
+                                                "operator": "EXIST"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "nlTemplates": { 
+                                "options": [
+                                    ""
+                                ]
+                            },
+                            "strategicSlot": "$eee"
+                        }
+                    ],
+                    "terminations": [
+                        {
+                            "criteriaSet": {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "operator": "AND",
+                                        "items": [
+                                            {
+                                                "left": "",
+                                                "operator": "EXIST"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "nlTemplates": { 
+                                "options": [
+                                    ""
+                                ]
+                            }
+                        },
+                        {
+                            "criteriaSet": {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "operator": "AND",
+                                        "items": [
+                                            {
+                                                "left": "",
+                                                "operator": "EXIST"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "nlTemplates": { 
+                                "options": [
+                                    ""
+                                ]
+                            }
+                        }
+                    ],
+                    "failure": {
+                        "nlTemplates": {
+                            "options": [
+                                "ahaha "
+                            ]
+                        }
+                    },
+                    "confirm": {}
+                }
+            ]
+        },
+        {
+            "id": "task-finish",
+            "title": "结束",
+            "entry": {
+                "title": "dddddd场景入口",
+                "criteriaSet": {
+                    "operator": "OR",
+                    "items": [
+                        {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "left": "${node-出发地目的地.fromPlace}",
+                                    "operator": "N_EXIST"
+                                },
+                                {
+                                    "left": "${node-出发地目的地.toPlace}",
+                                    "operator": "N_EXIST"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "canDrag": false,
+                "id": "entry"
+            },
+            "standardNodes": [
+                {
+                    "id": "taskFinishedNode",
+                    "title": "任务结束",
+                    "slotFinder": {
+                        "name": "",
+                        "slots": []
+                    },
+                    "triggers": [
+                        {
+                            "nlTemplates": {
+                                "options": [
+                                    "好的，您的安装信息已受理，感谢您的来电，祝您生活愉快，再见。"
+                                ]
+                            }
+                        }
+                    ],
+                    "terminations": [
+                        {
+                            "criteriaSet": {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "operator": "AND",
+                                        "items": [
+                                            {
+                                                "left": "",
+                                                "operator": "EXIST"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "nlTemplates": { 
+                                "options": [
+                                    ""
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "human-service",
+            "title": "转人工",
+            "entry": {
+                "id": "entry",
+                "title": "场景入口",
+                "criteriaSet": {
+                    "operator": "AND",
+                    "items": [
+                        {
+                            "operator": "OR",
+                            "items": [
+                                {
+                                    "type": "INTENT",
+                                    "value": 22394
+                                },
+                                {
+                                    "type": "SPEECH_ACT",
+                                    "value": "帮我订一张机票"
+                                },
+                                {
+                                    "left": "mountTvNode.confirmed",
+                                    "operator": "NO"
+                                },
+                                {
+                                    "left": "mountTvNode._failTimes",
+                                    "operator": "GT",
+                                    "right": 1
+                                },
+                                {
+                                    "left": "tvSizeNode._failTimes",
+                                    "operator": "GT",
+                                    "right": 1
+                                },
+                                {
+                                    "left": "mountMannerNode._failTimes",
+                                    "operator": "GT",
+                                    "right": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "standardNodes": [
+                {
+                    "id": "confirmHumanServiceNode",
+                    "title": "确认是否转人工",
+                    "slotFinder": {
+                        "name": "",
+                        "slots": []
+                    },
+                    "triggers": [
+                        {
+                            "criteriaSet": {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "OR",
+                                        "items": [
+                                            {
+                                                "left": "confirmHumanServiceNode.confirmed",
+                                                "operator": "N_EXIST"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "nlTemplates": {
+                                "options": [
+                                    "您确认要转人工吗？"
+                                ]
+                            },
+                            "strategicSlot": "confirmHumanServiceNode.confirmed"
+                        }
+                    ]
+                },
+                {
+                    "id": "node-zhuanrengong",
+                    "title": "zhuanrengong",
+                    "slotFinder": {
+                        "name": "",
+                        "slots": []
+                    },
+                    "triggers": [
+                        {
+                            "criteriaSet": {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "operator": "AND",
+                                        "items": [
+                                            {
+                                                "left": "",
+                                                "operator": "EXIST"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "nlTemplates": {
+                                "options": [
+                                    ""
+                                ]
+                            },
+                            "strategicSlot": ""
+                        }
+                    ],
+                    "terminations": [
+                        {
+                            "criteriaSet": {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "operator": "AND",
+                                        "items": [
+                                            {
+                                                "left": "",
+                                                "operator": "EXIST"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "nlTemplates": { 
+                                "options": [
+                                    ""
+                                ]
+                            }
+                        }
+                    ],
+                    "failure": {
+                        "nlTemplates": { 
+                            "options": [
+                                ""
+                            ]
+                        }
+                    }
+                },
+                {
+                    "id": "humanServiceNode",
+                    "title": "转人工",
+                    "slotFinder": {
+                        "name": "",
+                        "slots": []
+                    },
+                    "triggers": [
+                        {
+                            "criteriaSet": {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "AND",
+                                        "items": [
+                                            {
+                                                "left": "confirmHumanServiceNode.confirmed",
+                                                "operator": "YES"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "nlTemplates": {
+                                "options": [
+                                    "正在为您转人工。"
+                                ]
+                            },
+                            "strategicSlot": "confirmHumanServiceNode.confirmed"
+                        }
+                    ]
+                }
+            ],
+            "nodeGroups": []
+        }
+    ],
+    "taskId": "0.6481258124789355",
+    "taskName": "ToDE场景测试",
+    "vars": [
+        {
+            "name": "name1",
+            "type": "String",
+            "defaultValue": ""
+        }
+    ]
+}

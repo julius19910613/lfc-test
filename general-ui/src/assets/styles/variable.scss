@@ -1,0 +1,537 @@
+/*** Color ***/
+$color-primary: #1875f0;
+$color-btn-primary: #3D4B63;
+$color-success: #00a699;
+$color-warning: #f68c6d;
+$color-error: #f76260;
+$color-icon: #65748d;
+$color-disabled: #f7f7f7;
+$color-bg-f7: #f7f7f7;
+$color-bg-fc: #fcfcfc;
+
+$color-font-normal: #666666;
+$color-font-active: #333333;
+$color-font-mark: #999999;
+$color-font-disabled: #cccccc;
+
+$color-borderline: #dbdbdb;
+$color-borderline-disabled: #e9e9e9;
+$color-borderline-hover: #4b4b64;
+
+$color-button: #4b4b64;
+$color-white: #ffffff;
+
+$color-select: #F4F4F4;
+$color-select-hover: #9393A2;
+
+$color-input-error: #FEF3F0;
+
+/*** Font ***/
+@mixin font-18px() {
+  font-size: 18px;
+  line-height: 24px;
+}
+@mixin font-16px() {
+  font-size: 16px;
+  line-height: 24px;
+}
+@mixin font-14px() {
+  font-size: 14px;
+  line-height: 20px;
+}
+@mixin font-12px(){
+  font-size: 12px;
+  line-height: 18px;
+}
+@mixin font-12px-line-height-28px() {
+  font-size: 12px;
+  line-height: 28px;
+}
+@mixin font-14px-line-height-28px() {
+  font-size: 14px;
+  line-height: 28px;
+}
+@mixin font-16px-line-height-28px() {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+$app-dft-font-size: 12px;
+$app-dft-font-family: PingFangHK-Regular, PingFangSC, 'Microsoft YaHei', 'Microsoft JhengHei';
+$app-active-color: #1875F0;
+$page-base: #EEEEEE;
+$page-menu-color: #333;
+
+$general-input-radius: 4px;
+$general-input-dft-border: #D9D9D9;
+
+
+$default-line-height: 30px;
+$line-element-between-width: 5px;
+
+$area-border-color: #D9D9D9;
+$deactive-color: #AAAAAA;
+$active-color: #1875F0;
+$error-color: #F25C62;
+$break-small: 1024px;
+
+$page-header-height: 40px;
+$page-header-color: #444444;
+
+$product-menu-width: 60px;
+
+$page-menu-width:170px;
+$page-menu-category-height: 50px;
+$page-menu-item-height: 30px;
+$page-menu-category-padding: 20px;
+
+
+$chart-bg: white;
+
+$table-header-background: #EEEEEE;
+$table-body-background: white;
+$table-body-hover-background: #F9F9F9;
+$table-border-color: #EEEEEE;
+$table-border-color-e9: #e9e9e9;
+$table-row-height: 50px;
+
+$button-blue-bg: #1875F0;
+$button-blue-text: white;
+$button-blue-hover: #3D80FF;
+$button-blue-active-text: #2b85e4;
+
+$input-border-radius: 4px;
+$input-border-color: #D9D9D9;
+
+$tool-tip-background: black;
+$tool-tip-text: white;
+
+$notification-background: #5cd29d;
+$notification-fail-background: #fa7a7a;
+$notification-border-radius: 2px;
+$notification-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+$notification-width: 300px;
+$notification-height: 36px;
+
+$tag-background-color: #444444;
+$tag-font-color: white;
+
+$error-color: #fa7a7a;
+$success-color: #5cd29d;
+
+$box-shadow: rgba(75, 75, 75, 0.2);
+
+@mixin auto-overflow() {
+  // overflow is for IE
+  overflow: auto;
+  // other browser support overlay will use overlay
+  overflow: overlay;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+@mixin auto-overflow-X() {
+  // overflow is for IE
+  overflow-x: auto;
+  // other browser support overlay will use overlay
+  overflow-x: overlay;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+@mixin auto-overflow-Y() {
+  // overflow is for IE
+  overflow-y: auto;
+  // other browser support overlay will use overlay
+  overflow-y: overlay;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+@mixin click-button() {
+  cursor: pointer;
+  user-select: none;
+}
+
+@mixin button-hover-opacity(){
+  &:hover {
+    opacity: 0.9;
+  }
+}
+@mixin button-active-background($color) {
+  &:active {
+    background: darken($color, 10%);
+  }
+}
+
+@mixin general-checkbox {
+  width: 14px;
+  height: 14px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin general-input {
+  background: white;
+  border-radius: $general-input-radius;
+  border: 1px solid $general-input-dft-border;
+  padding: 5px 8px;
+
+  &.error {
+    border: 1px solid $error-color;
+  }
+  &.focus {
+    outline: none;
+  }
+}
+
+@mixin general-select {
+  background: white;
+  display: block;
+  border-radius: $general-input-radius;
+  border: 1px solid $general-input-dft-border;
+  padding: 5px 8px;
+  appearance: none;
+  &.error {
+    border: 1px solid $error-color;
+  }
+  &.focus {
+    outline: none;
+  }
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 7px solid black;
+    position: absolute;
+    top: 16px;
+    left: 10px;
+  }
+}
+
+@mixin general-textarea {
+  word-break: break-all;
+  border: 1px solid black;
+  padding: 10px;
+  width: 300px;
+  resize: none;
+  height: 6em;
+  &.error {
+    border: 1px solid $error-color;
+  }
+  margin-left: 10px;
+}
+
+@mixin flex-row {
+  flex: 0 0 auto;
+  min-height: $table-row-height;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin err-msg {
+  color: $error-color;
+  font-weight: bold;
+}
+
+@mixin popForm($name-width) {
+  .block {
+    margin-top: 10px;
+  }
+  .spliter {
+    margin-top: 20px;
+    border-bottom: 1px solid $area-border-color;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    min-height: 40px;
+    & > .err-msg {
+      @include err-msg();
+      margin-left: 10px;
+    }
+  }
+  input {
+    @include general-input();
+  }
+  select {
+    @include general-select();
+  }
+  textarea {
+    @include general-textarea();
+  }
+  .row-name {
+    width: $name-width;
+  }
+  .row-val {
+    margin-left: 10px;
+  }
+  & > .err-msg {
+    @include err-msg();
+    margin-top: 10px;
+    margin-left: calc(#{$name-width} + 10px);
+  }
+}
+
+@mixin customScrollbar() {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 0, 0, 0.01);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    // border-left: 0px;
+    background-clip: padding-box;
+    background-color: #cccccc;
+    border-radius: 16px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #c3c3c3;
+  }
+
+  // IE
+  scrollbar-base-color: rgba(255, 255, 255, 0);
+  scrollbar-face-color: #cccccc;
+  scrollbar-3dlight-color: rgba(255, 255, 255, 0);
+  scrollbar-highlight-color: rgba(255, 255, 255, 0);
+  scrollbar-track-color: rgba(255, 255, 255, 0);
+  scrollbar-arrow-color: #cccccc;
+  scrollbar-shadow-color: rgba(255, 255, 255, 0);
+  scrollbar-dark-shadow-color: rgba(255, 255, 255, 0);
+}
+
+@mixin customXScrollbar() {
+  &::-webkit-scrollbar {
+    height: 8px;
+    background: rgba(255, 0, 0, 0.01);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-top: 0px;
+    background-clip: padding-box;
+    background-color: #cccccc;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #c3c3c3;
+  }
+}
+
+@mixin card() {
+  margin-top: 10px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(102,102,102, 0.08);
+
+  &.h-fill {
+    height: calc(100% - 20px);
+  }
+  &.h-half {
+    height: calc(50% - 10px);
+    &.last {
+      margin-bottom: 20px;
+    }
+  }
+  &.h-auto {
+    height: auto;
+  }
+  &.w-fill {
+    width: 100%;
+  }
+  &.w-half {
+    width: calc(50% - 10px);
+    margin-left: 20px;
+    &.first {
+      margin-left: 0;
+    }
+  }
+  &.w-auto {
+    width: auto;
+  }
+}
+
+// All z-index in page should smaller than 100
+@mixin floatMenu() {
+  z-index: 100;
+}
+
+// All component below the popup show smaller than 1000
+@mixin popWindow() {
+  z-index: 1000;
+}
+
+@mixin popWindowFloatMenu() {
+  z-index: 1100;
+}
+
+@mixin textEllipsis() {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-all;
+  overflow: hidden;
+}
+
+@mixin clickable-text() {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// 圆角 border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// 盒模型阴影 box-shadow
+@mixin shadow($x, $y, $blur, $spread, $color) {
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  -moz-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
+}
+
+// icon 图标默认样式
+@mixin icon($url, $width, $height) {
+  display: inline-block;
+  margin-right: 8px;
+  width: $width;
+  height: $height;
+  vertical-align: middle;
+  background: url($url) center center no-repeat;
+}
+
+@mixin box-sizing($property) {
+  -webkit-box-sizing: $property;
+  -ms-box-sizing: $property;
+  box-sizing: $property;
+}
+
+@mixin transition($property, $func, $duration) {
+  transition: $property $func $duration;
+  -moz-transition: $property $func $duration;
+  -o-transition: $property $func $duration;
+  -webkit-transition: $property $func $duration;
+}
+
+/*
+*   按钮 Button
+*/
+
+// 大号
+.btn-big{
+  @include box-sizing(box-border);
+  font-size: 14px;
+  height: 46px;
+  padding: 0px 32px;
+  text-align: center;
+}
+.btn-medium{
+  @include box-sizing(box-border);
+  font-size: 12px;
+  height: 40px;
+  padding: 0px 20px;
+  min-width: 80px;
+  text-align: center;
+}
+.btn-normal{
+  @include box-sizing(box-border);
+  font-size: 12px;
+  height: 32px;
+  padding: 0px 20px;
+  min-width: 80px;
+  text-align: center;
+}
+.btn-small{
+  @include box-sizing(box-border);
+  font-size: 12px;
+  height: 28px;
+  min-width: 70px;
+  text-align: center;
+}
+
+// 深蓝色底 白色字体
+.btn-dark-blue{
+  border-radius: 2px;
+  border: 1px solid $color-button;
+  font-weight: 400;
+  background-color: $color-button;
+  color: $color-white;
+  cursor: pointer;
+  &:hover {
+    background: #5D5D74;
+  }
+}
+// 白色底 灰色边框 灰色字体
+.btn-white-gray{
+  border-radius:2px;
+  border: 1px solid $color-borderline;
+  font-weight: 400;
+  background: $color-white;
+  color: $color-font-normal;
+  cursor: pointer;
+  &:hover {
+    background: $color-borderline-disabled;
+  }
+}
+// 蓝色底 白色字体
+.btn-blue{
+  background: $active-color;
+  color: $color-white;
+  border-radius: 2px;
+  font-weight: 400;
+  border: 1px solid $active-color;
+  cursor: pointer;
+}
+// 蓝色底 白色字体
+.btn-red{
+  background: $color-error;
+  color: $color-white;
+  border-radius: 2px;
+  font-weight: 400;
+  border: 1px solid $color-error;
+  cursor: pointer;
+  &:hover {
+    background: $color-error;
+  }
+}
+// 灰色底，白色字体
+.btn-disabled{
+  background: $color-font-disabled;
+  color: $color-white;
+  border-radius: 2px;
+  font-weight: 400;
+  border: 1px solid $color-white;
+  cursor: not-allowed !important;
+}
+
+.black-gray-border{
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  border-color: #4B4B64;
+  box-shadow: 0 0 0 2px rgba(75, 75, 75, 0.2);
+}

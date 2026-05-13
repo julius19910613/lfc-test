@@ -1,0 +1,83 @@
+stages:
+  - "检查base dockerfile"
+  - "检查module dockerfile"
+  - "本地build镜像"
+  - "镜像上传"
+  - "发送消息"
+
+check_base_dockerfile:
+  stage: "检查base dockerfile"
+  before_script:
+    - echo "start to check base dockerfile ..."
+    - pwd
+    - export
+  script:
+    - bash /home/deployer/auto_development/dccheck.sh ./docker_base/Dockerfile base
+  after_script:
+    - echo "check base dockerfile finished !"
+  tags:
+    - fenhuadeng-gitlab-runner
+  allow_failure: true
+
+check_module_dockerfile:
+  stage: "检查module dockerfile"
+  before_script:
+    - echo "start to check module dockerfile ..."
+    - export
+  script:
+    - bash /home/deployer/auto_development/dccheck.sh ./docker/Dockerfile
+  after_script:
+    - echo "check module dockerfile finished !"
+    - echo "aaa" >> $CI_PROJECT_DIR/aaa.txt
+  tags:
+    - fenhuadeng-gitlab-runner
+  allow_failure: true
+
+build_dockerfile:
+  stage: "本地build镜像"
+  before_script: 
+    - echo "start to build dockerfile ..."
+    - result=/home/deployer/auto_development/$CI_COMMIT_SHORT_SHA/result.env
+    - export
+  script:
+    - cd docker/
+    - bash ./build.sh
+    - |
+      echo "build_link=$CI_JOB_URL" >> $result
+      if [[ $? -ne 0 ]];then
+        echo "build_result=faied" >> $result
+      else
+        echo "build_result=succeeded" >> $result
+      fi
+  after_script:
+    - echo "build dockerfile finished"
+  tags:
+    - fenhuadeng-gitlab-runner
+  allow_failure: true
+
+push_image:
+  stage: "镜像上传"
+  before_script:
+    - echo "start push image ..."
+    - echo "tag 应包含 commit ID"
+    - export
+  script:
+    - bash -x /home/deployer/auto_development/push_image.sh ./docker/build.env
+  after_script:
+    - echo "push image finished !"
+  tags:
+    - fenhuadeng-gitlab-runner
+  allow_failure: true
+
+message:
+  stage: "发送消息"
+  before_script:
+    - echo "start message ..."
+    - export
+  script:
+    - python3 /home/deployer/auto_development/send_message.py https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=386f857c-833d-4557-b383-87a9b0be364b
+  after_script:
+    - echo "message finished !"
+  tags:
+    - fenhuadeng-gitlab-runner
+  allow_failure: false

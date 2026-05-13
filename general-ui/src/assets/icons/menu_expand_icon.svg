@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="7px" viewBox="0 0 10 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>收起</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M11.3392941,10.3724131 C11.6677021,10.7373109 12.2297375,10.7668917 12.5946353,10.4384837 C12.9595331,10.1100757 12.9891139,9.54804026 12.6607059,9.18314246 L8.66070591,4.73869802 C8.30760162,4.34635992 7.69239838,4.34635992 7.33929409,4.73869802 L3.33929409,9.18314246 C3.01088607,9.54804026 3.04046689,10.1100757 3.40536468,10.4384837 C3.77026248,10.7668917 4.33229789,10.7373109 4.66070591,10.3724131 L8,6.66208633 L11.3392941,10.3724131 Z" id="path-1"></path>
+    </defs>
+    <g id="机器人技能" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="发现技能" transform="translate(-156.000000, -488.000000)">
+            <g id="07重要選單/01側邊欄選單/02模型/02BFOP" transform="translate(0.000000, 50.000000)">
+                <g id="層級一-9" transform="translate(0.000000, 416.000000)">
+                    <g id="02圖標/04選單圖標/01關閉" transform="translate(153.000000, 18.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="直线" fill-rule="nonzero"></g>
+                        <g id="01色票/02圖標/00深色" mask="url(#mask-2)" fill="#65748D" fill-rule="evenodd">
+                            <rect id="深色" x="0" y="0" width="16" height="16" rx="4"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

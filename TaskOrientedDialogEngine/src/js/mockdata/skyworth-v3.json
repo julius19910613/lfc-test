@@ -1,0 +1,1298 @@
+{
+    "taskId": "skyworth",
+    "taskName": "创维安时达电视报装",
+    "published": true,
+    "version": "1.0",
+    "actions": [
+        {
+            "id": "queryAddress",
+            "name": "查询地址",
+            "type": "WEB_API_POST",
+            "url": "http://172.16.100.216:10828/adapt/skyworth/order/getAddressByPhoneNumber",
+            "method": null,
+            "body": "{\n  \"appId\": \"app-test\",\n  \"taskId\": \"\",\n  \"taskInfo\": { \n    \"mobile\":\"${phoneNumberNode.phone}\"\n  }\n}",
+            "result": [
+                {
+                    "name": "data.province",
+                    "type": "STRING",
+                    "newName": null
+                },
+                {
+                    "name": "data.city",
+                    "type": "STRING",
+                    "newName": null
+                },
+                {
+                    "name": "data.county",
+                    "type": "STRING",
+                    "newName": null
+                },
+                {
+                    "name": "data.town",
+                    "type": "STRING",
+                    "newName": null
+                },
+                {
+                    "name": "data.address",
+                    "type": "STRING",
+                    "newName": null
+                }
+            ]
+        },
+        {
+            "id": "placeOrder",
+            "name": "生成订单",
+            "type": "WEB_API_POST",
+            "url": "http://172.16.100.216:10828/adapt/skyworth/order/create",
+            "method": null,
+            "body": "{\n  \"appId\": \"app1\",\n  \"taskId\": \"skyworth\",\n  \"taskInfo\": {\n    \"tvSize\":\"${tvSizeNode.tvSize}\",\n    \"mountManner\":\"${mountMannerNode.mountManner}\",\n    \"userMobile\":\"${phoneNumberNode.phone}\",\n    \"username\":\"${personNameNode.personName}\",\n    \"province\": \"${addressNode.l1}\",\n    \"city\": \"${addressNode.l2}\",\n    \"county\":\"${addressNode.l3}\",\n    \"town\":\"${addressNode.l4}\",\n    \"detailedAddress\":\"${addressNode.detail}\",\n    \"serviceNo\":\"${serviceNo}\",\n   \"description\":\"${reqUrgentNode.reqUrgent}\"\n  }\n}",
+            "result": [
+                {
+                    "name": "status",
+                    "type": "STRING",
+                    "newName": null
+                }
+            ]
+        }
+    ],
+    "vars": [
+        {
+            "name": "serviceNo",
+            "type": "STRING",
+            "defaultValue": "test-serviceno-101"
+        },
+        {
+            "name": "webApiHost",
+            "type": "STRING",
+            "defaultValue": "localhost:10999"
+        },
+        {
+            "name": "caller_id_number",
+            "type": "STRING",
+            "defaultValue": "15012345678"
+        }
+    ],
+    "entry": {
+        "id": "entry",
+        "title": "开始触发",
+        "criteria": {
+            "operator": "OR",
+            "items": [
+                {
+                    "type": "INTENT",
+                    "value": "装电视"
+                },
+                {
+                    "type": "REG_EXP",
+                    "value": ".*报装.*"
+                }
+            ]
+        },
+        "nlTemplates": null
+    },
+    "generalNodes": [
+        {
+            "id": "human-service",
+            "title": "转人工",
+            "entry": {
+                "id": "entry",
+                "title": "场景入口",
+                "criteriaSet": {
+                    "operator": "OR",
+                    "items": [
+                        {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "NO",
+                                    "type": "NORMAL",
+                                    "left": "${mountTvNode.confirmed}",
+                                    "rightType": null,
+                                    "right": ""
+                                }
+                            ]
+                        },
+                        {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "GT",
+                                    "type": "NORMAL",
+                                    "left": "${mountTvNode.解析失败次数}",
+                                    "rightType": "VAL",
+                                    "right": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "GT",
+                                    "type": "NORMAL",
+                                    "left": "${tvSizeNode.解析失败次数}",
+                                    "rightType": "VAL",
+                                    "right": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "GT",
+                                    "type": "NORMAL",
+                                    "left": "${mountMannerNode.解析失败次数}",
+                                    "rightType": "VAL",
+                                    "right": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "GT",
+                                    "type": "NORMAL",
+                                    "left": "${tvSizeNode.核对失败次数}",
+                                    "rightType": "VAL",
+                                    "right": "2"
+                                }
+                            ]
+                        },
+                        {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "GT",
+                                    "type": "NORMAL",
+                                    "left": "${mountTvNode.无效输入次数}",
+                                    "rightType": "VAL",
+                                    "right": "2"
+                                }
+                            ]
+                        },
+                        {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "GT",
+                                    "type": "NORMAL",
+                                    "left": "${addressNode.解析失败次数}",
+                                    "rightType": "VAL",
+                                    "right": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "GT",
+                                    "type": "NORMAL",
+                                    "left": "${phoneNumberNode.无效输入次数}",
+                                    "rightType": "VAL",
+                                    "right": "1"
+                                }
+                            ]
+                        },
+                        {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "GT",
+                                    "type": "NORMAL",
+                                    "left": "${phoneNumberNode.核对失败次数}",
+                                    "rightType": "VAL",
+                                    "right": "2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "nodeGroups": null,
+            "standardNodes": [
+                {
+                    "id": "humanServiceNode",
+                    "title": "转人工",
+                    "slotFinder": {
+                        "id": "",
+                        "slots": []
+                    },
+                    "actions": null,
+                    "confirm": null,
+                    "triggers": null,
+                    "terminations": [
+                        {
+                            "targets": null,
+                            "criteriaSet": null,
+                            "nlTemplates": {
+                                "selector": null,
+                                "options": [
+                                    "正在为您转人工。"
+                                ]
+                            },
+                            "exitType": "EXIT_TASK"
+                        }
+                    ],
+                    "failure": null,
+                    "args": null,
+                    "botActType": null
+                }
+            ]
+        },
+        {
+            "id": "task-finish",
+            "title": "退出",
+            "entry": {
+                "id": "entry",
+                "title": "场景入口",
+                "criteriaSet": {
+                    "operator": "AND",
+                    "items": []
+                }
+            },
+            "nodeGroups": null,
+            "standardNodes": [
+                {
+                    "id": "finishNode",
+                    "title": "任务结束",
+                    "slotFinder": {
+                        "id": "",
+                        "slots": []
+                    },
+                    "actions": [
+                        {
+                            "actionId": "placeOrder",
+                            "execPoint": "INIT",
+                            "pos": 0
+                        }
+                    ],
+                    "confirm": null,
+                    "triggers": null,
+                    "terminations": [
+                        {
+                            "targets": null,
+                            "criteriaSet": {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "operator": "AND",
+                                        "items": [
+                                            {
+                                                "operator": "NE",
+                                                "type": null,
+                                                "left": "${status}",
+                                                "rightType": "VAL",
+                                                "right": "1"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "nlTemplates": {
+                                "selector": null,
+                                "options": [
+                                    "对不起，由于未知故障，订单没有成功，再见。"
+                                ]
+                            },
+                            "exitType": "EXIT_TASK"
+                        },
+                        {
+                            "targets": null,
+                            "criteriaSet": {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "operator": "AND",
+                                        "items": [
+                                            {
+                                                "operator": "EQ",
+                                                "type": null,
+                                                "left": "${status}",
+                                                "rightType": "VAL",
+                                                "right": "1"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "nlTemplates": {
+                                "selector": null,
+                                "options": [
+                                    "好的，您的安装信息已经受理，请您保持电话畅通，早九点到晚六点师傅接单后会在1小时内与您电话联系确认上门时间，其它时间段次日九点半联系，安装收费标准也会提前和您电话确认，感谢您的来电，再见。"
+                                ]
+                            },
+                            "exitType": "EXIT_TASK"
+                        }
+                    ],
+                    "failure": null,
+                    "args": null,
+                    "botActType": null
+                }
+            ]
+        }
+    ],
+    "standardNodes": [
+        {
+            "id": "mountTvNode",
+            "title": "是否安装电视",
+            "slotFinder": {
+                "id": "confirm",
+                "slots": [
+                    {
+                        "name": "confirmed",
+                        "var": "",
+                        "confirmType": "NONE"
+                    }
+                ]
+            },
+            "actions": null,
+            "confirm": null,
+            "triggers": [
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "N_EXIST",
+                                        "type": null,
+                                        "left": "${mountTvNode.confirmed}",
+                                        "rightType": null,
+                                        "right": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            "您好，很高兴为您服务！请问是需要安装电视吗？"
+                        ]
+                    }
+                }
+            ],
+            "terminations": [],
+            "failure": {
+                "nlTemplates": {
+                    "selector": null,
+                    "options": [
+                        "不好意思，请尽量使用普通话。请问是需要安装电视吗？"
+                    ]
+                }
+            },
+            "args": null
+        },
+        {
+            "id": "tvSizeNode",
+            "title": "电视尺寸",
+            "slotFinder": {
+                "id": "tv_size",
+                "slots": [
+                    {
+                        "name": "tvSize",
+                        "var": "",
+                        "confirmType": "NONE"
+                    }
+                ]
+            },
+            "actions": null,
+            "confirm": null,
+            "triggers": [
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "N_EXIST",
+                                        "type": null,
+                                        "left": "${tvSizeNode.tvSize}",
+                                        "rightType": null,
+                                        "right": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            "请问您的电视机是多大尺寸的，例如55寸或不清楚尺寸？"
+                        ]
+                    }
+                }
+            ],
+            "terminations": [
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "UNKNOWN",
+                                        "type": null,
+                                        "left": "${tvSizeNode.tvSize}",
+                                        "rightType": "VAL",
+                                        "right": "UNK"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            "好的，师傅上门前会再跟您核实尺寸的。"
+                        ]
+                    },
+                    "exitType": null
+                },
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "EXIST",
+                                        "type": null,
+                                        "left": "${tvSizeNode.tvSize}",
+                                        "rightType": null,
+                                        "right": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": null,
+                    "exitType": null
+                }
+            ],
+            "failure": null,
+            "args": null
+        },
+        {
+            "id": "mountMannerNode",
+            "title": "安装方式",
+            "slotFinder": {
+                "id": "mount_manner",
+                "slots": [
+                    {
+                        "name": "mountManner",
+                        "var": "",
+                        "confirmType": "RIGHT_NOW"
+                    }
+                ]
+            },
+            "actions": null,
+            "confirm": {
+                "options": [
+                    {
+                        "targets": [
+                            "mountMannerNode.mountManner"
+                        ],
+                        "criteriaSet": {
+                            "operator": "OR",
+                            "items": [
+                                {
+                                    "operator": "AND",
+                                    "items": [
+                                        {
+                                            "operator": "EQ",
+                                            "type": null,
+                                            "left": "${mountMannerNode.mountManner}",
+                                            "rightType": "VAL",
+                                            "right": "挂在墙上"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "selector": null,
+                            "options": [
+                                "好的，具体收费和电视尺寸大小有关，师傅会严格按照公司收费标准提前跟您确认。可以吗？"
+                            ]
+                        }
+                    },
+                    {
+                        "targets": [
+                            "mountMannerNode.mountManner"
+                        ],
+                        "criteriaSet": {
+                            "operator": "OR",
+                            "items": [
+                                {
+                                    "operator": "AND",
+                                    "items": [
+                                        {
+                                            "operator": "EQ",
+                                            "type": null,
+                                            "left": "${mountMannerNode.mountManner}",
+                                            "rightType": "VAL",
+                                            "right": "吊顶安装"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "selector": null,
+                            "options": [
+                                "吊装需要您自己提供安装条件，是否能安装由师傅跟您联系确认，可以吗？"
+                            ]
+                        }
+                    },
+                    {
+                        "targets": [
+                            "mountMannerNode.mountManner"
+                        ],
+                        "criteriaSet": {
+                            "operator": "OR",
+                            "items": [
+                                {
+                                    "operator": "AND",
+                                    "items": [
+                                        {
+                                            "operator": "EQ",
+                                            "type": null,
+                                            "left": "${mountMannerNode.mountManner}",
+                                            "rightType": "VAL",
+                                            "right": "放在桌上"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "selector": null,
+                            "options": [
+                                "标配底座上门安装，师傅会收取40元一台，底座安装较为简单，建议您尝试按照说明书自己安装，可以吗？"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "triggers": [
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "N_EXIST",
+                                        "type": null,
+                                        "left": "${mountMannerNode.mountManner}",
+                                        "rightType": null,
+                                        "right": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            "请问您是想要挂在墙上还是放桌子上？"
+                        ]
+                    }
+                },
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "UNKNOWN",
+                                        "type": null,
+                                        "left": "${mountMannerNode.mountManner}",
+                                        "rightType": null,
+                                        "right": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            "请问您是想要挂在墙上，放桌子上，还是吊顶安装？"
+                        ]
+                    }
+                }
+            ],
+            "terminations": [
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "EQ",
+                                        "type": null,
+                                        "left": "${mountMannerNode.mountManner}",
+                                        "rightType": "VAL",
+                                        "right": "自己安装"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            "好的，那您有需要的话再与我们联系，再见。"
+                        ]
+                    },
+                    "exitType": "EXIT_TASK"
+                },
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "EXIST",
+                                        "type": null,
+                                        "left": "${mountMannerNode.mountManner}",
+                                        "rightType": null,
+                                        "right": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            ""
+                        ]
+                    },
+                    "exitType": null
+                }
+            ],
+            "failure": {
+                "nlTemplates": {
+                    "selector": null,
+                    "options": [
+                        "请问您是想要挂在墙上，放桌子上，还是吊顶安装？"
+                    ]
+                }
+            },
+            "args": null
+        },
+        {
+            "id": "phoneNumberNode",
+            "title": "联系电话",
+            "slotFinder": {
+                "id": "phone",
+                "slots": [
+                    {
+                        "name": "phone",
+                        "var": "caller_id_number",
+                        "confirmType": "RIGHT_NOW"
+                    }
+                ]
+            },
+            "actions": [
+                {
+                    "actionId": "queryAddress",
+                    "execPoint": "TERMINATION",
+                    "pos": 0
+                }
+            ],
+            "confirm": {
+                "options": [
+                    {
+                        "targets": [
+                            "phoneNumberNode.phone"
+                        ],
+                        "criteriaSet": {
+                            "operator": "OR",
+                            "items": [
+                                {
+                                    "operator": "AND",
+                                    "items": [
+                                        {
+                                            "operator": "FROM_CTX",
+                                            "type": null,
+                                            "left": "${phoneNumberNode.phone}",
+                                            "rightType": null,
+                                            "right": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "selector": null,
+                            "options": [
+                                "好的，请问师傅上门就是联系这个来电号码${phoneNumberNode.phone}吗？"
+                            ]
+                        }
+                    },
+                    {
+                        "targets": [
+                            "phoneNumberNode.phone"
+                        ],
+                        "criteriaSet": {
+                            "operator": "OR",
+                            "items": [
+                                {
+                                    "operator": "AND",
+                                    "items": [
+                                        {
+                                            "operator": "FROM_USER",
+                                            "type": null,
+                                            "left": "${phoneNumberNode.phone}",
+                                            "rightType": null,
+                                            "right": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "selector": null,
+                            "options": [
+                                "再次核对一下，请问师傅上门是联系电话${phoneNumberNode.phone}吗？"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "triggers": [
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "INVALID",
+                                        "type": null,
+                                        "left": "${phoneNumberNode.phone}",
+                                        "rightType": null,
+                                        "right": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            "您输入的号码有误，请重新输入，请在拨号键盘上输入手机号或者带区号的座机号，按井号键结束。<<DTMF:DTMF>>"
+                        ]
+                    }
+                },
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "N_EXIST",
+                                        "type": null,
+                                        "left": "${phoneNumberNode.phone}",
+                                        "rightType": null,
+                                        "right": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            "请在拨号键盘上输入手机号或者带区号的座机号，按井号键结束。<<DTMF:DTMF>>"
+                        ]
+                    }
+                }
+            ],
+            "terminations": null,
+            "failure": null,
+            "args": null
+        },
+        {
+            "id": "personNameNode",
+            "title": "人名",
+            "slotFinder": {
+                "id": "person-name",
+                "slots": [
+                    {
+                        "name": "personName",
+                        "var": "",
+                        "confirmType": "NONE"
+                    }
+                ]
+            },
+            "actions": null,
+            "confirm": null,
+            "triggers": [
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "N_EXIST",
+                                        "type": null,
+                                        "left": "${personNameNode.personName}",
+                                        "rightType": null,
+                                        "right": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            "请问您贵姓？"
+                        ]
+                    }
+                }
+            ],
+            "terminations": [
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "GT",
+                                        "type": null,
+                                        "left": "${personNameNode.触发次数}",
+                                        "rightType": "VAL",
+                                        "right": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": null,
+                    "exitType": null
+                }
+            ],
+            "failure": null,
+            "args": null
+        },
+        {
+            "id": "addressNode",
+            "title": "安装地址",
+            "slotFinder": {
+                "id": "address4",
+                "slots": [
+                    {
+                        "name": "address",
+                        "var": "",
+                        "confirmType": "RIGHT_NOW"
+                    },
+                    {
+                        "name": "l1",
+                        "var": "data.province",
+                        "confirmType": "NONE"
+                    },
+                    {
+                        "name": "l2",
+                        "var": "data.city",
+                        "confirmType": "NONE"
+                    },
+                    {
+                        "name": "l3",
+                        "var": "data.county",
+                        "confirmType": "NONE"
+                    },
+                    {
+                        "name": "l4",
+                        "var": "data.town",
+                        "confirmType": "NONE"
+                    },
+                    {
+                        "name": "detail",
+                        "var": "",
+                        "confirmType": "NONE"
+                    }
+                ]
+            },
+            "actions": [],
+            "confirm": {
+                "options": [
+                    {
+                        "targets": [
+                            "address"
+                        ],
+                        "criteriaSet": {
+                            "operator": "OR",
+                            "items": [
+                                {
+                                    "operator": "AND",
+                                    "items": [
+                                        {
+                                            "operator": "FROM_CTX",
+                                            "type": null,
+                                            "left": "${addressNode.address}",
+                                            "rightType": null,
+                                            "right": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "selector": null,
+                            "options": [
+                                "请问您的详细安装地址是${addressNode.address}吗？"
+                            ]
+                        }
+                    },
+                    {
+                        "targets": [
+                            "address"
+                        ],
+                        "criteriaSet": {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "OR",
+                                    "items": [
+                                        {
+                                            "operator": "FROM_USER",
+                                            "type": null,
+                                            "left": "${addressNode.address}",
+                                            "rightType": null,
+                                            "right": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "selector": null,
+                            "options": [
+                                "好的，核对一下您是在${addressNode.l1}${addressNode.l2}${addressNode.l3}，对吗？"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "triggers": [
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "N_EXIST",
+                                        "type": null,
+                                        "left": "${addressNode.l1}",
+                                        "rightType": null,
+                                        "right": null
+                                    }
+                                ]
+                            },
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "N_EXIST",
+                                        "type": null,
+                                        "left": "${addressNode.l2}",
+                                        "rightType": null,
+                                        "right": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            "请问您的详细地址是哪里，比如广东省深圳市宝安区石岩街道温馨小区5号楼1单元302<<VAD:3000>>"
+                        ]
+                    }
+                },
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "N_EXIST",
+                                        "type": null,
+                                        "left": "${addressNode.l3}",
+                                        "rightType": null,
+                                        "right": null
+                                    },
+                                    {
+                                        "operator": "EXIST",
+                                        "type": null,
+                                        "left": "${addressNode.l1}",
+                                        "rightType": null,
+                                        "right": ""
+                                    },
+                                    {
+                                        "operator": "EXIST",
+                                        "type": null,
+                                        "left": "${addressNode.l2}",
+                                        "rightType": null,
+                                        "right": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            "请问是${addressNode.l1}${addressNode.l2}的什么区或什么县？"
+                        ]
+                    }
+                }
+            ],
+            "terminations": [
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "EXIST",
+                                        "type": null,
+                                        "left": "${addressNode.l1}",
+                                        "rightType": null,
+                                        "right": null
+                                    },
+                                    {
+                                        "operator": "EXIST",
+                                        "type": null,
+                                        "left": "${addressNode.l2}",
+                                        "rightType": null,
+                                        "right": ""
+                                    },
+                                    {
+                                        "operator": "EXIST",
+                                        "type": null,
+                                        "left": "${addressNode.l3}",
+                                        "rightType": null,
+                                        "right": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            ""
+                        ]
+                    },
+                    "exitType": null
+                }
+            ],
+            "failure": null,
+            "args": null
+        },
+        {
+            "id": "node-结束",
+            "title": "结束",
+            "slotFinder": {
+                "id": "",
+                "slots": []
+            },
+            "actions": [
+                {
+                    "actionId": "placeOrder",
+                    "execPoint": "FIRST_TRIGGER",
+                    "pos": 0
+                }
+            ],
+            "confirm": null,
+            "triggers": [
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "DONE",
+                                        "type": "NORMAL",
+                                        "left": "${tvSizeNode.tvSize}",
+                                        "rightType": null,
+                                        "right": null
+                                    },
+                                    {
+                                        "operator": "DONE",
+                                        "type": "NORMAL",
+                                        "left": "${mountMannerNode.mountManner}",
+                                        "rightType": null,
+                                        "right": null
+                                    },
+                                    {
+                                        "operator": "DONE",
+                                        "type": "NORMAL",
+                                        "left": "${phoneNumberNode.phone}",
+                                        "rightType": null,
+                                        "right": null
+                                    },
+                                    {
+                                        "operator": "DONE",
+                                        "type": "NORMAL",
+                                        "left": "${personNameNode.personName}",
+                                        "rightType": null,
+                                        "right": null
+                                    },
+                                    {
+                                        "operator": "DONE",
+                                        "type": "NORMAL",
+                                        "left": "${addressNode.address}",
+                                        "rightType": null,
+                                        "right": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            ""
+                        ]
+                    }
+                }
+            ],
+            "terminations": [
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "EQ",
+                                        "type": null,
+                                        "left": "${status}",
+                                        "rightType": "VAL",
+                                        "right": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            "好的，您的安装信息已经受理，请您保持电话畅通，早九点到晚六点师傅接单后会在1小时内与您电话联系确认上门时间，其它时间段次日九点半联系，安装收费标准也会提前和您电话确认，感谢您的来电，再见！"
+                        ]
+                    },
+                    "exitType": "EXIT_TASK"
+                },
+                {
+                    "targets": null,
+                    "criteriaSet": {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "operator": "EXIST",
+                                        "type": null,
+                                        "left": "${status}",
+                                        "rightType": null,
+                                        "right": ""
+                                    },
+                                    {
+                                        "operator": "NE",
+                                        "type": null,
+                                        "left": "${status}",
+                                        "rightType": "VAL",
+                                        "right": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "selector": null,
+                        "options": [
+                            "正在为您转人工。。。"
+                        ]
+                    },
+                    "exitType": "EXIT_TASK"
+                }
+            ],
+            "failure": {
+                "nlTemplates": {
+                    "selector": null,
+                    "options": [
+                        ""
+                    ]
+                }
+            },
+            "args": null
+        }
+    ],
+    "nodeGroups": [],
+    "taskFinders": {
+        "finderNodes": [
+            {
+                "id": "reqUrgentNode",
+                "finderId": "req_urgent"
+            }
+        ]
+    }
+}

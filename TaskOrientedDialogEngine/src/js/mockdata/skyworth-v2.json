@@ -1,0 +1,729 @@
+{
+    "taskId": "skyworth",
+    "taskName": "创维安时达",
+    "published": false,
+    "version": "1.0",
+    "actions": [
+        {
+            "id": "action1",
+            "name": "设置地址",
+            "type": "SET_SLOT_VALUE",
+            "config": {
+                "sourceType":"HTTP_GET",
+                "url": "http://localhost:10999/tde/test/echo?phone=${phoneNumberNode.phone}&txt=北京市海淀区西二旗枫叶小区1号楼"
+            }
+        },
+        {
+            "id": "setPhone",
+            "name": "设置电话号码",
+            "type": "SET_SLOT_VALUE",
+            "config": {
+                "sourceType":"VARS",
+                "varName": "phone"
+            }
+        }
+    ],
+    "vars": [
+        {
+            "name": "name1",
+            "type": "STRING",
+            "defaultValue": ""
+        }
+    ],
+    "entry": {
+        "id": "entry",
+        "title": "开始触发",
+        "criteria": {
+            "operator": "AND",
+            "items": [
+                {
+                    "type": "INTENT",
+                    "value": "报装"
+                }
+            ]
+        },
+        "nlTemplates": {
+            "options": [
+                "您好！很高兴为您服务！"
+            ]
+        }
+    },
+    "nodeGroups": [
+        {
+            "id": "group1",
+            "title": "基本信息获取",
+            "nodes": [
+                "phoneNumberNode",
+                "personNameNode"
+            ]
+        }
+    ],
+    "generalNodes":[
+        {
+            "id": "jumpOutNode",
+            "title": "跳出",
+            "botActType": "jump-out",
+            "entry":{
+                "criteriaSet": {
+                }
+            },
+            "standardNodes":[
+                {
+                    "id": "jumpOutChildNode",
+                    "title": "跳出",
+                    "slotFinder": {
+                        "name": "",
+                        "slots": []
+                    },
+                    "triggers": [
+                        {
+                            "nlTemplates": {
+                                "options": [
+                                    "很抱歉没帮到您，感谢您的来电，祝您生活愉快，再见。"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "task-finish",
+            "title": "结束",
+            "botActType": "task-finished",
+            "entry":{
+                "criteriaSet": {
+                }
+            },
+            "standardNodes":[
+                {
+                    "id": "taskFinishedNode",
+                    "title": "任务结束",
+                    "slotFinder": {
+                        "name": "",
+                        "slots": []
+                    },
+                    "triggers": [
+                        {
+                            "nlTemplates": {
+                                "options": [
+                                    "好的，您的安装信息已受理，感谢您的来电，祝您生活愉快，再见。"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+        "id": "human-service",
+        "title": "转人工",
+        "botActType": "on-req-human-service",
+        "entry":{
+            "criteriaSet": {
+                "operator": "AND",
+                "items": [
+                    {
+                        "operator": "OR",
+                        "items": [
+                            {
+                                "left": "mountTvNode.confirmed",
+                                "operator": "NO"
+                            },
+                            {
+                                "left": "mountTvNode._failTimes",
+                                "operator": "GT",
+                                "right": 1
+                            },
+                            {
+                                "left": "tvSizeNode._failTimes",
+                                "operator": "GT",
+                                "right": 1
+                            },
+                            {
+                                "left": "mountMannerNode._failTimes",
+                                "operator": "GT",
+                                "right": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "standardNodes":[
+            {
+                "id": "confirmHumanServiceNode",
+                "title": "确认是否转人工",
+                "slotFinderName": "confirm",
+                "triggers": [
+                    {
+                        "criteriaSet": {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "OR",
+                                    "items": [
+                                        {
+                                            "left": "confirmHumanServiceNode.confirmed",
+                                            "operator": "N_EXIST"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "options": [
+                                "您确认要转人工吗？"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "humanServiceNode",
+                "title": "转人工",
+                "slotFinderName": null,
+                "triggers": [
+                    {
+                        "criteriaSet": {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "AND",
+                                    "items": [
+                                        {
+                                            "left": "confirmHumanServiceNode.confirmed",
+                                            "operator": "YES"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "options": [
+                                "正在为您转人工。"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }],
+    "standardNodes": [
+        {
+            "id": "mountTvNode",
+            "title": "是否安装电视",
+            "slotFinderName": "confirm",
+            "triggers": [
+                {
+                    "criteriaSet": {
+                        "operator": "AND",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "left": "mountTvNode.confirmed",
+                                        "operator": "N_EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "options": [
+                            "请问是需要安装电视吗？"
+                        ]
+                    }
+                }
+            ],
+            "terminations": [],
+            "failure": {
+                "nlTemplates": {
+                    "options": [
+                        "不好意思，请尽量使用普通话。请问是需要安装电视吗？"
+                    ]
+                },
+                "maxTimes": 5,
+                "exceedMaxTimes": {
+                    "action": "EXIT_NODE",
+                    "nlTemplates":{
+                        "enabled" : true,
+                        "options": [
+                            "打扰了，再见！"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "id": "tvSizeNode",
+            "title": "电视尺寸",
+            "slotFinderName": "tv_size",
+            "triggers": [
+                {
+                    "criteriaSet": {
+                        "operator": "AND",
+                        "items": [
+                            {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "left": "tvSizeNode.tvSize",
+                                        "operator": "N_EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "options": [
+                            "请问您的电视是多大尺寸的？"
+                        ]
+                    }
+                }
+            ],
+            "terminations": [
+                {
+                    "criteriaSet": {
+                        "operator": "AND",
+                        "items": [
+                            {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "left": "tvSizeNode.tvSize",
+                                        "operator": "EQ",
+                                        "right":"unknown"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "enabled": true,
+                        "options": [
+                            "好的，师傅上门前会再更您核实尺寸的。"
+                        ]
+                    }
+                },
+                {
+                    "criteriaSet": {
+                        "operator": "AND",
+                        "items": [
+                            {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "left": "tvSizeNode._reqTimes",
+                                        "operator": "GT",
+                                        "right": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "mountMannerNode",
+            "title": "安装方式",
+            "slotFinderName": "mount_manner",
+            "triggers": [
+                {
+                    "criteriaSet": {
+                        "operator": "AND",
+                        "items": [
+                            {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "left": "mountMannerNode.mountManner",
+                                        "operator": "N_EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "options": [
+                            "请问你是想挂在墙上还是放桌子上？"
+                        ]
+                    }
+                }
+            ],
+            "confirm": {
+                "type": "RIGHT_NOW",
+                "options": [
+                    {
+                        "targets": [
+                            "mountMannerNode.mountManner"
+                        ],
+                        "criteriaSet": {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "OR",
+                                    "items": [
+                                        {
+                                            "left": "mountMannerNode.mountManner",
+                                            "operator": "EQ",
+                                            "right": "wall"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "options": [
+                                "好的，具体收费和电视尺寸大小有关，师傅会严格按照公司收费标准提前跟您确认。可以吗？"
+                            ]
+                        }
+                    },
+                    {
+                        "targets": [
+                            "mountMannerNode.mountManner"
+                        ],
+                        "criteriaSet": {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "OR",
+                                    "items": [
+                                        {
+                                            "left": "mountMannerNode.mountManner",
+                                            "operator": "EQ",
+                                            "right": "ceil"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "options": [
+                                "吊装需要您自己提供安装条件，是否能安装由师傅跟您联系确认，可以吗？"
+                            ]
+                        }
+                    },
+                    {
+                        "targets": [
+                            "mountMannerNode.mountManner"
+                        ],
+                        "criteriaSet": {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "OR",
+                                    "items": [
+                                        {
+                                            "left": "mountMannerNode.mountManner",
+                                            "operator": "EQ",
+                                            "right": "table"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "options": [
+                                "标配底座上门安装，师傅会收取40元一台，底座安装较为简单，建议您尝试按照说明书自己安装，可以吗？"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "failure": {
+                "nlTemplates": {
+                    "options": [
+                        "请问你是想挂在墙上，放桌子上，还是吊顶安装？"
+                    ]
+                },
+                "maxTimes": 1,
+                "exceedMaxTimes": {
+                    "action": "EXIT_NODE",
+                    "nlTemplates":{
+                        "enabled" : true,
+                        "options": [
+                            "打扰了，再见！"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "id": "phoneNumberNode",
+            "title": "联系电话",
+            "slotFinderName": "phone",
+            "preActions": [
+                {
+                    "actionId": "setPhone"
+                }
+            ],
+            "triggers": [
+                {
+                    "criteriaSet": {
+                        "operator": "AND",
+                        "items": [
+                            {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "left": "phoneNumberNode.phone",
+                                        "operator": "N_EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "options": [
+                            "请您在拨号键盘上输入手机号或者带区号的座机号码。"
+                        ]
+                    }
+                },
+                {
+                    "criteriaSet": {
+                        "operator": "AND",
+                        "items": [
+                            {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "left": "phoneNumberNode.phone",
+                                        "operator": "INVALID"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "options": [
+                            "号码有误，请重输。"
+                        ]
+                    }
+                }
+            ],
+            "confirm": {
+                "type": "RIGHT_NOW",
+                "options": [
+                    {
+                        "criteriaSet": {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "OR",
+                                    "items": [
+                                        {
+                                            "left": "phoneNumberNode.phone",
+                                            "operator": "FROM_CTX"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "options": [
+                                "是这个来电号码${phoneNumberNode.phone}吗？"
+                            ]
+                        }
+                    },
+                    {
+                        "criteriaSet": {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "OR",
+                                    "items": [
+                                        {
+                                            "left": "phoneNumberNode.phone",
+                                            "operator": "FROM_USER"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "options": [
+                                "再次核对一下，来电号码是${phoneNumberNode.phone}吗？"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "failure": {
+                "nlTemplates": {
+                    "options": [
+                        "请问你是想挂在墙上，放桌子上，还是吊顶安装？"
+                    ]
+                },
+                "maxTimes": 1,
+                "exceedMaxTimes": {
+                    "action": "EXIT_NODE",
+                    "nlTemplates":{
+                        "enabled" : true,
+                        "options": [
+                            "打扰了，再见！"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "id": "personNameNode",
+            "title": "人名",
+            "slotFinderName": "person-name",
+            "triggers": [
+                {
+                    "criteriaSet": {
+                        "operator": "AND",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "left": "personNameNode.personName",
+                                        "operator": "N_EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "options": [
+                            "请问您贵姓？"
+                        ]
+                    }
+                }
+            ],
+            "terminations": [
+                {
+                    "criteriaSet": {
+                        "operator": "AND",
+                        "items": [
+                            {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "left": "personNameNode._reqTimes",
+                                        "operator": "GT",
+                                        "right": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "addressNode",
+            "title": "安装地址",
+            "slotFinderName": "mailing_address",
+            "preActions": [
+                {
+                    "actionId": "action1"
+                }
+            ],
+            "triggers": [
+                {
+                    "criteriaSet": {
+                        "operator": "AND",
+                        "items": [
+                            {
+                                "operator": "OR",
+                                "items": [
+                                    {
+                                        "left": "addressNode.address",
+                                        "operator": "N_EXIST"
+                                    },
+                                    {
+                                        "left": "addressNode.l1",
+                                        "operator": "N_EXIST"
+                                    },
+                                    {
+                                        "left": "addressNode.l2",
+                                        "operator": "N_EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "options": [
+                            "请问您的详细地址是哪里？"
+                        ]
+                    }
+                },
+                {
+                    "criteriaSet": {
+                        "operator": "AND",
+                        "items": [
+                            {
+                                "operator": "AND",
+                                "items": [
+                                    {
+                                        "left": "addressNode.l3",
+                                        "operator": "N_EXIST"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "nlTemplates": {
+                        "options": [
+                            "请问是${addressNode}的什么区或什么县？"
+                        ]
+                    }
+                }
+            ],
+            "confirm": {
+                "type": "RIGHT_NOW",
+                "options": [
+                    {
+                        "criteriaSet": {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "OR",
+                                    "items": [
+                                        {
+                                            "left": "addressNode.address",
+                                            "operator": "FROM_CTX"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "options": [
+                                "请问您的详细安装地址是${addressNode.address}吗？"
+                            ]
+                        }
+                    },
+                    {
+                        "criteriaSet": {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "operator": "OR",
+                                    "items": [
+                                        {
+                                            "left": "addressNode.phoneNum",
+                                            "operator": "FROM_USER"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "nlTemplates": {
+                            "options": [
+                                "好的，核对一下您是在${addressNode.l1}省${addressNode.l2}市${addressNode.l3}区，对吗？"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

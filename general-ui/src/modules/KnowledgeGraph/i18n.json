@@ -1,0 +1,28 @@
+{
+  "zh-cn":{
+    "i18n":{
+      "notify": {
+        "repeat_entity_name": "组{one}与组{two} 添加的实体'{name}'重复, 请检查",
+        "interface_param_empty":"组{one}-{two} 接口类型数据不能为空",
+        "url_empty":"组{one} 接口类型参数Url不能为空",
+        "param_type_empty":"组{one} 参数类型不能为空",
+        "entity_empty":"组{one} 实体添加不能为空",
+        "property_name_empty":"属性名不能为空",
+        "repeat_entity_name_2":"选择的实体'{name}'已经被使用，请重新选择"
+      }
+    }
+  },
+  "zh-tw":{
+    "i18n":{
+      "notify": {
+        "repeat_entity_name": "組{one}與組{two} 添加的實體'{name}'重復, 請檢查",
+        "interface_param_empty":"組{one}-{two} 接口類型數據不能為空",
+        "url_empty":"組{one} 接口類型參數Url不能為空",
+        "param_type_empty":"組{one} 參數類型不能為空",
+        "entity_empty":"組{one} 實體添加不能為空",
+        "property_name_empty":"屬性名不能為空",
+        "repeat_entity_name_2":"選擇的實體'{name}'已經被使用，請重新選擇"
+      }
+    }
+  }
+}

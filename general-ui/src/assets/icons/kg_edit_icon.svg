@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>编辑</title>
+    <desc>Created with Sketch.</desc>
+    <g id="一期" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1_2实体关系" transform="translate(-396.000000, -142.000000)" fill-rule="nonzero">
+            <g id="分组-3" transform="translate(200.000000, 134.000000)">
+                <g id="分组-4" transform="translate(20.000000, 8.000000)">
+                    <g id="编辑" transform="translate(176.000000, 0.000000)">
+                        <circle id="椭圆形" fill="#EEEEEE" cx="12" cy="12" r="12"></circle>
+                        <path d="M9.93205081,4.42820323 L13.5320508,4.42820323 C13.6425078,4.42820323 13.7320508,4.51774628 13.7320508,4.62820323 L13.7320508,16.3809896 C13.7320508,16.4120387 13.7248218,16.4426613 13.7109362,16.4704324 L11.8214935,20.2493178 C11.7967946,20.2987156 11.7367273,20.3187381 11.6873294,20.2940392 C11.6679767,20.2843628 11.6522845,20.2686705 11.6426081,20.2493178 L9.75316537,16.4704324 C9.73927983,16.4426613 9.73205081,16.4120387 9.73205081,16.3809896 L9.73205081,4.62820323 C9.73205081,4.51774628 9.82159386,4.42820323 9.93205081,4.42820323 Z" id="矩形" stroke="#B1B9C3" stroke-width="2" transform="translate(11.732051, 12.428203) rotate(-330.000000) translate(-11.732051, -12.428203) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

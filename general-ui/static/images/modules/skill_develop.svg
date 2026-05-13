@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1020px" height="640px" viewBox="0 0 1020 640" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>编组 15</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4,0 L736,0 C738.209139,-4.05812251e-16 740,1.790861 740,4 L740,68 C740,70.209139 738.209139,72 736,72 L4,72 C1.790861,72 2.705415e-16,70.209139 0,68 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="path-1"></path>
+        <filter x="-1.0%" y="-10.4%" width="102.0%" height="120.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.4   0 0 0 0 0.4   0 0 0 0 0.4  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M9,2 C12.8659932,2 16,5.13400675 16,9 C16,12.8659932 12.8659932,16 9,16 C5.13400675,16 2,12.8659932 2,9 C2,5.13400675 5.13400675,2 9,2 Z M9.86153822,7.59999979 L7.59999979,7.59999979 L7.59999979,7.9707438 C7.79682842,7.9825127 8.35384594,8.3414878 8.35384594,8.71223181 L8.35384594,12.4196718 C8.34745935,12.7761051 8.11876851,13.1454255 7.59999979,13.1611599 L7.59999979,13.5319039 L10.6153844,13.5319039 L10.6153844,13.1611599 C10.24931,13.1389004 9.86477976,12.9594455 9.86153822,12.4196718 L9.86153822,7.59999979 Z M8.99670869,4.7999999 C8.71413625,4.7999999 8.47334356,4.89985548 8.27465987,5.0996251 C8.07597618,5.29505168 7.97692328,5.5318971 7.97692328,5.80983706 C7.97692328,6.08777702 8.07597618,6.32432797 8.27465987,6.51975455 C8.47334356,6.71518113 8.71413625,6.81290467 8.99670869,6.81290467 C9.27928098,6.81290467 9.51977445,6.71518113 9.71845814,6.51975455 C9.92155711,6.32432797 10.0230771,6.08777702 10.0230771,5.80983706 C10.0230771,5.5318971 9.92402421,5.29505168 9.72534052,5.0996251 C9.52665683,4.89985548 9.28369626,4.7999999 8.99670869,4.7999999 Z" id="path-3"></path>
+        <path d="M9,2 C12.8659932,2 16,5.13400675 16,9 C16,12.8659932 12.8659932,16 9,16 C5.13400675,16 2,12.8659932 2,9 C2,5.13400675 5.13400675,2 9,2 Z M9.86153822,7.59999979 L7.59999979,7.59999979 L7.59999979,7.9707438 C7.79682842,7.9825127 8.35384594,8.3414878 8.35384594,8.71223181 L8.35384594,12.4196718 C8.34745935,12.7761051 8.11876851,13.1454255 7.59999979,13.1611599 L7.59999979,13.5319039 L10.6153844,13.5319039 L10.6153844,13.1611599 C10.24931,13.1389004 9.86477976,12.9594455 9.86153822,12.4196718 L9.86153822,7.59999979 Z M8.99670869,4.7999999 C8.71413625,4.7999999 8.47334356,4.89985548 8.27465987,5.0996251 C8.07597618,5.29505168 7.97692328,5.5318971 7.97692328,5.80983706 C7.97692328,6.08777702 8.07597618,6.32432797 8.27465987,6.51975455 C8.47334356,6.71518113 8.71413625,6.81290467 8.99670869,6.81290467 C9.27928098,6.81290467 9.51977445,6.71518113 9.71845814,6.51975455 C9.92155711,6.32432797 10.0230771,6.08777702 10.0230771,5.80983706 C10.0230771,5.5318971 9.92402421,5.29505168 9.72534052,5.0996251 C9.52665683,4.89985548 9.28369626,4.7999999 8.99670869,4.7999999 Z" id="path-5"></path>
+        <path d="M4,0 L736,0 C738.209139,-4.05812251e-16 740,1.790861 740,4 L740,544 C740,546.209139 738.209139,548 736,548 L4,548 C1.790861,548 2.705415e-16,546.209139 0,544 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="path-7"></path>
+        <filter x="-1.0%" y="-1.4%" width="102.0%" height="102.7%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.4   0 0 0 0 0.4   0 0 0 0 0.4  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M0,468 L740,468 L740,544 C740,546.209139 738.209139,548 736,548 L4,548 C1.790861,548 2.705415e-16,546.209139 0,544 L0,468 L0,468 Z" id="path-9"></path>
+        <filter x="-0.1%" y="-0.6%" width="100.1%" height="101.2%" filterUnits="objectBoundingBox" id="filter-10">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.91372549   0 0 0 0 0.91372549  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M4,0 L736,0 C738.209139,-4.05812251e-16 740,1.790861 740,4 L740,56 L740,56 L0,56 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="path-11"></path>
+        <filter x="-0.1%" y="-0.9%" width="100.1%" height="101.8%" filterUnits="objectBoundingBox" id="filter-12">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.91372549   0 0 0 0 0.91372549  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M2,0 L98,0 C99.1045695,-2.02906125e-16 100,0.8954305 100,2 L100,30 C100,31.1045695 99.1045695,32 98,32 L2,32 C0.8954305,32 1.3527075e-16,31.1045695 0,30 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z" id="path-13"></path>
+        <path d="M2,0 L78,0 C79.1045695,-2.02906125e-16 80,0.8954305 80,2 L80,30 C80,31.1045695 79.1045695,32 78,32 L2,32 C0.8954305,32 1.3527075e-16,31.1045695 0,30 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z" id="path-15"></path>
+        <polygon id="path-17" points="0 0 152 0 152 38 0 38"></polygon>
+        <filter x="-0.3%" y="-1.3%" width="100.7%" height="102.6%" filterUnits="objectBoundingBox" id="filter-18">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.91372549   0 0 0 0 0.91372549  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <polygon id="path-19" points="0 0 152 0 152 38 0 38"></polygon>
+        <filter x="-0.3%" y="-1.3%" width="100.7%" height="102.6%" filterUnits="objectBoundingBox" id="filter-20">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.91372549   0 0 0 0 0.91372549  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <polygon id="path-21" points="0 0 133 0 133 38 0 38"></polygon>
+        <filter x="-0.4%" y="-1.3%" width="100.8%" height="102.6%" filterUnits="objectBoundingBox" id="filter-22">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.91372549   0 0 0 0 0.91372549  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <polygon id="path-23" points="0 0 140 0 140 38 0 38"></polygon>
+        <filter x="-0.4%" y="-1.3%" width="100.7%" height="102.6%" filterUnits="objectBoundingBox" id="filter-24">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.91372549   0 0 0 0 0.91372549  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <polygon id="path-25" points="0 0 73 0 73 38 0 38"></polygon>
+        <filter x="-0.7%" y="-1.3%" width="101.4%" height="102.6%" filterUnits="objectBoundingBox" id="filter-26">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.91372549   0 0 0 0 0.91372549  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <polygon id="path-27" points="0 0 152 0 152 38 0 38"></polygon>
+        <filter x="-0.3%" y="-1.3%" width="100.7%" height="102.6%" filterUnits="objectBoundingBox" id="filter-28">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.91372549   0 0 0 0 0.91372549  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <polygon id="path-29" points="0 0 133 0 133 38 0 38"></polygon>
+        <filter x="-0.4%" y="-1.3%" width="100.8%" height="102.6%" filterUnits="objectBoundingBox" id="filter-30">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.91372549   0 0 0 0 0.91372549  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <polygon id="path-31" points="0 0 140 0 140 38 0 38"></polygon>
+        <filter x="-0.4%" y="-1.3%" width="100.7%" height="102.6%" filterUnits="objectBoundingBox" id="filter-32">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.91372549   0 0 0 0 0.91372549  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <polygon id="path-33" points="0 0 73 0 73 38 0 38"></polygon>
+        <filter x="-0.7%" y="-1.3%" width="101.4%" height="102.6%" filterUnits="objectBoundingBox" id="filter-34">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.91372549   0 0 0 0 0.91372549  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M4,0 L246,0 C248.209139,-4.05812251e-16 250,1.790861 250,4 L250,626 C250,628.209139 248.209139,630 246,630 L4,630 C1.790861,630 2.705415e-16,628.209139 0,626 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="path-35"></path>
+        <filter x="-3.0%" y="-1.2%" width="106.0%" height="102.4%" filterUnits="objectBoundingBox" id="filter-36">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.4   0 0 0 0 0.4   0 0 0 0 0.4  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M4,0 L246,0 C248.209139,-4.05812251e-16 250,1.790861 250,4 L250,56 L250,56 L0,56 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="path-37"></path>
+        <filter x="-0.2%" y="-0.9%" width="100.4%" height="101.8%" filterUnits="objectBoundingBox" id="filter-38">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.91372549   0 0 0 0 0.91372549  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="范例" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3-1技能平台-技能编辑" transform="translate(-245.000000, -65.000000)">
+            <g id="编组-15" transform="translate(250.000000, 70.000000)">
+                <g id="编组-2">
+                    <g id="Mask">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="编组" transform="translate(20.000000, 20.000000)">
+                        <text id="中文名称" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#666666">
+                            <tspan x="0" y="21">中文名称</tspan>
+                        </text>
+                        <g id="04表單/00文字輸入欄(H28pxF12、H32pxF14、H46pxF14)" transform="translate(88.000000, 0.000000)">
+                            <g id="01色票/00常用/01白色" fill="#FFFFFF" fill-rule="evenodd">
+                                <rect id="white" x="0" y="0" width="200" height="32"></rect>
+                            </g>
+                            <g id="01色票/03線框/00一般" stroke="#DBDBDB" stroke-width="1">
+                                <rect id="Fill/Disable" x="0.5" y="0.5" width="199" height="31" rx="2"></rect>
+                            </g>
+                            <g id="00字體/14級/置左/03停用、較不重要（ex-搜尋框的輸入提示）" transform="translate(8.000000, 7.000000)" fill="#CCCCCC" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                                <text id="字體">
+                                    <tspan x="0" y="10">请输入意图中文名称</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="02圖標/02常用提示圖標/00資訊" transform="translate(60.000000, 7.000000)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <g id="info-hover-icon"></g>
+                            <g id="01色票/02圖標/01淺色" mask="url(#mask-4)" fill="#BABABA" fill-rule="evenodd">
+                                <rect id="淺色" x="0" y="0" width="18" height="18"></rect>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="编组" transform="translate(348.000000, 20.000000)">
+                        <text id="英文名称" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#666666">
+                            <tspan x="0" y="21">英文名称</tspan>
+                        </text>
+                        <g id="04表單/00文字輸入欄(H28pxF12、H32pxF14、H46pxF14)" transform="translate(88.000000, 0.000000)">
+                            <g id="01色票/00常用/01白色" fill="#FFFFFF" fill-rule="evenodd">
+                                <rect id="white" x="0" y="0" width="200" height="32"></rect>
+                            </g>
+                            <g id="01色票/03線框/00一般" stroke="#DBDBDB" stroke-width="1">
+                                <rect id="Fill/Disable" x="0.5" y="0.5" width="199" height="31" rx="2"></rect>
+                            </g>
+                            <g id="00字體/14級/置左/03停用、較不重要（ex-搜尋框的輸入提示）" transform="translate(8.000000, 7.000000)" fill="#CCCCCC" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                                <text id="字體">
+                                    <tspan x="0" y="10">请输入意图中文名称</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="02圖標/02常用提示圖標/00資訊" transform="translate(60.000000, 7.000000)">
+                            <mask id="mask-6" fill="white">
+                                <use xlink:href="#path-5"></use>
+                            </mask>
+                            <g id="info-hover-icon"></g>
+                            <g id="01色票/02圖標/01淺色" mask="url(#mask-6)" fill="#BABABA" fill-rule="evenodd">
+                                <rect id="淺色" x="0" y="0" width="18" height="18"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="编组-2" transform="translate(0.000000, 82.000000)">
+                    <g id="Mask">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                        <use fill="#FCFCFC" fill-rule="evenodd" xlink:href="#path-7"></use>
+                    </g>
+                    <g id="矩形">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                    </g>
+                    <text id="输入意图常用表达，回车添加" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="22" fill="#999999">
+                        <tspan x="20" y="495">输入意图常用表达，回车添加</tspan>
+                    </text>
+                    <g id="编组-3">
+                        <g id="矩形">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-11"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-11"></use>
+                        </g>
+                        <g id="分组-7" transform="translate(665.000000, 18.000000)" fill="#1875F0">
+                            <text id="刷新" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal">
+                                <tspan x="27" y="15">刷新</tspan>
+                            </text>
+                            <g id="刷新" transform="translate(0.000000, 2.000000)" fill-rule="nonzero">
+                                <path d="M0.811093122,4.20723613 C0.811093122,4.20723613 2.26726683,1.95895779 4.57141394,0.752543708 C6.87554398,-0.453819129 9.71428451,-0.106525347 11.5760048,1.06327845 C13.437725,2.23315059 14.0645021,3.22015919 14.0645021,3.22015919 L15.6681286,2.30625157 C15.6681286,2.30625157 16,2.14177006 16,2.5256058 L16,8.26518687 C16,8.26518687 16,8.77699632 15.6128424,8.59416696 C15.2871689,8.44044817 11.7653065,6.43663704 10.6555001,5.80449027 C10.0460534,5.53250128 10.5815005,5.31154117 10.5815005,5.31154117 L12.1290042,4.42657329 C12.1290042,4.42657329 11.2463018,3.32049155 9.95434784,2.73470984 C8.57142248,2.01379635 7.27671953,1.92830971 5.69081601,2.52736542 C4.65666547,2.91791503 3.43912086,3.91804389 2.56215545,5.39533654 L0.811093122,4.20723613 L0.811093122,4.20723613 L0.811093122,4.20723613 Z M15.1889239,11.7927582 C15.1889239,11.7927582 13.7327502,14.0410707 11.428569,15.2474165 C9.12442187,16.4537964 6.28573258,16.1065709 4.42399524,14.9367501 C2.56217252,13.7668438 1.935515,12.7797839 1.935515,12.7797839 L0.331803059,13.6936915 C0.331803059,13.6936915 0,13.8582755 0,13.4743373 L0,7.73480747 C0,7.73480747 0,7.22304928 0.387055191,7.40579322 C0.712745685,7.55959743 4.23469351,9.56332314 5.34449987,10.1955382 C5.9539466,10.4675272 5.41851656,10.688419 5.41851656,10.688419 L3.87099585,11.5734211 C3.87099585,11.5734211 4.75373233,12.6794516 6.04566925,13.2652845 C7.42854339,13.9861467 8.72319511,14.0716675 10.309184,13.4725947 C11.3432663,13.082028 12.5608279,12.0820017 13.437725,10.6046236 L15.1889239,11.7927582 L15.1889239,11.7927582 L15.1889239,11.7927582 Z" id="形状"></path>
+                            </g>
+                        </g>
+                        <text id="意图表达" font-family="PingFangHK-Regular, PingFang HK" font-size="16" font-weight="normal" line-spacing="16" fill="#333333">
+                            <tspan x="20" y="37">意图表达</tspan>
+                        </text>
+                    </g>
+                    <g id="Group-22" transform="translate(560.000000, 76.000000)">
+                        <path d="M159.5,0.5 L6,0.5 C2.96243388,0.5 0.5,2.96243388 0.5,6 L0.5,36 C0.5,39.0375661 2.96243388,41.5 6,41.5 L154,41.5 C157.037566,41.5 159.5,39.0375661 159.5,36 L159.5,0.5 Z" id="Rectangle-32" stroke="#E9E9E9" fill="#FFFFFF"></path>
+                        <rect id="矩形" fill="#FCEAD1" x="94" y="10" width="42" height="22"></rect>
+                        <text id="你好，我要定玫瑰花。" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="22" fill="#666666">
+                            <tspan x="10" y="25">你好，我要定玫瑰花。</tspan>
+                        </text>
+                    </g>
+                    <g id="03按鈕/00一般按鈕-（H28px_F12、H32px_F14、H46px_F14）" transform="translate(440.000000, 81.000000)">
+                        <mask id="mask-14" fill="white">
+                            <use xlink:href="#path-13"></use>
+                        </mask>
+                        <g id="遮照"></g>
+                        <g id="13-Palette/General/white" mask="url(#mask-14)" fill="#FFFFFF" fill-rule="evenodd">
+                            <rect id="white" x="0" y="0" width="100" height="32" rx="4"></rect>
+                        </g>
+                        <g id="01色票/03線框/00一般" mask="url(#mask-14)" stroke="#DBDBDB" stroke-width="1">
+                            <rect id="Fill/Disable" x="0.5" y="0.5" width="99" height="31" rx="2"></rect>
+                        </g>
+                        <g id="00字體/14級/置中/00一般" mask="url(#mask-14)" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                            <g transform="translate(9.000000, 2.000000)" id="字體">
+                                <text>
+                                    <tspan x="13" y="15" fill="#666666">重新解析</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="03按鈕/00一般按鈕-（H28px_F12、H32px_F14、H46px_F14）" transform="translate(350.000000, 81.000000)">
+                        <mask id="mask-16" fill="white">
+                            <use xlink:href="#path-15"></use>
+                        </mask>
+                        <g id="遮照"></g>
+                        <g id="13-Palette/General/white" mask="url(#mask-16)" fill="#FFFFFF" fill-rule="evenodd">
+                            <rect id="white" x="0" y="0" width="80" height="32" rx="4"></rect>
+                        </g>
+                        <g id="01色票/03線框/00一般" mask="url(#mask-16)" stroke="#DBDBDB" stroke-width="1">
+                            <rect id="Fill/Disable" x="0.5" y="0.5" width="79" height="31" rx="2"></rect>
+                        </g>
+                        <g id="00字體/14級/置中/00一般" mask="url(#mask-16)" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                            <g transform="translate(9.000000, 2.000000)" id="字體">
+                                <text>
+                                    <tspan x="17" y="15" fill="#666666">删除</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="机器人头像" transform="translate(20.000000, 138.000000)">
+                        <circle id="Oval-8" fill="#E9E9E9" cx="20" cy="20" r="20"></circle>
+                        <g id="robot" transform="translate(7.000000, 12.000000)">
+                            <path d="M4.06182078,0 L22.9381792,0 C23.360186,-1.88543689e-16 23.7022901,0.342104083 23.7022901,0.764110856 L23.7022901,13.4025459 C23.7022901,13.8245527 23.360186,14.1666567 22.9381792,14.1666567 L7.67084859,14.1666567 C7.50780017,14.1666567 7.34902682,14.2188119 7.21773862,14.3154979 L3.54115409,17.0230866 C3.47319328,17.0731357 3.37752731,17.0586154 3.32747816,16.9906546 C3.30814095,16.964397 3.29770992,16.9326423 3.29770992,16.9000326 L3.29770992,0.764110856 C3.29770992,0.342104083 3.63981401,-2.55545521e-16 4.06182078,0 Z" id="Rectangle" fill="#333333"></path>
+                            <line x1="10.5114504" y1="6.07142857" x2="10.5114504" y2="7.69047619" id="Line" stroke="#FFFFFF" stroke-width="1.22257737" stroke-linecap="round" stroke-linejoin="round"></line>
+                            <line x1="17.3129771" y1="6.07142857" x2="17.3129771" y2="7.69047619" id="Line" stroke="#FFFFFF" stroke-width="1.22257737" stroke-linecap="round" stroke-linejoin="round"></line>
+                            <rect id="Rectangle-3" fill="#333333" x="25.351145" y="4.04761905" width="1.64885496" height="4.85714286" rx="0.824427481"></rect>
+                            <rect id="Rectangle-3" fill="#333333" x="0" y="4.04761905" width="1.64885496" height="4.85714286" rx="0.824427481"></rect>
+                        </g>
+                    </g>
+                    <g id="分组-10" transform="translate(70.000000, 138.000000)">
+                        <path d="M0.5,0.5 L0.5,70 C0.5,73.0375661 2.96243388,75.5 6,75.5 L644,75.5 C647.037566,75.5 649.5,73.0375661 649.5,70 L649.5,6 C649.5,2.96243388 647.037566,0.5 644,0.5 L0.5,0.5 Z" id="矩形" stroke="#E9E9E9" fill="#FFFFFF" fill-rule="nonzero"></path>
+                        <g id="01-table/th/第一欄" style="mix-blend-mode: darken;">
+                            <g id="Rectangle-7">
+                                <use fill="#F7F7F7" fill-rule="evenodd" xlink:href="#path-17"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-18)" xlink:href="#path-17"></use>
+                            </g>
+                            <g id="09-Font/14/Normal-left" transform="translate(20.000000, 9.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                                <text id="Font-content">
+                                    <tspan x="0" y="11">值</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="01-table/th/第二欄" style="mix-blend-mode: darken;" transform="translate(152.000000, 0.000000)">
+                            <g id="Rectangle-7">
+                                <use fill="#F7F7F7" fill-rule="evenodd" xlink:href="#path-19"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-20)" xlink:href="#path-19"></use>
+                            </g>
+                            <g id="09-Font/14/Normal-left" transform="translate(10.000000, 9.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                                <text id="Font-content">
+                                    <tspan x="0" y="11">槽位</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="01-table/th/第二欄" style="mix-blend-mode: darken;" transform="translate(304.000000, 0.000000)">
+                            <g id="Rectangle-7">
+                                <use fill="#F7F7F7" fill-rule="evenodd" xlink:href="#path-21"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-22)" xlink:href="#path-21"></use>
+                            </g>
+                            <g id="09-Font/14/Normal-left" transform="translate(10.000000, 9.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                                <text id="Font-content">
+                                    <tspan x="0" y="11">中文名</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="01-table/th/第二欄" style="mix-blend-mode: darken;" transform="translate(437.000000, 0.000000)">
+                            <g id="Rectangle-7">
+                                <use fill="#F7F7F7" fill-rule="evenodd" xlink:href="#path-23"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-24)" xlink:href="#path-23"></use>
+                            </g>
+                            <g id="09-Font/14/Normal-left" transform="translate(10.000000, 9.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                                <text id="Font-content">
+                                    <tspan x="0" y="11">解析器</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="01-table/th/第二欄" style="mix-blend-mode: darken;" transform="translate(577.000000, 0.000000)">
+                            <g id="Rectangle-7">
+                                <use fill="#F7F7F7" fill-rule="evenodd" xlink:href="#path-25"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-26)" xlink:href="#path-25"></use>
+                            </g>
+                            <g id="09-Font/14/Normal-left" transform="translate(10.000000, 9.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                                <text id="Font-content">
+                                    <tspan x="0" y="11">操作</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="01-table/th/第一欄" style="mix-blend-mode: darken;" transform="translate(0.000000, 38.000000)">
+                            <rect id="Rectangle-7" fill="#FCFCFC" x="0" y="0" width="152" height="38"></rect>
+                            <g id="13-Palette/General/transparent" fill="#FFFFFF" fill-opacity="0">
+                                <rect id="Fill/Primary-&amp;-Active-Hover" x="0" y="0" width="152" height="37" rx="4"></rect>
+                            </g>
+                            <g id="09-Font/14/Normal-left" transform="translate(20.000000, 9.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                                <text id="Font-content">
+                                    <tspan x="0" y="11">玫瑰花</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="01-table/td/第二欄" style="mix-blend-mode: darken;" transform="translate(152.000000, 38.000000)">
+                            <g id="Rectangle-7">
+                                <use fill="#FCFCFC" fill-rule="evenodd" xlink:href="#path-27"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-28)" xlink:href="#path-27"></use>
+                            </g>
+                            <g id="13-Palette/General/white" fill="#FFFFFF" fill-rule="evenodd">
+                                <rect id="white" x="0" y="0" width="152" height="37" rx="4"></rect>
+                            </g>
+                            <g id="09-Font/14/Normal-left" transform="translate(10.000000, 9.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                                <text id="Font-content">
+                                    <tspan x="0" y="11">flower</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="01-table/td/第二欄" style="mix-blend-mode: darken;" transform="translate(304.000000, 38.000000)">
+                            <g id="Rectangle-7">
+                                <use fill="#FCFCFC" fill-rule="evenodd" xlink:href="#path-29"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-30)" xlink:href="#path-29"></use>
+                            </g>
+                            <g id="13-Palette/General/white" fill="#FFFFFF" fill-rule="evenodd">
+                                <rect id="white" x="0" y="0" width="133" height="37" rx="4"></rect>
+                            </g>
+                            <g id="09-Font/14/Normal-left" transform="translate(10.000000, 9.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                                <text id="Font-content">
+                                    <tspan x="0" y="11">鲜花</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="01-table/td/第二欄" style="mix-blend-mode: darken;" transform="translate(437.000000, 38.000000)">
+                            <g id="Rectangle-7">
+                                <use fill="#FCFCFC" fill-rule="evenodd" xlink:href="#path-31"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-32)" xlink:href="#path-31"></use>
+                            </g>
+                            <g id="13-Palette/General/white" fill="#FFFFFF" fill-rule="evenodd">
+                                <rect id="white" x="0" y="0" width="140" height="37" rx="4"></rect>
+                            </g>
+                            <g id="09-Font/14/Normal-left" transform="translate(10.000000, 9.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                                <text id="Font-content">
+                                    <tspan x="0" y="11">@flower</tspan>
+                                </text>
+                            </g>
+                        </g>
+                        <g id="01-table/td/第二欄" style="mix-blend-mode: darken;" transform="translate(577.000000, 38.000000)">
+                            <g id="Rectangle-7">
+                                <use fill="#FCFCFC" fill-rule="evenodd" xlink:href="#path-33"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-34)" xlink:href="#path-33"></use>
+                            </g>
+                            <g id="13-Palette/General/white" fill="#FFFFFF" fill-rule="evenodd">
+                                <rect id="white" x="0" y="0" width="73" height="37" rx="4"></rect>
+                            </g>
+                            <g id="00字體/14級/置左/07警示" transform="translate(10.000000, 9.000000)" fill="#F76260" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                                <text id="字體">
+                                    <tspan x="0" y="11">删除</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="编组-4" transform="translate(760.000000, 0.000000)">
+                    <g id="Mask">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-36)" xlink:href="#path-35"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-35"></use>
+                    </g>
+                    <g id="矩形">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-37"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-38)" xlink:href="#path-37"></use>
+                    </g>
+                    <text id="语义解析" font-family="PingFangHK-Regular, PingFang HK" font-size="16" font-weight="normal" line-spacing="16" fill="#333333">
+                        <tspan x="16.3793103" y="37">语义解析</tspan>
+                    </text>
+                    <text id="意图表达话术介绍" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="24" letter-spacing="0.7" fill="#333333">
+                        <tspan x="16.3793103" y="91">意图表达话术介绍</tspan>
+                    </text>
+                    <text id="尽量输入标准的表达话术，包含在该场景下的" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="20" letter-spacing="0.600000024" fill="#666666">
+                        <tspan x="16.3793103" y="125">尽量输入标准的表达话术，包含</tspan>
+                        <tspan x="16.3793103" y="145">在该场景下的关键信</tspan>
+                        <tspan x="16.3793103" y="165">息。（至少输入一条常用表达）</tspan>
+                        <tspan x="16.3793103" y="185"></tspan>
+                        <tspan x="16.3793103" y="205">系统会自动来识别需要收集的信</tspan>
+                        <tspan x="16.3793103" y="225">息（槽位），当判断系统识别的</tspan>
+                        <tspan x="16.3793103" y="245">不准确或者不全时，可以手动 I </tspan>
+                        <tspan x="16.3793103" y="265">框选 I 来进行删除、修改、添加</tspan>
+                        <tspan x="16.3793103" y="285">槽位。（词典解析）</tspan>
+                        <tspan x="16.3793103" y="305"></tspan>
+                        <tspan x="16.3793103" y="325">点击意图表达的“外部解析”，可</tspan>
+                        <tspan x="16.3793103" y="345">进行外部解析</tspan>
+                        <tspan x="16.3793103" y="365"></tspan>
+                        <tspan x="16.3793103" y="385">当表达相似度超过75分，代表类</tspan>
+                        <tspan x="16.3793103" y="405">似话术不用再进行收集</tspan>
+                        <tspan x="16.3793103" y="425"></tspan>
+                        <tspan x="16.3793103" y="445">输入的意图表达可以被删除，删</tspan>
+                        <tspan x="16.3793103" y="465">除后对应该条的解析也会被同步</tspan>
+                        <tspan x="16.3793103" y="485">删除</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

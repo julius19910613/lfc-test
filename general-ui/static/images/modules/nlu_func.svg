@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1020px" height="640px" viewBox="0 0 1020 640" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>编组 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4,0 L1006,0 C1008.20914,-4.05812251e-16 1010,1.790861 1010,4 L1010,626 C1010,628.209139 1008.20914,630 1006,630 L4,630 C1.790861,630 2.705415e-16,628.209139 0,626 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="path-1"></path>
+        <filter x="-0.7%" y="-1.2%" width="101.5%" height="102.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.4   0 0 0 0 0.4   0 0 0 0 0.4  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="1010" height="60"></rect>
+        <filter x="-0.0%" y="-0.8%" width="100.1%" height="101.7%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.91372549   0 0 0 0 0.91372549  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M2,0 L118,0 C119.104569,-2.02906125e-16 120,0.8954305 120,2 L120,30 C120,31.1045695 119.104569,32 118,32 L2,32 C0.8954305,32 1.3527075e-16,31.1045695 0,30 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z" id="path-5"></path>
+    </defs>
+    <g id="范例" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5-1NLU-演示页面" transform="translate(-245.000000, -65.000000)">
+            <g id="编组-5" transform="translate(250.000000, 70.000000)">
+                <g id="编组-14">
+                    <g id="Mask">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="编组-15">
+                        <g id="矩形" fill="black" fill-opacity="1">
+                            <use filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        </g>
+                        <g id="编组-13" transform="translate(17.000000, 20.000000)" fill="#333333" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" line-spacing="20">
+                            <text id="Emotibot-NLU-演示界面">
+                                <tspan x="0" y="17">Emotibot NLU 演示界面</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+                <g id="左3-" transform="translate(0.000000, 60.000000)">
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="150" height="480"></rect>
+                    <g id="01色票/06列表背景色/懸浮" transform="translate(21.000000, 20.000000)" fill="#F9F9F9">
+                        <rect id="Fill/Button-Background" x="0" y="0" width="129" height="28" rx="4"></rect>
+                    </g>
+                    <g id="00字體/14級/置左/00一般" transform="translate(32.000000, 20.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="22">
+                        <text id="字體">
+                            <tspan x="0" y="18">分词词性</tspan>
+                        </text>
+                    </g>
+                    <g id="00字體/14級/置左/00一般" transform="translate(32.000000, 134.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="22">
+                        <text id="字體">
+                            <tspan x="0" y="18">句式识别</tspan>
+                        </text>
+                    </g>
+                    <g id="00字體/14級/置左/00一般" transform="translate(32.000000, 172.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="22">
+                        <text id="字體">
+                            <tspan x="0" y="18">言外行为</tspan>
+                        </text>
+                    </g>
+                    <g id="00字體/14級/置左/00一般" transform="translate(32.000000, 96.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="22">
+                        <text id="字體">
+                            <tspan x="0" y="18">关键词</tspan>
+                        </text>
+                    </g>
+                    <g id="00字體/14級/置左/00一般" transform="translate(32.000000, 58.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="22">
+                        <text id="字體">
+                            <tspan x="0" y="18">命名实体识别</tspan>
+                        </text>
+                    </g>
+                    <g id="00字體/14級/置左/00一般" transform="translate(32.000000, 210.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="22">
+                        <text id="字體">
+                            <tspan x="0" y="18">依存句法分析</tspan>
+                        </text>
+                    </g>
+                    <g id="00字體/14級/置左/00一般" transform="translate(32.000000, 248.000000)" fill="#666666" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="22">
+                        <text id="字體">
+                            <tspan x="0" y="18">句法树</tspan>
+                        </text>
+                    </g>
+                    <rect id="Rectangle" fill="#CCCCCC" fill-rule="nonzero" x="20" y="20" width="2" height="256"></rect>
+                    <g id="01色票/00常用/02鏈結和Info提示" transform="translate(20.000000, 20.000000)" fill="#1875F0">
+                        <rect id="Fill/Primary-&amp;-Active" x="0" y="0" width="2" height="28"></rect>
+                    </g>
+                </g>
+                <g id="分词词性" transform="translate(180.000000, 288.000000)">
+                    <text font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" line-spacing="28" fill="#333333">
+                        <tspan x="0" y="17">分词词性</tspan>
+                    </text>
+                    <rect id="矩形" stroke="#DBDBDB" fill="#FFFFFF" x="0.5" y="36.5" width="809" height="229" rx="4"></rect>
+                    <text id="词：年-词性：人称代词" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#666666">
+                        <tspan x="609" y="67">词：年</tspan>
+                        <tspan x="609" y="87">词性：人称代词</tspan>
+                    </text>
+                    <rect id="矩形" fill="#D8D8D8" x="588" y="36" width="1" height="230"></rect>
+                    <g id="but1" transform="translate(20.000000, 51.000000)">
+                        <rect id="矩形" stroke="#DBDBDB" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="73" height="31" rx="2"></rect>
+                        <text id="2017" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="15" y="21">2017</tspan>
+                        </text>
+                        <text id="c" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#999999">
+                            <tspan x="51" y="21">c</tspan>
+                        </text>
+                    </g>
+                    <g id="but2" transform="translate(104.000000, 51.000000)">
+                        <rect id="矩形" fill="#1875F0" fill-rule="evenodd" x="0" y="0" width="60" height="32" rx="2"></rect>
+                        <text id="2017" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#FFFFFF">
+                            <tspan x="15" y="21">年</tspan>
+                        </text>
+                        <text id="c" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#FFFFFF">
+                            <tspan x="34" y="21">rr</tspan>
+                        </text>
+                    </g>
+                    <g id="but1" transform="translate(174.000000, 51.000000)">
+                        <rect id="矩形" stroke="#DBDBDB" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="71" height="31" rx="2"></rect>
+                        <text id="2017" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="15" y="21">年末</tspan>
+                        </text>
+                        <text id="c" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#999999">
+                            <tspan x="48" y="21">d</tspan>
+                        </text>
+                    </g>
+                    <g id="but1" transform="translate(256.000000, 51.000000)">
+                        <rect id="矩形" stroke="#DBDBDB" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="51" height="31" rx="2"></rect>
+                        <text id="2017" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="15" y="21">,</tspan>
+                        </text>
+                        <text id="c" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#999999">
+                            <tspan x="24" y="21">ry</tspan>
+                        </text>
+                    </g>
+                    <g id="but1" transform="translate(318.000000, 51.000000)">
+                        <rect id="矩形" stroke="#DBDBDB" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="77" height="31" rx="2"></rect>
+                        <text id="2017" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="15" y="21">软银</tspan>
+                        </text>
+                        <text id="c" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#999999">
+                            <tspan x="48" y="21">nz</tspan>
+                        </text>
+                    </g>
+                    <g id="but1" transform="translate(406.000000, 51.000000)">
+                        <rect id="矩形" stroke="#DBDBDB" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="69" height="31" rx="2"></rect>
+                        <text id="2017" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="15" y="21">斥资</tspan>
+                        </text>
+                        <text id="c" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#999999">
+                            <tspan x="48" y="21">v</tspan>
+                        </text>
+                    </g>
+                    <g id="but1" transform="translate(486.000000, 51.000000)">
+                        <rect id="矩形" stroke="#DBDBDB" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="64" height="31" rx="2"></rect>
+                        <text id="2017" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="15" y="21">逾</tspan>
+                        </text>
+                        <text id="c" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#999999">
+                            <tspan x="34" y="21">vg</tspan>
+                        </text>
+                    </g>
+                    <g id="but1" transform="translate(20.000000, 93.000000)">
+                        <rect id="矩形" stroke="#DBDBDB" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="94" height="31" rx="2"></rect>
+                        <text id="2017" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="15" y="21">9000亿</tspan>
+                        </text>
+                        <text id="c" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#999999">
+                            <tspan x="68" y="21">m</tspan>
+                        </text>
+                    </g>
+                    <g id="but1" transform="translate(125.000000, 93.000000)">
+                        <rect id="矩形" stroke="#DBDBDB" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="71" height="31" rx="2"></rect>
+                        <text id="2017" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="15" y="21">美元</tspan>
+                        </text>
+                        <text id="c" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#999999">
+                            <tspan x="48" y="21">q</tspan>
+                        </text>
+                    </g>
+                    <g id="but1" transform="translate(210.000000, 93.000000)">
+                        <rect id="矩形" stroke="#DBDBDB" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="73" height="31" rx="2"></rect>
+                        <text id="2017" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="15" y="21">入股</tspan>
+                        </text>
+                        <text id="c" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#999999">
+                            <tspan x="48" y="21">vi</tspan>
+                        </text>
+                    </g>
+                    <g id="but1" transform="translate(294.000000, 93.000000)">
+                        <rect id="矩形" stroke="#DBDBDB" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="81" height="31" rx="2"></rect>
+                        <text id="2017" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="15" y="21">Uber</tspan>
+                        </text>
+                        <text id="c" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#999999">
+                            <tspan x="52" y="21">nx</tspan>
+                        </text>
+                    </g>
+                    <g id="but1" transform="translate(386.000000, 93.000000)">
+                        <rect id="矩形" stroke="#DBDBDB" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="51" height="31" rx="2"></rect>
+                        <text id="2017" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="15" y="21">,</tspan>
+                        </text>
+                        <text id="c" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#999999">
+                            <tspan x="24" y="21">ry</tspan>
+                        </text>
+                    </g>
+                    <g id="but1" transform="translate(448.000000, 93.000000)">
+                        <rect id="矩形" stroke="#DBDBDB" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" x="0.5" y="0.5" width="69" height="31" rx="2"></rect>
+                        <text id="2017" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="15" y="21">成为</tspan>
+                        </text>
+                        <text id="c" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#999999">
+                            <tspan x="48" y="21">v</tspan>
+                        </text>
+                    </g>
+                </g>
+                <g id="文本" transform="translate(180.000000, 80.000000)">
+                    <text id="请输入一段文本：" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" line-spacing="28" fill="#333333">
+                        <tspan x="0" y="17">请输入一段文本：</tspan>
+                    </text>
+                    <g id="04表單/00文字輸入欄(H28pxF12、H32pxF14、H46pxF14)" transform="translate(0.000000, 36.000000)">
+                        <g id="01色票/00常用/01白色" fill="#FFFFFF" fill-rule="evenodd">
+                            <rect id="white" x="0" y="0" width="810" height="100"></rect>
+                        </g>
+                        <g id="01色票/03線框/00一般" stroke="#DBDBDB" stroke-width="1">
+                            <rect id="Fill/Disable" x="0.5" y="0.5" width="809" height="99" rx="2"></rect>
+                        </g>
+                        <g id="00字體/14級/置左/01強調" transform="translate(8.000000, 7.000000)" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="22">
+                            <text id="字體"></text>
+                        </g>
+                    </g>
+                    <text id="2017年年末，软银斥资逾90亿美元入股" font-family="PingFangSC-Regular, PingFang SC" font-size="16" font-weight="normal" line-spacing="28" fill="#666666">
+                        <tspan x="20" y="60">2017年年末，软银斥资逾90亿美元入股Uber，成为后者最大的股东，获得了两个董事会席位，但随着美国针</tspan>
+                        <tspan x="20" y="88">对外资投资的审查加强，软银派驻Uber的董事一直未能就位。</tspan>
+                    </text>
+                    <text id="32/200" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" line-spacing="24" fill="#999999">
+                        <tspan x="0" y="149">32/200</tspan>
+                    </text>
+                    <g id="00-Button/Standard" transform="translate(690.000000, 146.000000)">
+                        <mask id="mask-6" fill="white">
+                            <use xlink:href="#path-5"></use>
+                        </mask>
+                        <g id="Mask"></g>
+                        <g id="13-Palette/Button-Bg/Default" mask="url(#mask-6)" fill="#4B4B64" fill-rule="evenodd">
+                            <rect id="Fill/Button-Background" x="0" y="0" width="120" height="32" rx="4"></rect>
+                        </g>
+                        <g id="13-Palette/General/transparent" mask="url(#mask-6)" fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd">
+                            <rect id="Fill/Primary-&amp;-Active-Hover" x="0" y="0" width="120" height="32" rx="4"></rect>
+                        </g>
+                        <g id="00字體/14級/置中/04背景深色" mask="url(#mask-6)" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="28">
+                            <g transform="translate(9.000000, 5.000000)" id="字體">
+                                <text>
+                                    <tspan x="23.5" y="12" fill="#FFFFFF">开始分析</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

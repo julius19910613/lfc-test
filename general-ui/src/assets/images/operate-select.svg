@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3px" height="13px" viewBox="0 0 3 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>更多</title>
+    <desc>Created with Sketch.</desc>
+    <g id="机器人列表" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1_1机器人列表" transform="translate(-937.000000, -173.000000)" fill="#9BA6B1">
+            <g id="编组-6" transform="translate(60.000000, 0.000000)">
+                <g id="part1" transform="translate(620.000000, 156.000000)">
+                    <g id="更多" transform="translate(257.000000, 17.000000)">
+                        <circle id="椭圆形" cx="1.5" cy="1.5" r="1.5"></circle>
+                        <circle id="椭圆形" cx="1.5" cy="6.5" r="1.5"></circle>
+                        <circle id="椭圆形" cx="1.5" cy="11.5" r="1.5"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

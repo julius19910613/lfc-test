@@ -1,0 +1,74 @@
+{
+    "taskId": "skyworth",
+    "taskName": "创维安时达",
+    "published": true,
+    "version": "1.0",
+    "actions": [],
+    "vars": [],
+    "entry": {
+        "id": "entry",
+        "title": "开始触发",
+        "criteria": {
+            "operator": "OR",
+            "items": [
+                {
+                    "type": "INTENT",
+                    "value": ""
+                }
+            ]
+        },
+        "nlTemplates": {
+            "options": [
+                "您好！很高兴为您服务！"
+            ]
+        }
+    },
+    "nodeGroups": [],
+    "generalNodes": [
+        {
+            "id": "jumpOutNode",
+            "title": "跳出",
+            "entry": {
+                "criteriaSet": {
+                    "operator": "OR",
+                    "items": [
+                        {
+                            "operator": "AND",
+                            "items": [
+                                {
+                                    "left": "",
+                                    "operator": "",
+                                    "right": 2,
+                                    "type": "INTENT"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "id": "entry",
+                "title": "场景入口"
+            },
+            "standardNodes": []
+        },
+        {
+            "id": "task-finish",
+            "title": "结束",
+            "entry": {
+                "criteriaSet": {}
+            },
+            "standardNodes": []
+        },
+        {
+            "id": "human-service",
+            "title": "转人工",
+            "entry": {
+                "criteriaSet": {
+                    "operator": "AND",
+                    "items": []
+                }
+            },
+            "standardNodes": []
+        }
+    ],
+    "standardNodes": []
+}

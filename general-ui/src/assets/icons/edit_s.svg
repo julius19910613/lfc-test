@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>02圖標/08圖像圖標/CRUD類型-編輯</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.2988969,4.60046229 L13.4152333,7.70987084 L5.13095585,16.0023152 L2.00440676,16.0023152 L2.00440676,12.8617708 L10.2988969,4.60046229 Z M12.8981029,2.0047422 L16.0048114,5.10701851 L14.4514781,6.65753104 L11.3442892,3.55635999 L12.8981029,2.0047422 Z" id="path-1"></path>
+    </defs>
+    <g id="对话行为" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2_1对话行为分类详情" transform="translate(-407.000000, -460.000000)">
+            <g id="分组-11" transform="translate(240.000000, 68.000000)">
+                <g id="分组-6" transform="translate(20.000000, 345.000000)">
+                    <g transform="translate(0.000000, 34.000000)" id="02圖標/08圖像圖標/CRUD類型-編輯">
+                        <g transform="translate(145.000000, 11.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="圖標" fill-rule="nonzero"></g>
+                            <g id="01色票/02圖標/04新淺色" mask="url(#mask-2)" fill="#9BA6B1" fill-rule="evenodd">
+                                <rect id="淺色" x="0" y="0" width="18" height="18"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

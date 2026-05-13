@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>539602DA-6B57-4535-9091-F249817F5BE8</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.2988969,4.60046229 L13.4152333,7.70987084 L5.13095585,16.0023152 L2.00440676,16.0023152 L2.00440676,12.8617708 L10.2988969,4.60046229 Z M12.8981029,2.0047422 L16.0048114,5.10701851 L14.4514781,6.65753104 L11.3442892,3.55635999 L12.8981029,2.0047422 Z" id="path-1"></path>
+    </defs>
+    <g id="02圖標-Symbol" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02圖標/08圖像圖標/CRUD類型-編輯">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="圖標" fill-rule="nonzero"></g>
+            <g id="01色票/02圖標/01淺色" mask="url(#mask-2)" fill="#BABABA">
+                <rect id="淺色" x="0" y="0" width="18" height="18"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

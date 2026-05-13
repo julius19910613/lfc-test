@@ -1,0 +1,778 @@
+// @import 'variable';
+
+// // el-tree
+// .el-tree{
+//   /deep/ .el-icon-caret-right{
+//     margin-left: 10px;
+//   }
+//   /deep/ .el-tree-node__content{
+//     line-height: 32px;
+//     height: 32px;
+//     &:hover{
+//       .edit-tree-node{
+//         display: block;
+//       }
+//     }
+//   }
+//   /deep/ .custom-tree-node{
+//     line-height: 32px;
+//     flex: 1;
+//     padding-right: 28px;
+//     box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     -webkit-box-sizing: border-box;
+//     overflow: hidden;
+//     text-overflow:ellipsis;
+//     white-space: nowrap;
+//   }
+//   /deep/ .el-tree-node__expand-icon{
+//     width: 14px;
+//     height: 11px;
+//     display: block;
+//     transform: rotate(0);
+//     background: url('./assets/icons/folder.svg') 50% no-repeat;
+//     margin-right: 8px;
+//     &::before{
+//       content: '';
+//     }
+//     &.expanded{
+//       background: url("./assets/icons/folder_open.svg") 50% no-repeat;
+//     }
+//     &.is-leaf{
+//       background: url("./assets/icons/folder_leaf.svg") 50% no-repeat;
+//     }
+//   }
+//   /deep/ .el-tree-node__label{
+//     font-weight: normal;
+//     @include font-12px();
+//   }
+//   /deep/ .el-tree--highlight-current{
+//     .el-tree-node.is-current>.el-tree-node__content{
+//       background-color: rgba(147,147,162,1);
+//       .el-tree-node__label{
+//         color: $color-white;
+//       }
+//     }
+//   }
+// }
+
+// // el-table
+// .el-table {
+//   .el-table__header {
+//     height: 50px;
+//     th {
+//       border-top: 1px solid $table-border-color-e9;
+//     }
+//     th, tr {
+//       padding: 6px 0;
+//       background-color: $color-bg-f7;
+//       .cell {
+//         padding: 0 20px;
+//         font-size: 12px;
+//       }
+//     }
+//   }
+//   td, th.is-leaf {
+//     border-bottom-color: $table-border-color-e9;
+//   }
+//   .el-table__row {
+//     td {
+//       padding: 8px 0;
+//       .cell {
+//         padding: 0 20px;
+//         color: $color-font-normal;
+//         font-size: 12px;
+//       }
+//     }
+//   }
+//   &.el-table-input {
+//     tr, td{
+//       padding: 2px 0;
+//     }
+//     .cell {
+//       padding: 2px 10px;
+//       input {
+//         width: 100%;
+//       }
+//     }
+//   }
+//   &.small {
+//     @include font-12px();
+//     .el-table__header {
+//       height: 40px;
+//       @include font-12px();
+//       th, tr {
+//         padding: 8px 0;
+//       }
+//     }
+//     .el-table__row {
+//       td {
+//         height: 40px;
+//         padding: 1px 0;
+//       }
+//     }
+//   }
+//   &.inline {
+//     border: 1px solid $table-border-color-e9;
+//   }
+//   // 带编辑的表格，处理input 框的外阴影问题
+//   &.el-table-edit {
+//     /deep/ tr {
+//       td {
+//         padding: 0;
+//         .cell{
+//           padding: 8px 2px 8px 10px;
+//           font-size: 12px;
+//         }
+//       }
+//       th {
+//         .cell{
+//           padding: 8px 2px 8px 10px;
+//         }
+//       }
+//     }
+//   }
+//   &.small {
+//     @include font-12px();
+//     .el-table__header {
+//       height: 40px;
+//       @include font-12px();
+//       th, tr {
+//         padding: 8px 0;
+//       }
+//     }
+//     .el-table__row {
+//       td {
+//         height: 40px;
+//         padding: 1px 0;
+//       }
+//     }
+//   }
+//   &.inline {
+//     border: 1px solid $table-border-color-e9;
+//   }
+// }
+
+// // el-dialog
+// .el-dialog__wrapper{
+//   .el-dialog__header{
+//     padding: 16px 20px;
+//     text-align: left;
+//     box-shadow:0px 1px 0px 0px $table-border-color-e9;
+//   }
+//   .el-dialog__body{
+//     padding: 20px;
+//   }
+//   .el-dialog__footer{
+//     padding: 20px;
+//     text-align: right;
+//     box-shadow:0px -1px 0px 0px $table-border-color-e9;
+//     padding: 20px;
+//   }
+//   .el-dialog__title {
+//     @include font-16px();
+//     color: $color-font-active;
+//   }
+//   &.no-body-padding {
+//     .el-dialog__body {
+//       padding: 20px 0;
+//     }
+//   }
+// }
+
+// // el-select
+// .el-select{
+//   .el-input{
+//     .el-input__inner{
+//       width: 100%;
+//       &:hover{
+//         border: 1px solid $general-input-dft-border;
+//         border-radius: 4px;
+//         border-color: $color-borderline-hover;
+//         box-shadow: 0 0 0 2px $box-shadow;
+//       }
+//     }
+//     &.is-focus{
+//       .el-input__inner{
+//         border: 1px solid $general-input-dft-border;
+//         border-radius: 4px;
+//         border-color: $color-borderline-hover;
+//         box-shadow: 0 0 0 2px $box-shadow;
+//       }
+//     }
+//   }
+//   .el-input__inner{
+//     &:focus{
+//       border: 1px solid $general-input-dft-border;
+//       border-radius: 4px;
+//       border-color: $color-borderline-hover;
+//       box-shadow: 0 0 0 2px $box-shadow;
+//     }
+//   }
+// }
+
+// // el-input
+// .el-input{
+//   input{
+//     &:focus{
+//       border: 1px solid $area-border-color;
+//       border-radius: 4px;
+//       border-color: $color-borderline-hover;
+//       box-shadow: 0 0 0 2px $box-shadow;
+//     }
+//   }
+//   &.is-disabled {
+//     .el-input__inner {
+//       background-color: $color-borderline-disabled;
+//       color: $color-font-mark;
+//     }
+//   }
+//   &.normal {
+//     input{
+//       height: 32px;
+//       width: 100%;
+//     }
+//   }
+//   &.mini {
+//     input{
+//       height: 28px;
+//       width: 100%;
+//       @include font-12px();
+//     }
+//   }
+// }
+
+// // el-input-number
+// .el-input-number{
+//   width: 160px;
+//   line-height: 30px;
+//   .el-input-number__decrease,
+//   .el-input-number__increase{
+//     line-height: 15px !important;
+//     background: transparent;
+//   }
+//   .el-input__inner{
+//     height: 32px;
+//     line-height: 32px;
+//   }
+// }
+
+// // el-dropdown-menu
+// .el-dropdown-menu{
+//   /deep/ .el-dropdown-menu__item{
+//     &:hover{
+//       background-color: $color-white;
+//       color: $color-font-normal;
+//     }
+//     &.selected{
+//       background-color: $color-select-hover !important;
+//       color: $color-white !important;
+//     }
+//     &.disabled{
+//       background-color: transparent !important;
+//       color: $color-font-disabled !important;
+//       cursor: not-allowed;
+//     }
+//   }
+// }
+
+// .el-pagination{
+//   &.is-background {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: flex-end;
+//     padding: 10px 20px 10px 0;
+//     .btn-next, .btn-prev {
+//       min-width: 18px;
+//       max-width: 18px;
+//       line-height: 18px;
+//       height: 18px;
+//       width: 18px;
+//       text-align: center;
+//     }
+//     .el-icon-arrow-left {
+//       margin-right: 0;
+//     }
+//     .el-pager {
+//       li:not(.disabled).active {
+//         background-color: #3D80FF;
+//         color: $color-white;
+//         border-radius: 4px;
+//       }
+//       li {
+//         width: 18px;
+//         height: 18px;
+//         padding: 0;
+//         min-width: 18px;
+//         max-width: 18px;
+//         line-height: 18px;
+//         font-size: 12px;
+//         font-weight: normal;
+//         background-color: $color-white;
+//         &:hover {
+//           background-color: #f4f4f5;
+//         }
+//       }
+//       .more::before {
+//         line-height: 18px;
+//         font-size: 12px;
+//       }
+//     }
+//   }
+//   .el-input--mini{
+//     .el-input__inner{
+//       width: 100px;
+//     }
+//   }
+//   .el-pagination__sizes{
+//     height: 22px;
+//     margin: 0px 10px;
+//   }
+//   .el-pagination__jump{
+//     margin-left: 0px;
+//   }
+//   span:not([class*=suffix]) {
+//     font-size: 12px;
+//   }
+//   .el-icon-arrow-left{
+//     margin-right: 5px;
+//   }
+//   .el-input--mini{
+//     .el-input__inner{
+//       height: 22px;
+//       line-height: 22px;
+//     }
+//   }
+//   .el-select{
+//     .el-input{
+//       .el-input__inner{
+//         font-size: 12px;
+//         &:hover{
+//           border: 1px solid $area-border-color;
+//           border-radius: 4px;
+//           border-color: $color-borderline-hover;
+//           box-shadow: 0 0 0 2px $box-shadow;
+//         }
+//       }
+//       &.is-focus{
+//         .el-input__inner{
+//           border: 1px solid $area-border-color;
+//           border-radius: 4px;
+//           border-color: $color-borderline-hover;
+//           box-shadow: 0 0 0 2px $box-shadow;
+//         }
+//       }
+//     }
+//     .el-input__inner{
+//       &:focus{
+//         border: 1px solid $area-border-color;
+//           border-radius: 4px;
+//           border-color: $color-borderline-hover;
+//           box-shadow: 0 0 0 2px $box-shadow;
+//       }
+//     }
+//   }
+//   .el-pagination__editor {
+//     &.el-input .el-input__inner {
+//       height: 22px;
+//       line-height: 22px;
+//       width: 44px;
+//       border-radius: 4px;
+//     }
+//   }
+// }
+
+// // el-checkbox
+// .el-checkbox {
+//   .el-checkbox__input{
+//     &.is-checked, &.is-indeterminate{
+//       .el-checkbox__inner{
+//         background-color: $color-borderline-hover;
+//         border-color: $color-borderline-hover;
+//       }
+//     }
+//     &:hover, &.is-focus{
+//       .el-checkbox__inner{
+//         border-color: $color-borderline-hover;
+//       }
+//     }
+//   }
+//   .el-checkbox__label{
+//     @include font-12px();
+//   }
+// }
+
+// // el-radio
+// .el-radio{
+//   .el-radio__input {
+//     &.is-checked{
+//       .el-radio__inner{
+//         border-color: $color-borderline-hover;
+//         background-color: $color-button;
+//       }
+//     }
+//     .el-radio__inner{
+//       &:hover{
+//         border-color: $color-borderline-hover
+//       }
+//     }
+//   }
+//   .el-radio__label{
+//     color: $color-font-normal !important;
+//   }
+// }
+
+// // el-textarea
+// .el-textarea{
+//   textarea{
+//     border-radius: 2px;
+//     min-height: 80px !important;
+//     border-color: $color-borderline;
+//     &:hover{
+//       border-color: $color-borderline-hover;
+//     }
+//     &:focus{
+//       border-radius: 2px;
+//       border-color: $color-borderline-hover;
+//       box-shadow: 0 0 0 2px $box-shadow;
+//     }
+//   }
+// }
+
+// // el-button
+// .el-button--text {
+//   @include font-14px();
+//   font-weight: normal;
+//   &.el-button--small {
+//     padding-top: 0;
+//     padding-bottom: 0;
+//   }
+//   &.error {
+//     color: $color-error;
+//   }
+// }
+
+// // el-tabs
+// .el-tabs {
+//   &.el-tabs--left {
+//     .el-tabs__header.is-left {
+//       margin-right: 20px;
+//       .el-tabs__active-bar {
+//         background-color: $active-color;
+//       }
+//       .el-tabs__item{
+//         color: $color-font-mark;
+//         &.is-active {
+//           color:  $active-color;
+//         }
+//       }
+//     }
+//   }
+//   &.el-tabs--top{
+//     height: 100%;
+//     .el-tabs__active-bar {
+//       width: 20px!important;
+//     }
+//     .el-tabs__header{
+//       background: $color-white;
+//       margin: 0;
+//     }
+//     .el-tabs__item{
+//       font-size: 12px;
+//       color: $color-font-normal;
+//       &.is-active{
+//         color: $color-primary;
+//       }
+//       &:hover{
+//         color: $color-primary;
+//       }
+//     }
+//     .el-tabs__active-bar{
+//       background-color: $color-primary;
+//     }
+//     .el-tabs__nav-wrap{
+//       padding-left: 20px;
+//       box-sizing: border-box;
+//       -moz-box-sizing: border-box;
+//       -webkit-box-sizing: border-box;
+//     }
+//     .el-tabs__nav-wrap::after{
+//       background: $color-white;
+//     }
+//     .el-radio__inner{
+//       &:hover{
+//         border-color: $color-borderline-hover
+//       }
+//     }
+//   }
+//   .el-radio__label{
+//     color: $color-font-normal !important;
+//   }
+// }
+
+// // el-textarea
+// .el-textarea{
+//   textarea{
+//     border-radius: 2px;
+//     min-height: 80px !important;
+//     border-color: $color-borderline;
+//     &:hover{
+//       border-color: $color-borderline-hover;
+//     }
+//     &:focus{
+//       border-radius: 2px;
+//       border-color: $color-borderline-hover;
+//       box-shadow: 0 0 0 2px $box-shadow;
+//     }
+//   }
+// }
+
+// // el-drawer
+// .el-drawer {
+//   .el-drawer__header {
+//     span {
+//       font-size: 18px;
+//     }
+//   }
+// }
+
+// // el-switch
+// .el-switch {
+//   &.is-checked {
+//     .el-switch__core {
+//       border-color: $color-primary;
+//       background-color: $color-primary;
+//     }
+//   }
+// }
+
+// // el-popover
+// .el-popover{
+//   background-color: $color-white;
+//   color: #666666;
+//   border: 0px;
+//   font-size: 12px;
+//   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.2);
+//   max-width: 500px;
+//   &.el-popover--plain {
+//     padding: 10px;
+//   }
+//   .popper__arrow{
+//     &::after{
+//       border-top-color: transparent;
+//     }
+//   }
+//   // &.popover-white-theme{
+//   //   background-color: $color-white;
+//   //   color: #666666;
+//   //   .popper__arrow{
+//   //     &::after{
+//   //       border-top-color: transparent;
+//   //     }
+//   //   }
+//   // }
+// }
+
+// // el-button
+// .el-button {
+//   min-width: 100px;
+//   font-size: 12px;
+//   font-weight: normal;
+//   border-radius: 3px;
+//   padding: 0 10px;
+//   height: 28px;
+//   &.el-button--danger {
+//     background-color: $color-error;
+//     border-color: $color-error;
+//     color: $color-white;
+//     &:hover, &:focus {
+//       background-color: $color-error;
+//       border-color: $color-error;
+//       color: $color-white;
+//     }
+//   }
+//   &.el-button--default {
+//     color: #666666;
+//     border:1px solid rgba(219,219,219,1);
+//     &:hover, &:focus {
+//       background: $color-white;
+//     }
+//   }
+//   &.el-button--primary {
+//     background: $color-btn-primary;
+//     border-color: $color-btn-primary;
+//     color: $color-white;
+//     &:hover, &:focus {
+//       background: $color-btn-primary;
+//       border-color: $color-btn-primary;
+//     }
+//   }
+//   &.el-button--info {
+//     color: $color-white;
+//     background-color: $color-primary;
+//     border-color: $color-primary;
+//     &:hover, &:focus {
+//       background-color: $color-primary;
+//       border-color: $color-primary;
+//     }
+//   }
+//   &.el-button--primary, &.el-button--danger, &.el-button--default, &.el-button--info {
+//     &.is-disabled, &.is-disabled:hover {
+//       border:1px solid rgba(219,219,219,1);
+//       background:rgba(247,247,247,1);
+//       color: #CCCCCC;
+//     }
+//   }
+//   &.el-button--medium {
+//     height: 46px;
+//   }
+//   &.el-button--mini {
+//     height: 28px;
+//   }
+// }
+
+// // el-message
+// .el-message {
+//   background: #ffffff;
+//   background:rgba(255,255,255,1);
+//   box-shadow:0px 2px 8px 0px rgba(0,0,0,0.2);
+//   border-radius:2px;
+//   padding: 10px 30px 10px 10px;
+//   border-color: #ffffff;
+//   min-width: 200px;
+//   max-width: 600px;
+//   .el-message__content {
+//     font-size: 12px;
+//     color: #666666;
+//   }
+//   .el-icon-success {
+//     color: #00A699;
+//   }
+//   .el-icon-warning {
+//     color: #F68C6D;
+//   }
+//   .el-icon-error {
+//     color: #F76260;
+//   }
+//   .el-icon-info  {
+//     color: #1875F0;
+//     font-size: 16px;
+//   }
+//   .el-message__closeBtn {
+//     right: 8px;
+//     background: #F3F3F3;
+//     border-radius: 50%;
+//     color: #BABABA;
+//     font-size: 24px;
+//   }
+//   .el-message__icon {
+//     margin-right: 3px;
+//     font-size: 16px;
+//   }
+// }
+
+// .emotibot{
+//   &.el-collapse{
+//     border-radius: 4px;
+//     border: 0px;
+//     /deep/ .el-collapse-item{
+//       margin-top: 8px;
+//       border-radius: 4px;
+//       &:hover{
+//           box-shadow:0px 5px 10px 0px rgba(0,0,0,0.15);
+//       }
+//       &:first-child{
+//           margin-top: 0px;
+//       }
+//       .el-collapse-item__header{
+//         height: 40px;
+//         padding: 0px 10px 0px 20px;
+//         border-radius: 4px 4px 0px 0px;
+//         border: 1px solid #DBDBDB;
+//         background-color: #EEEEEE;
+//         color: #666666;
+//         font-size: 14px;
+//         &.is-active{
+//           border-bottom: 1px solid transparent;
+//         }
+//         .el-collapse-item__arrow{
+//           font-weight: bold;
+//           font-size: 16px;
+//         }
+//       }
+//       .el-collapse-item__wrap{
+//         padding: 0px 20px;
+//         border-radius: 0px 0px 4px 4px;
+//         border: 1px solid #DBDBDB;
+//         border-top: 0px;
+//         background-color: #F7F7F7;
+//         .el-collapse-item__content{
+//           padding-bottom: 0px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// // 必须最外层添加的样式
+// .el-select-dropdown__item {
+//   &.selected {
+//     color: $color-borderline-hover;
+//     font-weight: normal;
+//   }
+// }
+
+// .license-warning.el-message--warning {
+//   height: 28px;
+//   top: 10px !important;
+//   background-color: $color-input-error;
+//   color: $color-error;
+//   .el-icon-warning {
+//     color: $color-error;
+//     @include font-18px();
+//   }
+//   .el-message__content {
+//     color: $color-error;
+//   }
+// }
+
+// .emotibot-datepicker-popover {
+//     .el-input__inner {
+//       height: 28px ;
+//       width: 144px ;
+//     }
+// }
+
+// .emotibot-datepicker {
+//   .el-date-editor--datetimerange.el-input,
+//   .el-date-editor--datetimerange.el-input__inner {
+//     width: 450px;
+//   }
+// }
+
+.emotibot-text-ecllipsis {
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size:12px;
+    font-family:PingFangSC-Regular,PingFang SC;
+}
+
+.el-date-editor--datetimerange.el-input, .el-date-editor--datetimerange.el-input__inner {
+    width: 500px;
+}
+
+.el-tooltip__popper {
+    max-width: 400px;
+    line-height: 180%;
+}
+.el-popover {
+    &.popover-white-theme {
+        .el-button {
+            min-width: 60px;
+            margin-top: 5px;
+        }
+    }
+}

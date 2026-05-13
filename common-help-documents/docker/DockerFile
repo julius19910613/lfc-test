@@ -1,0 +1,10 @@
+FROM harbor.emotibot.com/bfop/bfop2020_help_docs:base
+
+COPY docker/conf/nginx.conf.template /etc/nginx/nginx.conf.template
+
+WORKDIR /usr/share/nginx/html
+
+COPY docker/entrypoint.sh .
+COPY dist .
+
+ENTRYPOINT ["./entrypoint.sh"]
