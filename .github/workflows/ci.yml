@@ -36,7 +36,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile --ignore-engines
 
       - name: Build
         run: yarn build
@@ -59,7 +59,7 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --frozen-lockfile --ignore-engines
 
       - name: Build Storybook
         run: yarn storybook:build
