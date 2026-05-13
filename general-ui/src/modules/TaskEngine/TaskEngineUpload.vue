@@ -117,11 +117,11 @@ export default {
             });
           }
           that.$emit('endLoading');
-        }, (err) => {
+        }, (_err) => {
           that.$refs.uploadInput.value = '';
           // that.$notifyFail(`${that.$t('error_msg.save_fail')}:${err.message}`);
           this.$message({
-            message: `${that.$t('error_msg.save_fail')}:${res.error}`,
+            message: `${that.$t('error_msg.save_fail')}:${_err.message}`,
             type: 'error',
             showClose: true,
           });
@@ -266,7 +266,7 @@ export default {
     this.loadList();
   },
   computed: {
-     ...mapGetters([
+    ...mapGetters([
       'robotID',
     ]),
   },
