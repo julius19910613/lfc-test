@@ -164,7 +164,7 @@ export default {
         info,
       }).then(() => {
         general.downloadRawFile(blobData, filename);
-      }, (err) => {
+      }, () => {
         // that.$popErrorWindow(that.$t('error_msg.export_fail'), err);
         that.$message({
           message: that.$t('error_msg.export_fail'),
