@@ -1,4 +1,6 @@
-require('babel-register')
+require('@babel/register')({
+  envName: 'test',
+})
 var config = require('../../config')
 
 // http://nightwatchjs.org/gettingstarted#settings-file

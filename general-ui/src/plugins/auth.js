@@ -1,6 +1,6 @@
 import md5 from 'js-md5';
 import qs from 'qs';
-import 'babel-polyfill';
+import 'core-js/stable';
 import constant from '@/utils/js/constant';
 
 const LOGIN_PATH = '/auth/v3/login';
