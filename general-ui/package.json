@@ -101,7 +101,7 @@
     "karma-sinon-chai": "1",
     "karma-sourcemap-loader": "0.3",
     "karma-spec-reporter": "^0.0.36",
-    "karma-webpack": "3",
+    "karma-webpack": "^5",
     "markdown-loader": "~3.0.0",
     "marked": "~0.4.0",
     "mocha": "5",
