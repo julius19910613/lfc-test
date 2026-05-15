@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="entity-collecting-page" class="page entity-collecting-page">
   <div class="tool-box">
     <div class="row">

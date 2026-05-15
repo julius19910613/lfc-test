@@ -9,5 +9,11 @@ module.exports = {
     source: 'src',
     img: 'src',
     image: 'xlink:href'
-  }
+  },
+  // Explicit PostCSS config for vue-loader v15 <style> blocks
+  // Without this, postcss-loader looks for config from process.cwd() which
+  // in CI is the repo root, not general-ui/, causing "No PostCSS Config found"
+  postcss: [
+    require('autoprefixer')
+  ]
 }

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="intent-tester-pop">
   <div class="intent-tester-title">
     <div>{{$t("task_engine_v3.intent_tester_pop.label_test_intent")}}</div>

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div id="entity-collector" class="entity-collector-container" @mouseover="moreIcon = true" @mouseleave="moreIcon = false">
     <div class="order_column">
       <icon :size=20 icon-type="daggle"/>

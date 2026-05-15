@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="create-skill-pop">
   <div class="edit-skill-container">
     <div class="label-skill-name">{{$t('task_engine_v3.create_skill_pop.label_skill_name')}}</div>

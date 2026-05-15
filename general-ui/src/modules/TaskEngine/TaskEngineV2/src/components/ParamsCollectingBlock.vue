@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="params-collecting-block">
   <div class="button-delete-param">
     <icon icon-type="delete" :enableHover="true" :size=24 @click="deleteParam()"/>

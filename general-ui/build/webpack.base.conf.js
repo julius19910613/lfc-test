@@ -7,6 +7,8 @@ const utils = require('./utils');
 const config = require('../config');
 const vueLoaderConfig = require('./vue-loader.conf');
 
+const postcssConfigPath = path.resolve(__dirname, '..');
+
 function resolve(dir) {
   return path.join(__dirname, '..', dir);
 }
@@ -144,7 +146,7 @@ module.exports = {
             loader: 'postcss-loader', // postcss loader so we can use autoprefixer
             options: {
               config: {
-                path: '../postcssrc.js',
+                path: postcssConfigPath,
               },
             },
           },

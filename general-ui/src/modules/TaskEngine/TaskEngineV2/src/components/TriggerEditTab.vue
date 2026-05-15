@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="trigger-edit-tab">
   <div class="instruction block" v-t="'task_engine_v2.trigger_edit_tab.instruction'"></div>
   <draggable v-model="rules" :options="{ghostClass:'ghost'}" @start="drag=true" @end="drag=false; emitUpdate();">

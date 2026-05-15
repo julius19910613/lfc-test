@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="trigger-page" class="page trigger-page">
   <div class="add-trigger-container">
     <div class="row">

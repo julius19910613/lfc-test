@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div id="trigger-page" class="page trigger-page">
     <div id="card-content">
       <div id="card-content-header">

@@ -21,7 +21,12 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
     if (err) throw err
 
     // Output errors first so they are visible even if warnings truncate the log
-    const statsJson = stats.toJson({ assets: false, modules: false, chunks: false })
+    const statsJson = stats.toJson({
+      all: false,
+      errors: true,
+      errorDetails: true,
+      warnings: false
+    })
     if (statsJson.errors && statsJson.errors.length) {
       console.log(chalk.red('\n=== BUILD ERRORS ===\n'))
       statsJson.errors.forEach((e, i) => {

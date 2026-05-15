@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="intent-editor-pop">
   <div class="intent-editor-title">
     <div>{{titleString}}</div>

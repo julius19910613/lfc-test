@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="var-template-edit-pop">
   <div class="instruction block">
     {{$t("task_engine_v2.var_template_edit_pop.instruction")}}

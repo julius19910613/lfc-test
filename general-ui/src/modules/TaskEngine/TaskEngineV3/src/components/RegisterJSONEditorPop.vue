@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="tde-setting-editor-pop" class="tde-setting-editor-pop">
   <div class="tooltip_container" v-tooltip="{ msg: $t('task_engine_v3.register_json_editor_pop.title_description')}">
     <icon icon-type="info" :enableHover="true" :size=20 />

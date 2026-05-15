@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="action-card" class="action-card">
   <div class="msg-action action-block" v-if="action.type=='msg'">
     <div class="label-response">{{$t("task_engine_v3.action_card.msg.label_response")}}</div>

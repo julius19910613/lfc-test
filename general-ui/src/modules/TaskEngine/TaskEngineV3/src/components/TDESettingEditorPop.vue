@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="tde-setting-editor-pop" class="tde-setting-editor-pop">
     <div class="row">
       <div class="title_column">{{$t("task_engine_v3.tde_setting_editor_pop.nlgTemplate")}}</div>

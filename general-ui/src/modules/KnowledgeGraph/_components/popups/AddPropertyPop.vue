@@ -320,6 +320,9 @@ import misc from '../../../../utils/js/misc';
 import mixInMultiEditor from '../../_mixin/multiEditor';
 import MixinValidate from '../../_mixin/Validate';
 
+// Extracted regex to module-level constant to avoid @babel/parser Unicode escape error with Vue 2.7
+const CHINESE_ALPHANUMERIC_REGEX = /^[\u4e00-\u9fa5_a-zA-Z0-9]+$/;
+
 export default {
   props: {
     extData: {
@@ -714,7 +717,7 @@ export default {
       }
       const newValue = this.newSynonym;
       newValue.replace(/[\r\n]/g, '');
-      if (newValue && newValue.length > 0 && /^[\u4e00-\u9fa5_a-zA-Z0-9]+$/.test(newValue)) {
+      if (newValue && newValue.length > 0 && CHINESE_ALPHANUMERIC_REGEX.test(newValue)) {
         this.synonymSet.push(this.newSynonym);
         this.inputVisible = false;
         this.newSynonym = '';

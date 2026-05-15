@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="global-edge-edit-pop">
   <div class="instruction block" v-t="'task_engine_v2.global_edge_edit_pop.instruction'"></div>
   <div class="block-list-container">
