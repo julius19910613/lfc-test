@@ -49,7 +49,8 @@ exports.cssLoaders = function (options) {
               includePaths: [
                 path.resolve(__dirname, '../src/assets'),
                 path.resolve(__dirname, '../src/assets/images')
-              ]
+              ],
+              silenceDeprecations: ['legacy-js-api', 'import', 'global-builtin', 'color-functions']
             })
 
             if (normalizedLoaderOptions.indentedSyntax) {

@@ -1,22 +1,58 @@
+const path = require('path');
+const utils = require('../build/utils');
+
+function stripStyleRules(rules = []) {
+  return rules
+    .map((rule) => {
+      if (rule.oneOf) {
+        return {
+          ...rule,
+          oneOf: stripStyleRules(rule.oneOf),
+        };
+      }
+      return rule;
+    })
+    .filter((rule) => {
+      const test = rule.test ? rule.test.toString() : '';
+      const useText = Array.isArray(rule.use)
+        ? rule.use.map((item) => (typeof item === 'string' ? item : item.loader || '')).join(' ')
+        : typeof rule.use === 'string'
+          ? rule.use
+          : rule.loader || '';
+      const ruleText = `${test} ${useText}`;
+
+      return !/(css|scss|sass|styl|stylus|postcss|style-loader|css-loader|sass-loader|vue-style-loader)/.test(ruleText);
+    });
+}
+
 module.exports = {
   core: {
     builder: 'webpack5',
   },
   stories: ['../src/stories/index.js'],
   addons: [
-    '@storybook/addon-essentials',
     '@storybook/addon-actions',
     '@storybook/addon-knobs',
     '@storybook/addon-storysource',
   ],
   webpackFinal: async (config) => {
+    config.module.rules = stripStyleRules(config.module.rules);
+
     // Merge with project webpack config
     config.resolve.alias = {
       ...config.resolve.alias,
       vue$: 'vue/dist/vue.esm.js',
-      '@': require('path').resolve(__dirname, '../src'),
+      '@': path.resolve(__dirname, '../src'),
+      styles: path.resolve(__dirname, '../src/assets/styles'),
     };
     config.resolve.extensions = ['.js', '.vue', '.json', '.scss', '.html', '.svg'];
+
+    config.module.rules.push(
+      ...utils.styleLoaders({
+        sourceMap: true,
+        usePostCSS: true,
+      }),
+    );
 
     // Add markdown loader support
     const marked = require('marked');

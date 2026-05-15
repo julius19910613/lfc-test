@@ -8,8 +8,6 @@ const path = require('path');
 const baseWebpackConfig = require('./webpack.base.conf');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
-const portfinder = require('portfinder');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const HOST = process.env.HOST;
@@ -39,7 +37,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     hot: true,
     compress: true,
     host: HOST || config.dev.host,
-    port: PORT || config.dev.port,
+    port: PORT || 'auto',
     open: config.dev.autoOpenBrowser,
     static: false, // since we use CopyWebpackPlugin.
     proxy: config.dev.proxyTable,
@@ -47,8 +45,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       publicPath: config.dev.assetsPublicPath,
       stats: 'errors-warnings',
     },
-    watchOptions: {
-      poll: config.dev.poll,
+    watchFiles: {
+      options: {
+        poll: config.dev.poll,
+      },
     },
   },
   plugins: [
@@ -112,28 +112,4 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   },
 });
 
-module.exports = new Promise((resolve, reject) => {
-  portfinder.basePort = process.env.PORT || config.dev.port;
-  portfinder.getPort((err, port) => {
-    if (err) {
-      reject(err);
-    } else {
-      // publish the new Port, necessary for e2e tests
-      process.env.PORT = port;
-      // add port to devServer config
-      devWebpackConfig.devServer.port = port;
-
-      // Add FriendlyErrorsPlugin
-      devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
-        compilationSuccessInfo: {
-          messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
-        },
-        onErrors: config.dev.notifyOnErrors
-        ? utils.createNotifierCallback()
-        : undefined,
-      }));
-
-      resolve(devWebpackConfig);
-    }
-  });
-});
+module.exports = devWebpackConfig;

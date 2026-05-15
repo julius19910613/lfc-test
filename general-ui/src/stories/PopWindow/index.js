@@ -1,4 +1,4 @@
-import action from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions';
 import withMarkdownNotes from '../withMarkdownNotes';
 import TextButton from '../../components/basic/TextButton';
 import DescriptionContent from './DescriptionContent';

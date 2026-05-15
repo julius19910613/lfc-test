@@ -651,8 +651,7 @@ export default {
   display: -ms-flexbox;    /* IE10 */
   display: -webkit-box;    /* Safari */
   display: -webkit-flex;    /* Chrome, WebKit */
-  display: box;
-  display: flexbox;
+  display: flex;
 }
 @mixin flex($height) {
   -prefix-box-flex: 0 0 $height;
@@ -802,4 +801,3 @@ export default {
       width: 40px;
     }
 </style>
-

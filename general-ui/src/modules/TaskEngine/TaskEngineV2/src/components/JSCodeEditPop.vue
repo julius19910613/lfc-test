@@ -454,8 +454,8 @@ $borderColor: #E9E9E9;
 
         input, p {
           flex: 1;
-          height: $listHeight / 2;
-          line-height: $listHeight / 2;
+          height: calc(#{$listHeight} / 2);
+          line-height: calc(#{$listHeight} / 2);
           margin-right: 8px;
         }
         & > p {
@@ -511,4 +511,3 @@ $borderColor: #E9E9E9;
   height: 100%;
 }
 </style>
-

@@ -7,8 +7,6 @@ const utils = require('./utils');
 const config = require('../config');
 const vueLoaderConfig = require('./vue-loader.conf');
 
-const postcssConfigPath = path.resolve(__dirname, '..');
-
 function resolve(dir) {
   return path.join(__dirname, '..', dir);
 }
@@ -120,29 +118,6 @@ module.exports = {
         generator: {
           filename: utils.assetsPath('fonts/[name].[hash:7][ext]'),
         },
-      },
-      {
-        test: /\.s[a|c]ss$/,
-        // loader: 'style!css!sass'
-        use: [
-          {
-            loader: 'style-loader', // Adds CSS to the DOM by injecting a <style> tag
-          },
-          {
-            loader: 'css-loader', //  interprets @import and url() like import/require() and will resolve them.
-          },
-          {
-            loader: 'postcss-loader', // postcss loader so we can use autoprefixer
-            options: {
-              config: {
-                path: postcssConfigPath,
-              },
-            },
-          },
-          {
-            loader: 'sass-loader', // compiles Sass to CSS
-          },
-        ],
       },
     ],
   },
