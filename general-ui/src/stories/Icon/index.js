@@ -1,5 +1,5 @@
 import { text, number, boolean } from '@storybook/addon-knobs';
-import { withMarkdownNotes } from '@storybook/addon-notes';
+import withMarkdownNotes from '../withMarkdownNotes';
 import Icon from '../../components/basic/Icon';
 import README from './README.md';
 

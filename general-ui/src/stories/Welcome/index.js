@@ -1,4 +1,4 @@
-import { withMarkdownNotes } from '@storybook/addon-notes';
+import withMarkdownNotes from '../withMarkdownNotes';
 import README from './README.md';
 
 export default [{

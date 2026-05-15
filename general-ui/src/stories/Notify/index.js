@@ -1,4 +1,4 @@
-import { withMarkdownNotes } from '@storybook/addon-notes';
+import withMarkdownNotes from '../withMarkdownNotes';
 import TextButton from '../../components/basic/TextButton';
 import README from './README.md';
 

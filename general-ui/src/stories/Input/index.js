@@ -1,6 +1,6 @@
 import { text, boolean, number } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-import { withMarkdownNotes } from '@storybook/addon-notes';
+import withMarkdownNotes from '../withMarkdownNotes';
 import InfoInput from '../../components/basic/InfoInput';
 import SearchInput from '../../components/basic/SearchInput';
 import READMEInput from './README_Input.md';
