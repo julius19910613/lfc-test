@@ -1,5 +1,5 @@
 import { boolean } from '@storybook/addon-knobs';
-import { withMarkdownNotes } from '@storybook/addon-notes';
+import withMarkdownNotes from '../withMarkdownNotes';
 import Toggle from '../../components/basic/Toggle';
 import README from './README.md';
 

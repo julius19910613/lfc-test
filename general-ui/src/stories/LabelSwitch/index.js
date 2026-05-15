@@ -1,6 +1,6 @@
 import { object, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-import { withMarkdownNotes } from '@storybook/addon-notes';
+import withMarkdownNotes from '../withMarkdownNotes';
 import LabelSwitch from '../../components/basic/LabelSwitch';
 import README from './README.md';
 

@@ -1,5 +1,5 @@
 import { number } from '@storybook/addon-knobs';
-import { withMarkdownNotes } from '@storybook/addon-notes';
+import withMarkdownNotes from '../withMarkdownNotes';
 import LoadingLine from '../../components/basic/LoadingLine';
 import LoadingDot from '../../components/basic/LoadingDot';
 import README from './README.md';

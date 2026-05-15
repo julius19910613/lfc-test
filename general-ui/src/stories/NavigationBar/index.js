@@ -1,5 +1,5 @@
 import { text, object } from '@storybook/addon-knobs';
-import { withMarkdownNotes } from '@storybook/addon-notes';
+import withMarkdownNotes from '../withMarkdownNotes';
 import NavBar from '../../components/NavigationBar';
 
 import README from './README.md';

@@ -1,7 +1,7 @@
 // import { text, select, number } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-import { withMarkdownNotes } from '@storybook/addon-notes';
 import pickerUtil from '@/utils/vue/DatePickerUtil';
+import withMarkdownNotes from '../withMarkdownNotes';
 import DatePicker from '../../components/DateTimePicker/DatePicker';
 import TimePicker from '../../components/DateTimePicker/TimePicker';
 import DatetimePicker from '../../components/DateTimePicker';
