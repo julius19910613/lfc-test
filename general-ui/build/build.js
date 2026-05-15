@@ -19,6 +19,18 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
   webpack(webpackConfig, (err, stats) => {
     spinner.stop()
     if (err) throw err
+
+    // Output errors first so they are visible even if warnings truncate the log
+    const statsJson = stats.toJson({ assets: false, modules: false, chunks: false })
+    if (statsJson.errors && statsJson.errors.length) {
+      console.log(chalk.red('\n=== BUILD ERRORS ===\n'))
+      statsJson.errors.forEach((e, i) => {
+        console.log(chalk.red(`Error ${i + 1}:`))
+        console.log(e.message || e.stack || String(e))
+        console.log()
+      })
+    }
+
     process.stdout.write(stats.toString({
       colors: true,
       modules: false,
