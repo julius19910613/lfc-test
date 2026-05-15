@@ -574,7 +574,7 @@ export default {
       padding: 10px;
     }
   }
-  /deep/ .el-checkbox__label{
+  ::v-deep .el-checkbox__label{
     display: none;
   }
   .icon-box {
@@ -752,13 +752,13 @@ export default {
         }
       }
     }
-    /deep/ .el-dialog__header{
+    ::v-deep .el-dialog__header{
       box-shadow: none;
     }
-    /deep/ .el-dialog__footer{
+    ::v-deep .el-dialog__footer{
        box-shadow: none;
     }
-    /deep/ .el-dialog__body{
+    ::v-deep .el-dialog__body{
       padding: 10px 30px;
     }
   }
@@ -822,7 +822,7 @@ export default {
   }
   .tree-popover-input{
     margin-bottom: 10px;
-    /deep/ input{
+    ::v-deep input{
       width: 250px;
       background:rgba(247,247,247,.5);
       border-radius:14px;
@@ -839,7 +839,7 @@ export default {
   .material-tree{
     flex: 1;
     overflow-y: auto;
-    /deep/ .el-tree-node__content{
+    ::v-deep .el-tree-node__content{
       box-shadow:inset 0px -1px 0px 0px rgba(233,233,233,1);
     }
   }

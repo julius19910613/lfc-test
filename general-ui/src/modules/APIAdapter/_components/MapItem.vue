@@ -140,7 +140,7 @@ export default {
   border-bottom: none;
   margin-top: 20px;
   &.emotibot {
-    /deep/ .el-table__header {
+    ::v-deep .el-table__header {
       th {
         padding: 8px 0;
         font-size: 12px;

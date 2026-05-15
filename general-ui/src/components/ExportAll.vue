@@ -141,14 +141,14 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/variable';
 .history-drawer{
-  /deep/ .el-drawer {
+  ::v-deep .el-drawer {
     direction: ltr !important;
   }
-  /deep/ .el-drawer__header{
+  ::v-deep .el-drawer__header{
     font-size: 18px;
     margin-bottom: 20px;
   }
-  /deep/ .el-drawer__body{
+  ::v-deep .el-drawer__body{
     height: calc(100% - 80px);
   }
 }

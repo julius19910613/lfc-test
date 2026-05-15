@@ -133,11 +133,11 @@
 <style lang="scss" scoped>
   @import '../../assets/styles/variable';
 
-  /deep/ .warning-row {
+  ::v-deep .warning-row {
     background-color: oldlace;
   }
 
-  /deep/ .success-row {
+  ::v-deep .success-row {
     background-color: #f0f9eb;
   }
 </style>

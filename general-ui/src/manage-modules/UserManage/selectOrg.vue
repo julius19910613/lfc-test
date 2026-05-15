@@ -121,28 +121,28 @@ export default {
         border: 1px solid rgba(233, 233, 233, 1);
         font-size: 20px;
         line-height: 80px;
-        /deep/ .el-radio {
+        ::v-deep .el-radio {
           width: 450px;
           height: 80px;
           line-height: 80px;
         }
-        /deep/ .el-radio__input {
+        ::v-deep .el-radio__input {
           float: left;
           line-height: 80px;
           margin-left: 20px;
         }
-         /deep/ .el-radio__label{
+         ::v-deep .el-radio__label{
            position: absolute;
            left: 40%;
           }
-        /deep/ .el-radio__input.is-checked .el-radio__inner {
+        ::v-deep .el-radio__input.is-checked .el-radio__inner {
           border-color: #1875f0;
           background: #1875f0;
         }
-        /deep/ .el-radio__input.is-checked + .el-radio__label {
+        ::v-deep .el-radio__input.is-checked + .el-radio__label {
           color: #1875f0;
         }
-        /deep/ .el-radio__label {
+        ::v-deep .el-radio__label {
           font-size: 20px;
           padding-left: 0px;
         }
@@ -151,7 +151,7 @@ export default {
         border: 2px solid rgba(24, 117, 240, 1);
       }
     }
-    /deep/ .el-button--primary {
+    ::v-deep .el-button--primary {
       background-color: #3d4b63;
       border-color: #3d4b63;
     }

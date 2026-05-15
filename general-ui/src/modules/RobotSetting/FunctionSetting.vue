@@ -245,7 +245,7 @@ $card-remark-color: #999999;
   }
 }
 // .function-setting-tab {
-//   /deep/ .el-tabs__nav {
+//   ::v-deep .el-tabs__nav {
 //     height: 40px;
 //     line-height: 40px;
 //   }

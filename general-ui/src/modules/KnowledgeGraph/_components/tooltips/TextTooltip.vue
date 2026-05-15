@@ -246,7 +246,7 @@ export default {
     textarea {
       width: 80%;
     }
-    /deep/ .el-textarea {
+    ::v-deep .el-textarea {
       min-width: 520px;
     }
   }

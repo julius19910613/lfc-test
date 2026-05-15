@@ -475,7 +475,7 @@ export default {
 
 <style lang="scss" scoped>
 @import 'styles/variable';
-/deep/ .el-input__inner {
+::v-deep .el-input__inner {
   width: 100%;
 }
 .width-auto {
@@ -572,16 +572,16 @@ export default {
       display: flex;
       flex-direction: row;
       @include font-14px();
-      /deep/ .el-select {
+      ::v-deep .el-select {
         width: 100%;
         input {
           width: 100%;
         }
       }
-      // /deep/ .emotibot.el-tabs .el-tabs__nav-wrap{
+      // ::v-deep .emotibot.el-tabs .el-tabs__nav-wrap{
       //   padding-left: 0;
       // }
-       /deep/ .em-ans-editor {
+       ::v-deep .em-ans-editor {
         width: 100%;
         .el-textarea {
           min-width: 550px;

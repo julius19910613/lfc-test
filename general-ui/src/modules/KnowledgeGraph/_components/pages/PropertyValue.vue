@@ -777,7 +777,7 @@ export default {
        #export_all_btn {
          margin-left: 10px;
        }
-      /deep/ .emotibot {
+      ::v-deep .emotibot {
         &.el-input {
           width: 200px;
           height: 32px;

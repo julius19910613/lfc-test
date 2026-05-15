@@ -589,7 +589,7 @@ i.edit-icon {
       justify-content: space-between;
       margin-bottom: 5px;
       @include font-14px();
-      /deep/ button {
+      ::v-deep button {
         @include font-12px();
       }
     }
@@ -630,7 +630,7 @@ i.edit-icon {
         @include font-12px();
       }
     }
-    /deep/ .el-table {
+    ::v-deep .el-table {
       td .cell {
         padding: 0 5px;
       }
@@ -677,7 +677,7 @@ i.edit-icon {
       .sub-section-body {
         padding: 20px;
         background-color: $table-body-hover-background;
-        /deep/ .el-table {
+        ::v-deep .el-table {
           .emotibot.el-button--text {
             @include font-12px();
           }
@@ -699,7 +699,7 @@ i.edit-icon {
               flex-shrink: 0;
               margin-left: 10px;
             }
-            /deep/ .emotibot.el-input.mini {
+            ::v-deep .emotibot.el-input.mini {
               flex: 1;
               input {
                 width: 300px;

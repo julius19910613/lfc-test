@@ -823,7 +823,7 @@ export default {
 <style lang="scss" scoped>
 @import 'styles/variable';
 .wb-editor-wrapper{
-  /deep/ .el-dialog{  
+  ::v-deep .el-dialog{  
     width: 770px;
     margin-top: 5vh !important;
     .el-dialog__body{
@@ -886,7 +886,7 @@ export default {
         color: $active-color;
       }
     }
-    /deep/ .el-table{
+    ::v-deep .el-table{
       height: 240px;
       display: flex;
       flex-direction: column;

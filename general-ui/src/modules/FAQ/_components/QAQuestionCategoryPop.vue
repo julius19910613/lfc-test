@@ -97,7 +97,7 @@ export default {
       }
     }
 
-    #category-list /deep/ .tree-item {
+    #category-list ::v-deep .tree-item {
       padding-left: 1em;
     }
 

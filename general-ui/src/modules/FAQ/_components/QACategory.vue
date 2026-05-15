@@ -425,11 +425,11 @@ $fill-parent: 100%;
   
 }
 
-#categories /deep/ div {
+#categories ::v-deep div {
   display: inline-block;
 }
 
-#categories /deep/ .tree-item {
+#categories ::v-deep .tree-item {
   padding-left: 1em;
 }
 

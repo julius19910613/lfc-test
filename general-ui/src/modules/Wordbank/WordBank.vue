@@ -226,7 +226,7 @@ export default {
     .category-list{
       height: calc(100% - 217px);
     }
-    /deep/ .status-wrapper{
+    ::v-deep .status-wrapper{
       width: 100%;
       .el-collapse-item__header{
         border-width: 0px;

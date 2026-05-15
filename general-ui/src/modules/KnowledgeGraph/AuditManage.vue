@@ -530,7 +530,7 @@ export default {
     }
   }
   .test{
-    /deep/ .el-input {
+    ::v-deep .el-input {
       width: 200px;
     }
   }

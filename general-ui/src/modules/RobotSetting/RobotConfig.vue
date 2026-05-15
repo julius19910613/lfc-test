@@ -1398,7 +1398,7 @@ export default {
           line-height: 28px;
           .el-input-number--mini{
             width: 80px;
-            /deep/ .el-input{
+            ::v-deep .el-input{
               input{
                 width: 100%;
                 padding-left: 10px;

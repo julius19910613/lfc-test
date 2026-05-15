@@ -36,11 +36,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  /deep/ .el-dialog__headerbtn{
+  ::v-deep .el-dialog__headerbtn{
     top: 10px;
     right: 10px;
   }
-  /deep/ .el-dialog__body{
+  ::v-deep .el-dialog__body{
     padding: 0 20px 20px;
   }
   .preview-img{

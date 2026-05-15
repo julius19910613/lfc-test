@@ -118,7 +118,7 @@ export default {
     }
     .right {
       flex: 1;
-      /deep/ input{
+      ::v-deep input{
         width: 100%;
       }
       .el-select{

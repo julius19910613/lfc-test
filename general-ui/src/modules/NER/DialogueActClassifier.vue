@@ -270,7 +270,7 @@ export default {
     }
     .search-box{
       width: 220px;
-      /deep/ input{
+      ::v-deep input{
         width: 100%;
         font-size: 14px;
       }

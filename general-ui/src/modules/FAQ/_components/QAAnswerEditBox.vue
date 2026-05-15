@@ -416,7 +416,7 @@ export default {
       color:red;
     }
 
-    /deep/ .dynamic_input {
+    ::v-deep .dynamic_input {
         overflow:hidden;
     }
 

@@ -1566,7 +1566,7 @@ $stat-card-height: 300px;
   .middle {
     height: 60px;
     line-height: 60px;
-    /deep/ .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+    ::v-deep .el-radio-button__orig-radio:checked + .el-radio-button__inner {
       color: #606266;
       background-color: #fff;
       border-color: #dcdfe6;
@@ -1661,12 +1661,12 @@ $stat-card-height: 300px;
       width: 110px;
       float: right;
       margin-right: 10px;
-      /deep/ .el-input__inner {
+      ::v-deep .el-input__inner {
         height: 28px;
         line-height: 28px;
         font-size: 12px;
       }
-      /deep/ .el-select-dropdown__item {
+      ::v-deep .el-select-dropdown__item {
         font-size: 12px;
       }
     }

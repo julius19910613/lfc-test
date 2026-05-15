@@ -258,7 +258,7 @@ export default {
 <style lang="scss" scoped>
 .upload-excel-dialog{
   margin-top: 10vh;
-  /deep/ .el-dialog{
+  ::v-deep .el-dialog{
     width: 650px;
     .el-dialog__body{
       padding: 20px;

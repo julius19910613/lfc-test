@@ -858,7 +858,7 @@ export default {
     }
   }
 }
-.selector /deep/ {
+.selector ::v-deep {
   flex: 0 0 400px;
   input {
     width: 400px;
@@ -869,7 +869,7 @@ export default {
   margin: 0px 10px;
 }
 
-/deep/ .el-select {
+::v-deep .el-select {
   width: 100%;
   .el-input.is-focus .el-input__inner {
     border-color: $color-borderline;

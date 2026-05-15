@@ -284,7 +284,7 @@ export default {
     }
   }
 }
-/deep/ .common-dialog {
+::v-deep .common-dialog {
     &.el-dialog {
       .el-dialog__header {
         padding: 17px 20px;

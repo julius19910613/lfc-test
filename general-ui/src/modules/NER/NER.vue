@@ -37,7 +37,7 @@ export default {
   box-sizing: border-box;
   width: 100%;
   height: 100%; 
-  /deep/ .el-tabs{
+  ::v-deep .el-tabs{
     .el-tabs__content{
       margin: 10px;
       width: calc(100% - 20px) !important;

@@ -165,15 +165,15 @@ export default {
         }
       }
     }
-    /deep/ .el-tabs__header{
+    ::v-deep .el-tabs__header{
       display: none;
     }
-    /deep/ .ans-title{
+    ::v-deep .ans-title{
       min-width: 56px;
       text-align: right;
       margin-right: 20px;
     }
-    /deep/ .el-tabs__content{
+    ::v-deep .el-tabs__content{
       width: 100%;
       padding: 0;
       border: none;
@@ -182,7 +182,7 @@ export default {
       @include customScrollbar();
       @include auto-overflow-Y();
     }
-    /deep/ .multi-selector {
+    ::v-deep .multi-selector {
       padding-right: 10px;
     }
   }

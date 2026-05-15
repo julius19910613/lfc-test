@@ -1016,7 +1016,7 @@ export default {
 #edge-edit-tab {
   .el-input-number{
     width: 60px;
-    /deep/ .el-input .el-input__inner{
+    ::v-deep .el-input .el-input__inner{
       width: 60px;
       padding-left: 15px;
       padding-right: 35px;

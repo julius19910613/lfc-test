@@ -2,10 +2,10 @@
 
 // // el-tree
 // .el-tree{
-//   /deep/ .el-icon-caret-right{
+//   ::v-deep .el-icon-caret-right{
 //     margin-left: 10px;
 //   }
-//   /deep/ .el-tree-node__content{
+//   ::v-deep .el-tree-node__content{
 //     line-height: 32px;
 //     height: 32px;
 //     &:hover{
@@ -14,7 +14,7 @@
 //       }
 //     }
 //   }
-//   /deep/ .custom-tree-node{
+//   ::v-deep .custom-tree-node{
 //     line-height: 32px;
 //     flex: 1;
 //     padding-right: 28px;
@@ -25,7 +25,7 @@
 //     text-overflow:ellipsis;
 //     white-space: nowrap;
 //   }
-//   /deep/ .el-tree-node__expand-icon{
+//   ::v-deep .el-tree-node__expand-icon{
 //     width: 14px;
 //     height: 11px;
 //     display: block;
@@ -42,11 +42,11 @@
 //       background: url("./assets/icons/folder_leaf.svg") 50% no-repeat;
 //     }
 //   }
-//   /deep/ .el-tree-node__label{
+//   ::v-deep .el-tree-node__label{
 //     font-weight: normal;
 //     @include font-12px();
 //   }
-//   /deep/ .el-tree--highlight-current{
+//   ::v-deep .el-tree--highlight-current{
 //     .el-tree-node.is-current>.el-tree-node__content{
 //       background-color: rgba(147,147,162,1);
 //       .el-tree-node__label{
@@ -117,7 +117,7 @@
 //   }
 //   // 带编辑的表格，处理input 框的外阴影问题
 //   &.el-table-edit {
-//     /deep/ tr {
+//     ::v-deep tr {
 //       td {
 //         padding: 0;
 //         .cell{
@@ -259,7 +259,7 @@
 
 // // el-dropdown-menu
 // .el-dropdown-menu{
-//   /deep/ .el-dropdown-menu__item{
+//   ::v-deep .el-dropdown-menu__item{
 //     &:hover{
 //       background-color: $color-white;
 //       color: $color-font-normal;
@@ -676,7 +676,7 @@
 //   &.el-collapse{
 //     border-radius: 4px;
 //     border: 0px;
-//     /deep/ .el-collapse-item{
+//     ::v-deep .el-collapse-item{
 //       margin-top: 8px;
 //       border-radius: 4px;
 //       &:hover{

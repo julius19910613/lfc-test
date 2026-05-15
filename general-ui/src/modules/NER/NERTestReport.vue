@@ -403,7 +403,7 @@ export default {
     height: calc(100% - 140px);
     min-height: 100px;
     position: relative;
-    /deep/ .test-case-table{
+    ::v-deep .test-case-table{
       width: 100%;
       height: 100%;
       .el-table__body-wrapper{

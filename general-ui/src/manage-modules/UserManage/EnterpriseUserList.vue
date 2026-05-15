@@ -465,7 +465,7 @@ export default {
     }
 }
 
-/deep/ .emotibot {
+::v-deep .emotibot {
         margin-right: 20px;
         &.el-input {
           width: 200px;

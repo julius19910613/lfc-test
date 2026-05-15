@@ -34,17 +34,33 @@ exports.cssLoaders = function (options) {
     const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
 
     if (loader) {
+      const normalizedLoaderOptions = Object.assign({}, loaderOptions)
+
       loaders.push({
         loader: loader + '-loader',
-        options: Object.assign({}, loaderOptions, {
-          sourceMap: options.sourceMap
-        }, {
-          includePaths: [
-            "src/assets",
-            "src/assets/images"
-          ],
-          data: '@import "styles/variable.scss";',
-        })
+        options: loader === 'sass'
+          ? (() => {
+            const sassOptions = Object.assign({}, normalizedLoaderOptions.sassOptions, {
+              includePaths: [
+                path.resolve(__dirname, '../src/assets'),
+                path.resolve(__dirname, '../src/assets/images')
+              ]
+            })
+
+            if (normalizedLoaderOptions.indentedSyntax) {
+              sassOptions.indentedSyntax = normalizedLoaderOptions.indentedSyntax
+              delete normalizedLoaderOptions.indentedSyntax
+            }
+
+            return Object.assign({}, normalizedLoaderOptions, {
+              sourceMap: options.sourceMap,
+              additionalData: '@import "styles/variable.scss";',
+              sassOptions
+            })
+          })()
+          : Object.assign({}, normalizedLoaderOptions, {
+            sourceMap: options.sourceMap
+          })
       })
     }
 

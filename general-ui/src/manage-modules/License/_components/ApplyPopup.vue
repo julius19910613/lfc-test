@@ -150,7 +150,7 @@ export default {
         flex-shrink: 0;
         margin-left: 10px;
       }
-      /deep/ .el-input input {
+      ::v-deep .el-input input {
         width: 100%;
         height: 32px;
       }

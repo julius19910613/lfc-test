@@ -41,7 +41,7 @@ export default {
       margin: 0;
       display: flex;
       flex-direction: column;
-      /deep/ {
+      ::v-deep {
         > .el-tabs__content {
           margin: 0 20px;
           flex: 1;

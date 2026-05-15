@@ -495,7 +495,7 @@ export default {
       }
     }
   }
-  /deep/ .el-dialog__body{
+  ::v-deep .el-dialog__body{
     padding: 0;
   }
   .json-text{
@@ -521,7 +521,7 @@ export default {
     width: 200px;
     border-top: 1px solid#e9e9e9;
     border-bottom: 1px solid#e9e9e9;
-    /deep/ .el-tree-node{
+    ::v-deep .el-tree-node{
       &.is-current{
         background-color: #f5f7fa;
       }

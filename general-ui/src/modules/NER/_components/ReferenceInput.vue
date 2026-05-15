@@ -299,10 +299,10 @@ export default {
       width: 100%;
       height: 38px;
     }
-    /deep/ .el-dropdown-link{
+    ::v-deep .el-dropdown-link{
       display: none;
     }
-    /deep/ .el-dropdown-menu__item{
+    ::v-deep .el-dropdown-menu__item{
       &:hover{
         background-color: $color-white !important;
         color: $color-font-normal;

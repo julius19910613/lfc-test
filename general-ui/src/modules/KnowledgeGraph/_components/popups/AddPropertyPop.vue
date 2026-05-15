@@ -1267,7 +1267,7 @@ export default {
       display: flex;
       flex-direction: row;
       @include font-14px();
-      /deep/ .el-textarea {
+      ::v-deep .el-textarea {
         width: 500px;
       }
     }
@@ -1298,7 +1298,7 @@ export default {
     width: 100%;
   }
 }
-/deep/ .el-select {
+::v-deep .el-select {
   width: 100%;
   .el-input.is-focus .el-input__inner {
     border-color: $color-borderline;
