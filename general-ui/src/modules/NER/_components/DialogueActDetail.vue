@@ -867,7 +867,7 @@ export default {
           }
           .input-box {
             flex: 1;
-            /deep/ input {
+            ::v-deep input {
               width: 100%;
               font-size: 14px;
             }
@@ -875,7 +875,7 @@ export default {
         }
       }
     }
-    /deep/ .tags-collapse{
+    ::v-deep .tags-collapse{
       .tag-header-box{
         width: 100%;
         height: 100%;
@@ -903,7 +903,7 @@ export default {
           line-height: 32px;
           .tag-name-input{
             width: 220px;
-            /deep/ input{
+            ::v-deep input{
               width: 100%;
               font-size: 14px;
             }
@@ -911,7 +911,7 @@ export default {
           .tag-desc-input{
             width: 330px;
             margin-left: 10px;
-            /deep/ input{
+            ::v-deep input{
               width: 100%;
               font-size: 14px;
             }
@@ -937,7 +937,7 @@ export default {
         .el-tabs{
           display: inline-block;
           width: 100%;
-          /deep/ .el-tabs__header{
+          ::v-deep .el-tabs__header{
             width: 182px;
             margin: 0px 0px 10px 0px;
             .el-tabs__nav-wrap{
@@ -964,7 +964,7 @@ export default {
             }
           }
         }
-        /deep/ .corpurs-input{
+        ::v-deep .corpurs-input{
           width: 100%;
           input{
             width: 100% !important;
@@ -1000,7 +1000,7 @@ export default {
             font-size: 14px;
             min-width: 100px;
             .corpus-input-box{
-              /deep/ input{
+              ::v-deep input{
                 font-size: 14px;
               }
             }
@@ -1028,7 +1028,7 @@ export default {
     .system-act-box{
       .selector-box{
         position: relative;
-        /deep/ .el-select {
+        ::v-deep .el-select {
           .el-select__tags{
             display: none;
           }
@@ -1088,7 +1088,7 @@ export default {
     }
   }
 }
-/deep/ .tags-selector{
+::v-deep .tags-selector{
   width: 100%;
   height: 32px;
   .el-select__tags{

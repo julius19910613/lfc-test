@@ -331,7 +331,7 @@ export default {
   .slot-input{
     height: 38px;
     font-size: 14px;
-    /deep/ input{
+    ::v-deep input{
       height: 38px;
       line-height: 38px;
     }
@@ -342,10 +342,10 @@ export default {
       width: 100%;
       height: 38px;
     }
-    /deep/ .el-dropdown-link{
+    ::v-deep .el-dropdown-link{
       display: none;
     }
-    /deep/ .el-dropdown-menu__item{
+    ::v-deep .el-dropdown-menu__item{
       &:hover{
         background-color: $color-white !important;
         color: #666666;

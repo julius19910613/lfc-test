@@ -118,7 +118,7 @@ $row-height: 40px;
   margin-left: 10px;
 }
 
-.v-select /deep/ .dropdown-toggle{
+.v-select ::v-deep .dropdown-toggle{
   background: white;
   height: 30px;
   box-sizing: border-box;

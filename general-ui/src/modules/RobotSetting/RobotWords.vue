@@ -378,7 +378,7 @@ export default {
         .edit-mode{
           position: relative;
           margin-top: 10px;
-          /deep/ .el-input{
+          ::v-deep .el-input{
             width: 100%;
             input{
               width: 100%;

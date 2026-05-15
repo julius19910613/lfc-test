@@ -419,13 +419,13 @@ export default {
     }
   }
 }
-.selector /deep/ {
+.selector ::v-deep {
   flex: 0 0 400px;
   input {
     width: 400px;
   }
 }
-.elselect /deep/ {
+.elselect ::v-deep {
   input {
     border-color: $color-borderline;
     width: 100%;

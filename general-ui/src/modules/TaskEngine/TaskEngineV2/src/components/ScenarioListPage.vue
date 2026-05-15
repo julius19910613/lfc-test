@@ -812,7 +812,7 @@ $row-height: $default-line-height;
 #scenario-list-page-v2{
   height: 100%;
   padding: 0 10px;
-  /deep/ .el-button{
+  ::v-deep .el-button{
     padding: 0;
     font-size: 12px;
     border-radius: 3px;

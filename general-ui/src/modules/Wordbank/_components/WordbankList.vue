@@ -697,7 +697,7 @@ export default {
           margin-left: 10px;
           cursor: pointer;
         }
-        /deep/ .popover-write-theme{
+        ::v-deep .popover-write-theme{
           .uploading-item{
             display: flex;
             width: 100%;
@@ -739,7 +739,7 @@ export default {
       }
       .search-box{
         width: 260px !important;
-        /deep/ .search-input{
+        ::v-deep .search-input{
           .el-input-group__prepend{
             input{
               width: 100px;
@@ -757,7 +757,7 @@ export default {
       flex: 1;
       position: relative;
       overflow: hidden;
-      /deep/ .el-table{
+      ::v-deep .el-table{
         height: 100%;
         display: flex;
         flex-direction: column;

@@ -422,7 +422,7 @@ export default {
   padding: 0 20px;
   @include font-14px();
   color: $color-font-active;
-  /deep/ .eltabSel .cell {
+  ::v-deep .eltabSel .cell {
     overflow: visible !important;
   }
   .grey-block{

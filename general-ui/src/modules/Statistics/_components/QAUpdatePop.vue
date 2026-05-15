@@ -418,16 +418,16 @@ $container_width: 70%;
     overflow: auto;
   }
 
-  #categories /deep/ div {
+  #categories ::v-deep div {
     display: inline-block;
   }
 
-  #categories /deep/ .tree-item {
+  #categories ::v-deep .tree-item {
     padding-left: 2em;
   }
 }
 
-#qa-update-qa-container /deep/ .tree-item-list {
+#qa-update-qa-container ::v-deep .tree-item-list {
   list-style: none;
 }
 </style>

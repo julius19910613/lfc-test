@@ -122,7 +122,7 @@ export default {
     margin-top: 50px;
     min-height: 150px;
   }
-  /deep/ .el-checkbox__label{
+  ::v-deep .el-checkbox__label{
     display: none;
   }
   .material-list-header{
@@ -204,7 +204,7 @@ export default {
   -webkit-box-sizing: border-box;
 }
 .emotibot-checkbox{
-  /deep/ &.el-checkbox{
+  ::v-deep &.el-checkbox{
     margin-right: 30px;
   }
 }

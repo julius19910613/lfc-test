@@ -116,10 +116,10 @@ $fixed-height: 142px;
     font-size: 14px;
 
     // cancel reset of bold and italic, use HTML5 spec ref: https://www.w3.org/TR/html5/rendering.html
-    & /deep/ b { font-weight: bolder; }
-    & /deep/ strong { font-weight: bolder; }
-    & /deep/ i { font-style: italic; }
-    & /deep/ em { font-style: italic; }
+    & ::v-deep b { font-weight: bolder; }
+    & ::v-deep strong { font-weight: bolder; }
+    & ::v-deep i { font-style: italic; }
+    & ::v-deep em { font-style: italic; }
 
     &.full {
       height: auto;
@@ -127,7 +127,7 @@ $fixed-height: 142px;
       overflow: auto;
     }
 
-    /deep/ ul {
+    ::v-deep ul {
       li::before {
         content: "\2022";
         margin-right: 5px;
@@ -135,7 +135,7 @@ $fixed-height: 142px;
       }
     }
 
-    /deep/ ol {
+    ::v-deep ol {
       counter-reset: list-item-counter;
       li {
         counter-increment: list-item-counter;

@@ -112,7 +112,7 @@ export default {
   &.fit-parent {
     width: 100%;
   }
-  /deep/ .content {
+  ::v-deep .content {
     ul {
       li::before {
         content: "\2022";

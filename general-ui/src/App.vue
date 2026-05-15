@@ -918,7 +918,7 @@ export default {
   height: 100vh;
   background: #fff;
   z-index: 1000;
-  /deep/ .loading {
+  ::v-deep .loading {
     background: #fff;
     height: 100vh;
     position: absolute;

@@ -104,7 +104,7 @@ export default {
   height: 300px;
   overflow-y: auto;
   .test-input-box{
-    /deep/ input {
+    ::v-deep input {
       width: 100%;
     }
   }

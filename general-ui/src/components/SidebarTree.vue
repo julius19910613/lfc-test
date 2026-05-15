@@ -325,17 +325,17 @@ export default {
   -webkit-box-sizing: border-box;
   box-shadow:inset 0px -1px 0px 0px rgba(238,238,238,1);
   margin-bottom: 14px;
-  /deep/ input{
+  ::v-deep input{
     // width: 180px;
     width: calc(100% - 10px);
   }
-  /deep/ .el-input__suffix{
+  ::v-deep .el-input__suffix{
     right: 10px;
   }
-  /deep/ .el-input__icon{
+  ::v-deep .el-input__icon{
     font-size: 16px;
   }
-  /deep/ .circle-input{
+  ::v-deep .circle-input{
     input{
       border-radius: 50px;
     }
@@ -351,13 +351,13 @@ export default {
   display: flex;
   flex-direction: column;
 }
-/deep/ .el-tree-node>.el-tree-node__children{
+::v-deep .el-tree-node>.el-tree-node__children{
   overflow: visible;
 }
 
 .material-tree{
   overflow-y: auto;
-  /deep/ .el-tree-node{
+  ::v-deep .el-tree-node{
     &:focus{
       >.el-tree-node__content{
         background-color: #ffffff;
@@ -365,7 +365,7 @@ export default {
     }
   }
   flex: 1;
-  /deep/ .el-tree-node{
+  ::v-deep .el-tree-node{
     position: relative;
     &.is-current{
       >.el-tree-node__content{
@@ -422,7 +422,7 @@ export default {
   z-index: 20;
   width: calc(100% - 10px);
   background: #ffffff;
-  /deep/ input{
+  ::v-deep input{
     height: 26px;
     width: calc(100% - 10px);
   }
@@ -433,7 +433,7 @@ export default {
   position: absolute;
   left: 10px;
   top: 0;
-  /deep/ input{
+  ::v-deep input{
     height: 26px;
     width: calc(100% - 20px);
   }

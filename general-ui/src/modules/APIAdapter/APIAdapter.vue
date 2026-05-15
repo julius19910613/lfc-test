@@ -171,7 +171,7 @@ export default {
       @include font-16px();
     }
   }
-  /deep/ .emotibot.el-table {
+  ::v-deep .emotibot.el-table {
     display: flex;
     flex-direction: column;
     .el-table__header-wrapper {
@@ -183,7 +183,7 @@ export default {
       overflow-y: auto;
     }
   }
-  /deep/ .emotibot.el-pagination {
+  ::v-deep .emotibot.el-pagination {
     text-align: right;
     padding-top: 10px;
     padding-bottom: 10px;

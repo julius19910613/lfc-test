@@ -156,7 +156,7 @@ export default {
     }
     .search-input{
       margin-left: 10px;
-      /deep/ input{
+      ::v-deep input{
         font-size: 14px;
         width: 230px;
       }

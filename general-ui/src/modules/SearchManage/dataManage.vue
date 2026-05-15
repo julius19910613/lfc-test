@@ -501,13 +501,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/deep/.el-dialog__wrapper{
-  /deep/.el-dialog{
-    /deep/.el-dialog__body{
-      /deep/ .el-form {
-       /deep/ .el-form-item {
-          /deep/.el-form-item__content {
-           /deep/ .el-input__inner{
+::v-deep.el-dialog__wrapper{
+  ::v-deep.el-dialog{
+    ::v-deep.el-dialog__body{
+      ::v-deep .el-form {
+       ::v-deep .el-form-item {
+          ::v-deep.el-form-item__content {
+           ::v-deep .el-input__inner{
               width: 310px!important;
             }
           }
@@ -522,7 +522,7 @@ export default {
     display: inline-block;
     text-align: right;
   }
-  /deep/ .header-search input{
+  ::v-deep .header-search input{
     width:174px;
   }
   display: flex;

@@ -281,7 +281,7 @@ export default {
   }
   .emotibot {
     &.el-table-edit{
-      /deep/ tr {
+      ::v-deep tr {
         th:first-child {
           .cell{
             padding: 8px 2px 8px 20px;

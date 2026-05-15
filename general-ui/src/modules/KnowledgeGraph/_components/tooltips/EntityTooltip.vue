@@ -451,7 +451,7 @@ export default {
   .row {
     display: flex;
     flex-direction: row;
-    /deep/ .emotibot {
+    ::v-deep .emotibot {
         &.el-input {
           width: 100%;
           height: 32px;

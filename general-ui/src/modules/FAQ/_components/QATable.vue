@@ -94,11 +94,11 @@ $fill-parent: 100%;
 /* hack here, if we don't set vertical-align other than baseline
    the table layout might "out of control"
  */
-#table-container /deep/ td {
+#table-container ::v-deep td {
   vertical-align: top;
 }
 
-#table-container /deep/ .v-table-body {
+#table-container ::v-deep .v-table-body {
   height: calc(100% - 50px);
 }
 

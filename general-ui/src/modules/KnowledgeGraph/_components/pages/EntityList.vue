@@ -555,7 +555,7 @@ export default {
   flex-direction: column;
   @include auto-overflow();
   border-bottom: 1px solid #e6e6e6;
-  /deep/ .general-table-container {
+  ::v-deep .general-table-container {
     background: white;
     .general-table-header {
       background: #f6f6f6;
@@ -614,7 +614,7 @@ export default {
     }
     .entity_search {
       padding: 0px 20px;
-      /deep/ .emotibot {
+      ::v-deep .emotibot {
         &.el-input {
           width: 200px;
           height: 28px;

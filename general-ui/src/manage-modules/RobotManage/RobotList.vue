@@ -1032,7 +1032,7 @@ export default {
     line-height: 28px;
   }
 }
-/deep/ .text-button.primary{
+::v-deep .text-button.primary{
   border-radius:3px!important;
   border:1px solid rgba(219,219,219,1)!important;
   color: #666666!important;

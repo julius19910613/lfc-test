@@ -899,7 +899,7 @@
           align-items: center;
           height: 52px;
           .search-input {
-            /deep/ .emotibot {
+            ::v-deep .emotibot {
                .el-select{
                 input {
                     width: 90px;
@@ -998,7 +998,7 @@
               margin: 0 5px;
             }
           }
-          .status /deep/ {
+          .status ::v-deep {
             display: flex;
             flex-direction: row;
             align-items: center;

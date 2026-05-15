@@ -113,7 +113,7 @@ $editor-color: #333;
         border-radius: $editor-border-radius;
 
         &:hover {
-          border-color: color($editor-border-color) blackness(30%);
+          border-color: darken($editor-border-color, 30%);
         }
 
         &[disabled], &[readonly] {
@@ -140,7 +140,7 @@ $editor-color: #333;
         margin-bottom: 4px;
 
         &:hover {
-          border-color: color($editor-border-color) blackness(30%);
+          border-color: darken($editor-border-color, 30%);
         }
 
         &[disabled] {

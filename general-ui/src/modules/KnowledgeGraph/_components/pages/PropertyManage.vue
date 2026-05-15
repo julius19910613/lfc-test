@@ -1076,7 +1076,7 @@ export default {
         justify-content: space-around;
     }
   }
-  /deep/ .emotibot {
+  ::v-deep .emotibot {
         &.el-input {
           width: 200px;
           height: 28px;
@@ -1126,7 +1126,7 @@ export default {
       height: calc(100% - 60px);
       background: blue;
       display: flex;
-      /deep/ .el-table {
+      ::v-deep .el-table {
         flex: 1;
       }
     }
@@ -1161,10 +1161,10 @@ export default {
     background-color: rgba(0, 0, 0, 0.55);
   }
 }
-/deep/ .el-table::before {
+::v-deep .el-table::before {
   height: 0;
 }
-/deep/ .el-table__body-wrapper.is-scrolling-none {
+::v-deep .el-table__body-wrapper.is-scrolling-none {
          max-height:calc(100% - 48px);
         @include auto-overflow-Y();
         @include customScrollbar();

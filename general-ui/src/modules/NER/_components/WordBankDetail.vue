@@ -118,7 +118,7 @@ export default {
 
 <style lang="scss" scoped>
 .wb-detail-wrapper{
-  /deep/ .el-dialog{
+  ::v-deep .el-dialog{
     width: 800px;
     margin-top: 8vh !important;
     .el-dialog__body{
