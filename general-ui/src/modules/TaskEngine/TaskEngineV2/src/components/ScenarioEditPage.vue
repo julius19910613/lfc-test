@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="scenario-edit-page" @wheel="onPageWheel()">
   <div class="browse-window" ref="window">
     <div class="header">

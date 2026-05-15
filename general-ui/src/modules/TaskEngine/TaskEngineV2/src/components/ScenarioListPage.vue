@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="scenario-list-page-v2">
   <input type="file" ref="uploadScenarioJSONInput" style="visibility: hidden; display: none;" @change="changeScenarioJSONFile()" accept=".json">
   <!-- 场景为空时 显示 start-->

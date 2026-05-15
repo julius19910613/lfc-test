@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="entity-relation-editor-pop" class="entity-relation-editor-pop">
   <h1>{{$t("task_engine_v3.entity-relation-editor-pop.title")}}</h1>
   <button class="btn-basic" @click="addRelatedEntity">{{$t("task_engine_v3.entity-relation-editor-pop.add_row")}}</button>

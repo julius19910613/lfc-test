@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="params-collecting-edge-edit-tab">
   <draggable v-model="normalEdges" :options="{ghostClass:'ghost'}" @start="drag=true" @end="drag=false; emitUpdate();">
     <template v-for="(edge, index) in normalEdges">

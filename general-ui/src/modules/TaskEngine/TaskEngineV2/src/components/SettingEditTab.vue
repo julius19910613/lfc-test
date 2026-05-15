@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="setting-edit-tab">
   <div class="block">
     <div class="label-header">{{$t("task_engine_v2.setting_edit_tab.node_type")}}</div>

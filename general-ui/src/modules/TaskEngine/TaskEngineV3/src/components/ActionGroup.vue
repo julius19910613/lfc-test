@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="action-group" class="action-group">
   <div class="label-first-action-type">{{labelFirstActionType}}</div>
   <div class="action-group-box">

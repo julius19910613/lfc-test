@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="condition-block">
   <div
     class="button-delete-condition"

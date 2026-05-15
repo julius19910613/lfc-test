@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="action-edit-tab">
   <action-page
     :initialActionGroupList="actionGroupList"

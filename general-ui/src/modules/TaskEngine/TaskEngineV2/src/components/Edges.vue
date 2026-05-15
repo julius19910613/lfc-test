@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div id="edges" class="edges"> 
     <svg class="svg">
       <g class="paths" v-for="p, idx in paths" >

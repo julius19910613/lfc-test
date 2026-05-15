@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="scenario-editor-pop">
   <!-- <div class="row">
     <div id="template-list">

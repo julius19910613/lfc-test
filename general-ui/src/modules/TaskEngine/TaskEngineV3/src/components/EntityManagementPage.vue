@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="entity-management-page" class="entity-management-page page">
   <h1>{{$t('task_engine_v3.entity_management.title')}}</h1>
   <hr>

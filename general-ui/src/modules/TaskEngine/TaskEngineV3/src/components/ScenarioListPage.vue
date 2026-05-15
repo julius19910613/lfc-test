@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="scenario-list-page-v3">
   <div class="content card h-fill w-fill">
     <div class="header title">

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="import-scenario-pop">
   <div class="import-format-radio-container">
     <input

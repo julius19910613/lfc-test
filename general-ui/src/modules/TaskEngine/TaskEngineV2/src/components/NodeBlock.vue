@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div class="node-block" :style="style"
   @mouseover="mouseOverNode = true"
   @mouseout="mouseOverNode = false">

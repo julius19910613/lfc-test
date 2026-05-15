@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="edit-skills-pop" class="edit-skills-pop">
   <text-button
     class="button-add-skill"

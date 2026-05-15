@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="scenario-editor-pop">
   <div class="edit-title">{{$t("task_engine_v3.create_scenario_pop.label_name_the_scenario")}}</div>
   <div class="edit-data">

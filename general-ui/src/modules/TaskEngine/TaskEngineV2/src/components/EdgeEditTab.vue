@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="edge-edit-tab">
   <div class="instruction block">
     {{$t("task_engine_v2.edge_edit_tab.instruction")}}

@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="action-page" class="page action-page">
   <div class="add-action-container">
     <div class="row" v-if="version === '2.0'">

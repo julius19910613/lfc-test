@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="custom-entity-type-editor-pop" class="custom-entity-type-editor-pop">
   <h1 class="header-title">{{$t("task_engine_v3.custom_entity_type_editor_pop.title")}}</h1>
   <div class="row">

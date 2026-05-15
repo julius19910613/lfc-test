@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="restful-edge-edit-page">
   <div class="block">
     <div class="label label-bold">

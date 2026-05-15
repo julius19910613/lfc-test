@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="entity-synonyms" class="entity-synonyms-container">
   <div class="entity_column">
     <input type="text" class="no_border full_width"

@@ -171,17 +171,18 @@
     </div>
   </div>
 </template>
-<i18n src='../../i18n.json'></i18n>
 <script>
 import { mapGetters } from 'vuex';
 import Tools from '../../../../utils/js/Tools';
 import api from '../../_api/knowledgeGraph';
 import mixInMultiEditor from '../../_mixin/multiEditor';
 import MixinValidate from '../../_mixin/Validate';
+import i18nData from '../../i18n.json';
 
 
 export default {
   name: 'AddExtPropertyPop',
+  i18n: i18nData,
   api,
   mixins: [mixInMultiEditor, MixinValidate],
   data() {

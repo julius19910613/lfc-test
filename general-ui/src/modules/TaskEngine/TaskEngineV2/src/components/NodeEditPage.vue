@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="node-edit-page" :style="pageStyle">
    <div class="edit-header">
      <input type="text" class="edit-name" v-show="editHeaderFlag" v-model="edgeName" @keyup.enter="editHeaderFlag=false" @blur="editHeaderFlag=false">

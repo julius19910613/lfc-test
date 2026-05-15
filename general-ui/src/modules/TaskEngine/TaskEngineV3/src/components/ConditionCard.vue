@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="condition-card">
   <div class="label-when" v-if="index==0">{{$t("task_engine_v3.condition_card.if")}}</div>
   <div class="label-when" v-if="index!=0">{{$t("task_engine_v3.condition_card.and")}}</div>  

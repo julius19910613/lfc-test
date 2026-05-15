@@ -2,9 +2,12 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const utils = require('./utils');
 const config = require('../config');
 const vueLoaderConfig = require('./vue-loader.conf');
+
+const postcssConfigPath = path.resolve(__dirname, '..');
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir);
@@ -25,6 +28,7 @@ const createLintingRule = () => ({
 module.exports = {
   context: path.resolve(__dirname, '../'),
   plugins: [
+    new VueLoaderPlugin(),
     new webpack.LoaderOptionsPlugin({
       options: {
         eslint: {},
@@ -75,13 +79,17 @@ module.exports = {
     rules: [
       ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
-        test: /\.html$/,
-        loader: 'html-loader',
+        test: /\.vue$/,
+        use: [
+          {
+            loader: 'vue-loader',
+            options: vueLoaderConfig,
+          },
+        ],
       },
       {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: vueLoaderConfig,
+        test: /\.html$/,
+        loader: 'html-loader',
       },
       {
         test: /\.js$/,
@@ -138,7 +146,7 @@ module.exports = {
             loader: 'postcss-loader', // postcss loader so we can use autoprefixer
             options: {
               config: {
-                path: '../postcssrc.js',
+                path: postcssConfigPath,
               },
             },
           },

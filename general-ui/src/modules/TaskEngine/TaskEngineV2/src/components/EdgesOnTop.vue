@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div id="edges-on-top" class="edges">
     <svg class="svg">
       <defs>

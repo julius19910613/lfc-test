@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
 <div id="sentence-replacement-editor-pop" class="sentence-replacement-editor-pop">
   <text-button
     width='68px'
