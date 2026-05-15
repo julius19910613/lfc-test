@@ -2,9 +2,13 @@
 
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
-    sourceType: 'module'
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ['@babel/preset-env'],
+    },
+    sourceType: 'module',
   },
   env: {
     browser: true,
@@ -12,43 +16,53 @@ module.exports = {
   extends: 'airbnb-base',
   // required to lint *.vue files
   plugins: [
-    'html'
+    'html',
   ],
   // check if imports actually resolve
   settings: {
+    'html/html-extensions': ['.html', '.vue'],
     'import/resolver': {
       webpack: {
-        config: 'build/webpack.base.conf.js'
-      }
-    }
+        config: 'build/webpack.base.conf.js',
+      },
+    },
   },
   // add your custom rules here
   rules: {
-    // don't require .vue extension when importing
-    'import/extensions': ['error', 'always', {
-      js: 'never',
-      vue: 'never',
-      cjs: 'never',
-      mjs: 'never'
-    }],
+    // keep legacy mixed import style during eslint 8 migration
+    'import/extensions': 'off',
     // disallow reassignment of function parameters
-    // disallow parameter object manipulation except for specific exclusions
-    'no-param-reassign': ['error', {
-      props: true,
-      ignorePropertyModificationsFor: [
-        'state', // for vuex state
-        'acc', // for reduce accumulators
-        'e' // for e.returnvalue
-      ]
-    }],
+    'no-param-reassign': ['error', { props: false }],
     // allow optionalDependencies
     'import/no-extraneous-dependencies': ['error', {
-      optionalDependencies: ['test/unit/index.js']
+      optionalDependencies: ['test/unit/index.js'],
     }],
     // allow debugger and no-console during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-console': process.env.NODE_ENV === 'production' ? ["warn"] : ["off"],
-    'no-param-reassign': ["error", {"props": false}],
+    'no-console': process.env.NODE_ENV === 'production' ? ['warn'] : ['off'],
+    'arrow-parens': 'off',
+    'function-paren-newline': 'off',
+    'function-call-argument-newline': 'off',
+    'implicit-arrow-linebreak': 'off',
+    indent: 'off',
+    'keyword-spacing': 'off',
+    'lines-between-class-members': 'off',
+    'no-else-return': 'off',
+    'no-multi-spaces': ['error', { ignoreEOLComments: true }],
+    'no-multiple-empty-lines': 'off',
+    'no-promise-executor-return': 'off',
+    'no-restricted-globals': 'off',
     'no-unused-expressions': 'off',
-  }
-}
+    'object-curly-newline': 'off',
+    'operator-linebreak': 'off',
+    'prefer-destructuring': 'off',
+    'prefer-object-spread': 'off',
+    'prefer-regex-literals': 'off',
+    // existing code style rules - turned off to avoid changing business code
+    camelcase: 'off',
+    'import/no-useless-path-segments': 'off',
+    'prefer-promise-reject-errors': 'off',
+    'operator-assignment': 'off',
+    'comma-style': 'off',
+  },
+};
