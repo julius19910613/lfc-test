@@ -12,6 +12,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const HOST = process.env.HOST;
 const PORT = process.env.PORT && Number(process.env.PORT);
+const commonModulesPath = path.dirname(require.resolve('common-modules-zj/package.json'));
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: 'development',
@@ -61,13 +62,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'index_dev.html', // 修改模板文件名字
+      template: 'version.html',
       chunks: ['chunk-vendors', 'app'],
       inject: true,
     }),
     new HtmlWebpackPlugin({
       filename: 'login.html',
-      template: 'login.html',
+      template: 'version.html',
       chunks: ['chunk-vendors', 'login'],
       inject: true,
     }),
@@ -86,6 +87,21 @@ const devWebpackConfig = merge(baseWebpackConfig, {
           globOptions: {
             ignore: ['**/.*'],
           },
+        },
+        {
+          from: path.resolve(commonModulesPath, 'src/assets/styles/iconfont'),
+          to: 'common_resources/emotibot/icons/iconfont',
+          noErrorOnMissing: true,
+        },
+        {
+          from: path.resolve(commonModulesPath, 'src/assets/styles/coloricon'),
+          to: 'common_resources/emotibot/icons/coloricon',
+          noErrorOnMissing: true,
+        },
+        {
+          from: path.resolve(commonModulesPath, 'src/assets/images/favicon.png'),
+          to: 'common_resources/emotibot/images/favicon.png',
+          noErrorOnMissing: true,
         },
       ],
     }),
@@ -111,5 +127,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     },
   },
 });
+
+devWebpackConfig.externals = {};
 
 module.exports = devWebpackConfig;
